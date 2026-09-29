@@ -1,0 +1,149 @@
+/* Styles globaux du portfolio */
+:root {
+    --black: #03070d;
+    --board-bg: #e5d8bb;
+    --board-rim: #f3a7c7;
+    --ink: #0e0e12;
+    --gray-ink: #1f2233;
+    --pink-soft: #f2aac5;
+    --pink-strong: #ef8db6;
+    --paper: #f4f1eb;
+    --metal: #d7c8bd;
+    --metal-dark: #b9a99d;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    background-image: url("../assets/Img/bois_bureau.png");
+    background-repeat: repeat;
+    background-position: center top;
+    background-size: auto;
+}
+
+main {
+    min-height: 100vh;
+    display: grid;
+    place-items: start center;
+    padding: 1rem 1rem 2.5rem;
+    width: min(100%, 1200px);
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.hero {
+    width: min(100%, 1200px);
+}
+
+.hero__art {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0;
+}
+
+.hero__title {
+    position: absolute;
+    left: 50%;
+    top: 44%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    z-index: 2;
+    text-align: center;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1;
+    letter-spacing: 0.1em;
+    color: var(--ink);
+}
+
+.hero__art img {
+    position: absolute;
+    width: 120px;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.hero__art .bouton-bleu {
+    right: 2vw;
+    bottom: 6vh;
+    width: 320px;
+}
+
+.hero__art .barrette-beige {
+    left: 65vw;
+    bottom: -14vh;
+    width: 320px;
+    transform: translateX(-50%) rotate(40deg);
+}
+
+.hero__art .barrette-bleu {
+    left: -27vw;
+    top: -15vh;
+    width: 320px;
+    transform: rotate(-35deg);
+}
+
+.hero__art .barrette-rose {
+    left: 45vw;
+    top: 9vh;
+    width: 320px;
+    transform: rotate(35deg);
+}
+
+.hero__art .trombone-bleu {
+    right: 32vw;
+    top: 70vh;
+    width: 220px;
+}
+
+.hero__art .trombone-bleu--second {
+    left: 17vw;
+    bottom: 12vh;
+    width: 220px;
+    transform: rotate(35deg);
+}
+
+.hero__art .trombone-rose {
+    left: 17vw;
+    bottom: 12vh;
+    width: 220px;
+    transform: rotate(35deg);
+}
+
+.hero__art .pin {
+    right: -20vw;
+    top: -4vh;
+    width: 180px;
+}
+
+.hero__art .xppen {
+    left: 12vw;
+    top: -4vh;
+    width: 570px;
+    transform: rotate(22deg);
+}
+
+.hero__art .clip {
+    right: 47vw;
+    top: 35vh;
+    width: 320px;
+    transform: rotate(-26deg);
+}
+
+.hero__art .paperball {
+    right: -20vw;
+    top: 34vh;
+    width: 450px;
+}
