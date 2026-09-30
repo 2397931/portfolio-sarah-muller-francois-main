@@ -196,11 +196,18 @@ main {
 
 .about__paper {
     position: relative;
-    min-height: calc(100vh - 4rem);
-    width: calc(100% - 4rem);
-    margin: 2rem auto;
-    padding: 6rem clamp(2rem, 5vw, 5rem) 3rem;
-    background: var(--paper);
+    /* Augmenté: plus haut pour donner plus d'espace visuel */
+    min-height: calc(120vh - 4rem);
+    /* Augmenté: papier plus large sur grands écrans */
+    width: calc(100% - 8vw);
+    margin: 2.5rem auto;
+    /* Augmenté: padding vertical et horizontal pour agrandir la zone */
+    padding: 8rem clamp(3rem, 6vw, 6rem) 4rem;
+    background-image: url("../assets/Img/white-ripped-crumpled-paper-piece-png.webp");
+    /* Recentrage et réduction de l'image pour éviter qu'elle déborde */
+    background-position: center top;
+    background-size: contain;
+    background-repeat: no-repeat;
     transform: rotate(-1deg);
 }
 
@@ -228,9 +235,9 @@ main {
 }
 
 .about__pin {
-    top: -1.8rem;
-    left: 30%;
-    width: 4.5rem;
+    top: -1.8vw;
+    left: 30vh;
+    width: 150px;
     transform: rotate(8deg);
 }
 
@@ -251,7 +258,8 @@ main {
 }
 
 .about__image-placeholder {
-    width: min(100%, 390px);
+    width: min(100%, 700px);
+    height: min(100%, 900px);
     aspect-ratio: 1 / 1;
     background: var(--paper);
     box-shadow: inset 0 0 0 1px rgba(14, 14, 18, 0.2);
@@ -260,16 +268,15 @@ main {
 .about__bow {
     right: 6%;
     top: 8%;
-    width: clamp(100px, 16vw, 190px);
-    transform: rotate(10deg);
+    width: clamp(100px, 16vw, 320px);
+    transform: rotate(20deg);
 }
 
 .about__arrow {
-    left: 44%;
-    bottom: 8%;
+    left: 41vw;
+    bottom: 39vh;
     z-index: 3;
-    width: clamp(90px, 13vw, 150px);
-    transform: rotate(-5deg);
+    width: 320px;
 }
 
 @media (max-width: 700px) {
@@ -283,8 +290,10 @@ main {
     }
 
     .about__paper {
+        /* Sur mobile, limiter la largeur pour conserver lisibilité */
         width: calc(100% - 2rem);
-        margin: 1.5rem auto 0;
+        margin: 1.2rem auto 0;
+        padding: 4rem 1.5rem 2rem;
     }
 
     .about__pink-panel {
