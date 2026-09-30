@@ -31,6 +31,24 @@ body {
     background-size: auto;
 }
 
+@font-face {
+    font-family: "Myrtille Pixel";
+    src: url("../assets/font/myrtille-pixel.otf") format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Mieszkanie";
+    src: url("../assets/font/mieszkanie9.otf") format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Nunito Local";
+    src: url("../assets/font/Nunito-VariableFont_wght.ttf") format("truetype");
+    font-display: swap;
+}
+
 main {
     min-height: 100vh;
     display: grid;
@@ -161,4 +179,121 @@ main {
     right: -20vw;
     top: 34vh;
     width: 450px;
+}
+
+/* About Section */
+
+.about {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(90deg, var(--board-bg) 0 50%, var(--pink-strong) 50% 100%);
+}
+
+.about__paper {
+    position: relative;
+    min-height: calc(100vh - 4rem);
+    width: calc(100% - 4rem);
+    margin: 2rem auto;
+    padding: 6rem clamp(2rem, 5vw, 5rem) 3rem;
+    background: var(--paper);
+    transform: rotate(-1deg);
+}
+
+.about__paper h2 {
+    margin: 0 0 2rem;
+    font-family: "Mieszkanie", sans-serif;
+    font-weight: 300;
+    font-size: 6.2vw;
+    line-height: 0.9;
+}
+
+.about__paper p {
+    max-width: 52ch;
+    margin: 0 0 1rem;
+    font-family: "Nunito Local", sans-serif;
+    font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+    line-height: 1.55;
+}
+
+.about__pin,
+.about__clip,
+.about__arrow,
+.about__bow {
+    position: absolute;
+}
+
+.about__pin {
+    top: -1.8rem;
+    left: 30%;
+    width: 4.5rem;
+    transform: rotate(8deg);
+}
+
+.about__clip {
+    right: 1rem;
+    bottom: 0.5rem;
+    width: 5rem;
+    transform: rotate(20deg);
+}
+
+.about__pink-panel {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: 4rem;
+    background: var(--pink-strong);
+}
+
+.about__image-placeholder {
+    width: min(100%, 390px);
+    aspect-ratio: 1 / 1;
+    background: var(--paper);
+    box-shadow: inset 0 0 0 1px rgba(14, 14, 18, 0.2);
+}
+
+.about__bow {
+    right: 6%;
+    top: 8%;
+    width: clamp(100px, 16vw, 190px);
+    transform: rotate(10deg);
+}
+
+.about__arrow {
+    left: 44%;
+    bottom: 8%;
+    z-index: 3;
+    width: clamp(90px, 13vw, 150px);
+    transform: rotate(-5deg);
+}
+
+@media (max-width: 700px) {
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .about__paper,
+    .about__pink-panel {
+        min-height: 100vh;
+    }
+
+    .about__paper {
+        width: calc(100% - 2rem);
+        margin: 1.5rem auto 0;
+    }
+
+    .about__pink-panel {
+        padding: 2rem;
+    }
+
+    .about__arrow {
+        left: auto;
+        right: 8%;
+        bottom: 46%;
+    }
 }
