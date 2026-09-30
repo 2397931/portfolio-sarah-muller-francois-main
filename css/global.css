@@ -102,24 +102,39 @@ main {
     transform: rotate(35deg);
 }
 
-.hero__art .trombone-bleu {
+.hero__art .trombone-bleu--first {
     right: 32vw;
-    top: 70vh;
-    width: 220px;
+    top: 73vh;
+    width: 250px;
+    transform: rotate(12deg);
 }
 
 .hero__art .trombone-bleu--second {
     left: 17vw;
     bottom: 12vh;
-    width: 220px;
-    transform: rotate(35deg);
+    width: 250px;
+    transform: rotate(-20deg);
 }
 
 .hero__art .trombone-rose {
-    left: 17vw;
+    left: 19.5vw;
     bottom: 12vh;
-    width: 220px;
-    transform: rotate(35deg);
+    width: 250px;
+    transform: rotate(32deg);
+}
+
+.hero__art .trombone-rose--second {
+    right: 23vw;
+    top: 70vh;
+    width: 250px;
+    transform: rotate(70deg);
+}
+
+.hero__art .trombone-bleu--third {
+    left: 24vw;
+    top: 69vh;
+    width: 250px;
+    transform: rotate(34deg);
 }
 
 .hero__art .pin {
@@ -136,7 +151,7 @@ main {
 }
 
 .hero__art .clip {
-    right: 47vw;
+    right: 55vw;
     top: 35vh;
     width: 320px;
     transform: rotate(-26deg);
