@@ -5,16 +5,17 @@ export const projects = [
 		category: "Montage vidéo",
 		year: "2026",
 		mediaType: "video",
-		image: "",
+		image: "assets/Img/Hyunjin.aep.png",
 		link: "assets/video/hyunjinParty.mp4",
-		summary: "Montage vidéo créé autour de Hyunjin du groupe Stray Kids, avec une ambiance luxe et un contraste fort.",
-		concept: "Le thème principal du montage est l’argent et le luxe. J’ai utilisé principalement les couleurs rouge, vert et blanc pour créer une esthétique stylée et marquée.",
+		summary: "Cette création est un montage de Hyunjin du groupe Stray Kids, créé comme cadeau pour une amie. Le thème de l’argent et du luxe guide la composition, avec un contraste marqué entre les éléments graphiques et les images du personnage.",
+		concept: "Cette création est un montage de Hyunjin du groupe Stray Kids, créé comme cadeau pour une amie. Le thème de l’argent et du luxe guide la composition, avec un contraste marqué entre les éléments graphiques et les images du personnage.",
 		visual: [
-			"Couleurs dominantes : rouge, vert et blanc.",
-			"Ambiance luxe et contraste fort.",
-			"Montage rythmé avec des éléments graphiques marqués.",
+			"Palette rouge, vert et blanc inspirée de l’argent et du luxe.",
+			"Composition éditoriale avec une grille et des éléments graphiques découpés.",
+			"Montage rythmé, contrasté et pensé pour une lecture immédiate.",
 		],
 		support: "After Effects",
+		theme: { accent: "#7d9b72", surface: "#f5f7f2", ink: "#172016" },
 	},
 	{
 		id: "Sweeny",
@@ -25,13 +26,14 @@ export const projects = [
 		image: "assets/Img/SweenyIMG.png",
 		link: "https://202397931.tim-momo.com/Projet-Final/",
 		summary: "Site Web pour une petite compagnie de pâtisserie, pensé pour être simple, coloré et chaleureux.",
-		concept: "J’ai créé un site Web pour une petite compagnie de pâtisserie appelée Sweeny. Le site présente leurs différents produits avec une présentation simple et colorée.",
+		concept: "J'ai créé un site Web pour une petite compagnie de pâtisserie appelée Sweeny. L'interface présente les produits avec une navigation simple et une ambiance douce afin de rendre la découverte agréable et intuitive.",
 		visual: [
-			"Palette rose, brun et blanc.",
-			"Ambiance douce et chaleureuse.",
-			"Sections pensées pour découvrir les produits, la compagnie et les contacts.",
+			"Palette rose, brun et blanc pour rappeler l'univers de la pâtisserie.",
+			"Images de produits mises en avant avec une hiérarchie claire.",
+			"Sections dédiées aux produits, à la compagnie et aux contacts.",
 		],
 		support: "HTML, CSS et JavaScript",
+		theme: { accent: "#e887a7", surface: "#fff8f2", ink: "#3d2524" },
 	},
 	{
 		id: "Imparfaite",
@@ -42,13 +44,14 @@ export const projects = [
 		image: "assets/Img/ImparfaiteIMG.png",
 		link: "assets/video/Imparfaite_h264_1920_1080.mp4",
 		summary: "Micro-montage construit pour raconter une histoire avec une ambiance sombre et cohérente.",
-		concept: "J’ai créé un micro-montage à partir de différentes séquences vidéo pour raconter l’histoire du personnage.",
+		concept: "J'ai créé un micro-montage à partir de différentes séquences vidéo pour raconter l'histoire du personnage. Les transitions, les effets, la musique et le montage sonore construisent une atmosphère sombre et cohérente.",
 		visual: [
-			"Transitions et effets visuels pour donner du rythme.",
-			"Couleurs sombres pour renforcer l’atmosphère.",
-			"Montage sonore et musical pour garder une cohérence globale.",
+			"Transitions et effets visuels utilisés pour installer le rythme.",
+			"Couleurs sombres pour renforcer l'atmosphère du récit.",
+			"Montage sonore et musical travaillé pour garder une continuité.",
 		],
 		support: "After Effects",
+		theme: { accent: "#8f6874", surface: "#f1eceb", ink: "#211b21" },
 	},
 	{
 		id: "IChooseF5ve",
@@ -56,18 +59,39 @@ export const projects = [
 		category: "Montage vidéo",
 		year: "2026",
 		mediaType: "video",
-		image: "",
+		image: "assets/Img/F5VE.jpg",
 		link: "assets/video/IChooseF5ve.mp4",
-		summary: "Montage nostalgique inspiré des années 2010, avec des couleurs vives et une énergie rétro.",
-		concept: "Cette création est un montage vidéo de la chanson I Choose You du groupe f5ve. Je l’ai créé afin de recréer une ambiance nostalgique inspirée des années 2010.",
+		summary: "Cette création est un montage vidéo de la chanson I Choose You du groupe f5ve. Il retrouve une énergie nostalgique inspirée des années 2010, entre images prises avec un iPhone SE et effets flash.",
+		concept: "Cette création est un montage vidéo de la chanson I Choose You du groupe f5ve. Je l'ai créé pour retrouver une énergie nostalgique inspirée des années 2010, entre images prises avec un iPhone SE et effets flash.",
 		visual: [
-			"Couleurs vives et flash pour rappeler l’esthétique de l’époque.",
-			"Images prises avec un iPhone SE pour renforcer le côté nostalgique.",
-			"Ensemble visuel inspiré des années 2010.",
+			"Couleurs vives et effets flash inspirés des interfaces des années 2010.",
+			"Images prises avec un iPhone SE pour conserver une texture spontanée.",
+			"Plans et éléments graphiques assemblés dans une esthétique rétro dynamique.",
 		],
 		support: "After Effects",
+		theme: { accent: "#e66b37", surface: "#fff6e8", ink: "#2a2020" },
 	},
 ];
+
+export async function loadProjects() {
+	try {
+		const response = await fetch("data/projects.json");
+		if (!response.ok) {
+			throw new Error(`Impossible de charger les projets : ${response.status}`);
+		}
+
+		const projectData = await response.json();
+		projects.splice(0, projects.length, ...projectData.map((project) => ({
+			...project,
+			mediaType: project.category === "Design web" ? "image" : "video",
+			summary: project.summary ?? project.description,
+			concept: project.concept ?? project.description,
+			visual: project.visual ?? [],
+		})));
+	} catch (error) {
+		console.warn("Les données de secours des projets sont utilisées.", error);
+	}
+}
 
 function escapeHtml(value) {
 	return String(value)
@@ -119,6 +143,10 @@ function getProjectMediaMarkup(project, context) {
 			<source src="${project.link}" type="video/mp4">
 			Votre navigateur ne prend pas en charge la lecture vidéo.
 		</video>`;
+	}
+
+	if (project.image) {
+		return `<img class="project-card__image" src="${project.image}" alt="Aperçu du projet ${escapeHtml(project.title)}">`;
 	}
 
 	return `<span class="project-card__graphic project-card__graphic--${project.id.toLowerCase()}" aria-hidden="true"></span>`;

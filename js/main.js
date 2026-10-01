@@ -4,6 +4,7 @@ import {
 	getProjectById,
 	getProjectHref,
 	getProjectIndex,
+	loadProjects,
 	projects,
 	renderProjectDetails,
 	renderProjectHero,
@@ -69,6 +70,14 @@ function initProjectPage() {
 	const project = getProjectById(projectId);
 	const previousProject = getPreviousProject(project.id);
 	const nextProject = getNextProject(project.id);
+	const theme = project.theme ?? {};
+
+	document.body.style.setProperty("--project-accent", theme.accent ?? "#ef8db6");
+	document.body.style.setProperty("--project-surface", theme.surface ?? "#f4f1eb");
+	document.body.style.setProperty("--project-ink", theme.ink ?? "#0e0e12");
+	if (project.image) {
+		document.body.style.setProperty("--project-background-image", `url("${project.image}")`);
+	}
 
 	heroSlot.innerHTML = renderProjectHero(project);
 	detailsSlot.innerHTML = renderProjectDetails(project);
@@ -86,8 +95,10 @@ function initProjectPage() {
 	}
 }
 
-if (document.body.classList.contains("project-page")) {
-	initProjectPage();
-} else {
-	initProjectCarousel();
-}
+loadProjects().then(() => {
+	if (document.body.classList.contains("project-page")) {
+		initProjectPage();
+	} else {
+		initProjectCarousel();
+	}
+});

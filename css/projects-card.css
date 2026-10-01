@@ -1,10 +1,14 @@
 /* Page projet - Hyunjin.aep */
 
 body.project-page {
-	background-image: url("../assets/Img/bois_bureau.png");
-	background-repeat: repeat;
-	background-position: center top;
-	background-size: auto;
+	background-color: var(--project-surface, var(--paper));
+	background-image:
+		linear-gradient(135deg, color-mix(in srgb, var(--project-surface, #f4f1eb) 88%, white), color-mix(in srgb, var(--project-accent, #ef8db6) 14%, white)),
+		var(--project-background-image, url("../assets/Img/bois_bureau.png"));
+	background-repeat: no-repeat, no-repeat;
+	background-position: center, right 5vw top 7rem;
+	background-size: cover, min(56vw, 760px) auto;
+	background-attachment: fixed;
 }
 
 body.project-page main {
@@ -34,6 +38,12 @@ body.project-page main {
 	font-family: "Nunito Local", sans-serif;
 }
 
+.project-topbar__label,
+.project-hero__eyebrow,
+.project-meta dt {
+	color: var(--project-ink, var(--ink));
+}
+
 .project-topbar__link {
 	display: inline-flex;
 	align-items: center;
@@ -51,7 +61,7 @@ body.project-page main {
 	padding: 0.75rem 1rem;
 	border-radius: 999px;
 	color: var(--ink);
-	background: rgba(242, 170, 197, 0.5);
+	background: color-mix(in srgb, var(--project-accent, #ef8db6) 42%, white);
 	box-shadow: 0 10px 30px rgba(14, 14, 18, 0.08);
 	letter-spacing: 0.08em;
 	text-transform: uppercase;
@@ -96,7 +106,7 @@ body.project-page main {
 	flex-direction: column;
 	justify-content: center;
 	padding: clamp(1.5rem, 3vw, 3rem);
-	background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(242, 170, 197, 0.18));
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), color-mix(in srgb, var(--project-accent, #ef8db6) 16%, white));
 	border: 1px solid rgba(14, 14, 18, 0.08);
 }
 
@@ -145,7 +155,7 @@ body.project-page main {
 
 .project-meta dt {
 	margin: 0 0 0.35rem;
-	color: var(--pink-strong);
+	color: var(--project-accent, var(--pink-strong));
 	font-size: 0.75rem;
 	letter-spacing: 0.11em;
 	text-transform: uppercase;
@@ -184,8 +194,8 @@ body.project-page main {
 
 .project-actions__button--primary {
 	color: white;
-	background: linear-gradient(135deg, #ff76a8, #ef8db6);
-	box-shadow: 0 14px 30px rgba(239, 141, 182, 0.35);
+	background: var(--project-accent, var(--pink-strong));
+	box-shadow: 0 14px 30px color-mix(in srgb, var(--project-accent, #ef8db6) 35%, transparent);
 }
 
 .project-actions__button--secondary {
