@@ -19,6 +19,7 @@
             "accent": "#7d9b72",
             "surface": "#f5f7f2",
             "ink": "#172016",
+            "backgroundImage": "assets/Img/grille.jpg",
             "background": "#285d20"
         }
     },
@@ -91,6 +92,7 @@
             "accent": "#e66b37",
             "surface": "#fff6e8",
             "ink": "#2a2020",
+            "backgroundImage": "assets/Img/No_background.jpg",
             "background": "#f3d7b5"
         }
     }
