@@ -925,7 +925,8 @@ body.project-page main {
 
     place-items: center;
 
-    min-height: 100vh;
+    width: 100%;
+    min-height: 100svh;
 
     padding:
         clamp(2.5rem, 5vw, 4rem)
@@ -952,7 +953,7 @@ body.project-page main {
 .projects__stage {
     position: relative;
 
-    width: min(100%, 1220px);
+    width: min(100%, 1600px);
 
     margin: 0 auto;
 }
@@ -969,7 +970,7 @@ body.project-page main {
 
     z-index: 2;
 
-    width: min(100%, 1080px);
+    width: min(100%, 1400px);
 
     height: auto;
 
@@ -1055,7 +1056,7 @@ body.project-page main {
 .projects__carousel {
     position: absolute;
 
-    inset: 29% 12% 21% 12%;
+    inset: 27% 8% 18% 8%;
 
     z-index: 2;
 }
@@ -1167,9 +1168,9 @@ body.project-page main {
 
     display: block;
 
-    width: min(52vw, 760px);
+    width: min(58vw, 860px);
 
-    height: min(75vh, 640px);
+    height: min(78vh, 700px);
 
     right: auto;
     left: 50%;
@@ -1180,8 +1181,6 @@ body.project-page main {
 
     border-radius: 22px;
 
-    transform: translateX(-50%);
-
     overflow: hidden;
 
     text-decoration: none;
@@ -1190,8 +1189,11 @@ body.project-page main {
         0 16px 35px rgba(14, 14, 18, 0.26);
 
     transform:
+        translateX(-50%)
         translateY(0)
         scale(1);
+
+    transform-origin: center center;
 
     transition:
         transform 180ms ease,
