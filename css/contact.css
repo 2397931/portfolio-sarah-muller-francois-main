@@ -1,0 +1,387 @@
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact {
+	position: relative;
+	width: 100%;
+	min-height: 95vh;
+	overflow: hidden;
+	margin-top: 10vh;
+	padding: 7vh 5vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+}
+
+
+/* =========================================
+   WOOD BACKGROUND
+========================================= */
+
+.contact__wood {
+	position: absolute;
+	inset: 0;
+	background-image: url("../assets/contact/wood-background.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: 0;
+}
+
+
+/* =========================================
+   DARK CENTER
+========================================= */
+
+.contact__stage {
+	position: relative;
+	width: 100vw;
+	min-width: 100vw;
+	height: 80vh;
+	background: #191923;
+	overflow: visible;
+	z-index: 1;
+	margin-left: -5vw;
+	margin-right: -5vw;
+}
+
+
+/* =========================================
+   ENVELOPE
+========================================= */
+
+.contact__envelope {
+	position: absolute;
+	top: -19vh;
+	left: 15vw;
+	width: 42vw;
+	height: auto;
+	z-index: 2;
+	object-fit: contain;
+	transform: rotate(-10deg);
+}
+
+
+/* =========================================
+   CONTACT CARD
+========================================= */
+
+.contact__card {
+	position: absolute;
+	width: 30vw;
+	right: 30vw;
+	top: 9vh;
+	z-index: 3;
+	transform: rotate(7deg);
+}
+
+.contact__card-image {
+	display: block;
+	width: 30vw;
+	height: auto;
+}
+
+
+/* =========================================
+   TEXT INSIDE CARD
+========================================= */
+
+.contact__card-text {
+	position: absolute;
+	left: 5%;
+	top: 50%;
+	width: 43%;
+	transform: translateY(-50%);
+	z-index: 4;
+	text-align: center;
+}
+
+.contact__card-text p {
+	margin: 0;
+	font-family: "Nunito Local", sans-serif;
+	font-size: 1.2vw;
+	line-height: 1.4;
+	color: #191923;
+}
+
+
+/* =========================================
+   LINE IN THE MIDDLE OF CARD
+========================================= */
+
+.contact__card-line {
+	position: absolute;
+	left: 52%;
+	top: 18%;
+	width: 0.12vw;
+	height: 64%;
+	background: #191923;
+	z-index: 4;
+}
+
+
+/* =========================================
+   SOCIAL LOGOS INSIDE CARD
+========================================= */
+
+.contact__card-socials {
+	position: absolute;
+	left: 57%;
+	top: 50%;
+	transform: translateY(-50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2vh;
+	z-index: 5;
+}
+
+.contact__card-social {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: transform 0.2s ease;
+}
+
+.contact__card-social:hover,
+.contact__card-social:focus-visible {
+	transform: scale(1.08);
+}
+
+.contact__card-social img {
+	display: block;
+	width: 3.2vw;
+	height: auto;
+	object-fit: contain;
+}
+
+
+/* =========================================
+   EMAIL INSIDE CARD
+========================================= */
+
+.contact__card-email {
+	position: absolute;
+	left: 8%;
+	right: 8%;
+	bottom: 10%;
+	z-index: 5;
+	text-align: center;
+}
+
+.contact__card-email a {
+	font-family: "Nunito Local", sans-serif;
+	font-size: 0.9vw;
+	color: #191923;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.contact__card-email a:hover {
+	text-decoration: underline;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.contact__arrow {
+	position: absolute;
+	width: 8vw;
+	height: auto;
+	right: 20vw;
+	bottom: -3vh;
+	z-index: 5;
+	transform: rotate(-200deg);
+}
+
+
+/* =========================================
+   "CONTACTEZ MOI!"
+========================================= */
+
+.contact__message {
+	position: absolute;
+	right: 3vw;
+	bottom: -2vh;
+	z-index: 6;
+	pointer-events: none;
+}
+
+.contact__message h2 {
+	margin: 0;
+	font-family: "Meow Script", sans-serif;
+	font-size: clamp(2.8rem, 5vw, 5.5rem);
+	font-weight: 400;
+	font-style: italic;
+	color: #f47bb0;
+	white-space: nowrap;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+	.contact {
+		min-height: 85vh;
+		padding: 6vh 4vw;
+	}
+
+	.contact__stage {
+		width: 100vw;
+		min-width: 100vw;
+		height: 70vh;
+		margin-left: -4vw;
+		margin-right: -4vw;
+	}
+
+	.contact__envelope {
+		width: 44vw;
+		height: auto;
+		left: 8vw;
+		top: 5vh;
+		bottom: auto;
+	}
+
+	.contact__card {
+		width: 38vw;
+		right: 8vw;
+		top: 8vh;
+	}
+
+	.contact__card-image {
+		width: 38vw;
+	}
+
+	.contact__card-text p {
+		font-size: 1.5vw;
+	}
+
+	.contact__card-socials {
+		gap: 1.5vh;
+	}
+
+	.contact__card-social img {
+		width: 4vw;
+	}
+
+	.contact__card-line {
+		width: 0.15vw;
+	}
+
+	.contact__card-email {
+		bottom: 9%;
+	}
+
+	.contact__card-email a {
+		font-size: 1.2vw;
+	}
+
+	.contact__arrow {
+		width: 8vw;
+		right: 18vw;
+		bottom: 7vh;
+	}
+
+	.contact__message {
+		right: 1vw;
+		bottom: 0;
+	}
+
+	.contact__message h2 {
+		font-size: clamp(2rem, 5vw, 4rem);
+	}
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+	.contact {
+		min-height: 100vh;
+		padding: 4vh 3vw;
+	}
+
+	.contact__stage {
+		width: 100vw;
+		min-width: 100vw;
+		height: 85vh;
+		margin-left: -3vw;
+		margin-right: -3vw;
+	}
+
+	.contact__envelope {
+		width: 58vw;
+		height: auto;
+		left: 2vw;
+		top: 5vh;
+		bottom: auto;
+	}
+
+	.contact__card {
+		width: 48vw;
+		right: 3vw;
+		top: 15vh;
+	}
+
+	.contact__card-image {
+		width: 48vw;
+	}
+
+	.contact__card-text {
+		left: 4%;
+		width: 44%;
+	}
+
+	.contact__card-text p {
+		font-size: 2vw;
+	}
+
+	.contact__card-line {
+		left: 52%;
+		width: 0.2vw;
+		height: 65%;
+	}
+
+	.contact__card-socials {
+		left: 58%;
+		gap: 1.5vh;
+	}
+
+	.contact__card-social img {
+		width: 5vw;
+	}
+
+	.contact__card-email {
+		bottom: 8%;
+	}
+
+	.contact__card-email a {
+		font-size: 1.7vw;
+	}
+
+	.contact__arrow {
+		width: 10vw;
+		right: 20vw;
+		bottom: 19vh;
+	}
+
+	.contact__message {
+		right: 2vw;
+		bottom: 5vh;
+	}
+
+	.contact__message h2 {
+		font-size: clamp(2rem, 9vw, 3.5rem);
+	}
+}

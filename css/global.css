@@ -49,6 +49,12 @@ body {
     font-display: swap;
 }
 
+@font-face {
+    font-family: "Meow Script";
+    src: url("../assets/font/MeowScript-Regular.ttf") format("truetype");
+    font-display: swap;
+}
+
 main {
     min-height: 100vh;
     display: grid;

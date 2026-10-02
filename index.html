@@ -6,6 +6,7 @@
     <title>Portfolio Sarah Muller François</title>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/projects-card.css">
+    <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
     <main>
@@ -27,7 +28,6 @@
                 <img src="./maket/illustrations/paperball_iillustration.png" alt="Image paperball" class="paperball">
             </div>
         </header>
-
     </main>
 
     <section class="about" id="a-propos" aria-labelledby="about-title">
@@ -38,38 +38,209 @@
             <p>Quisque gravida facilisis purus, vitae scelerisque ante hendrerit vel. Vivamus tellus odio, condimentum at velit et, fringilla sagittis ex.</p>
             <img src="./maket/illustrations/clip_illustration.png" alt="" class="about__clip" aria-hidden="true">
         </article>
+
         <article class="about__pink-panel">
             <div class="about__image-placeholder" aria-label="Espace image du portfolio"></div>
             <img src="./maket/illustrations/noeu_papillon.png" alt="Noeud rose décoratif" class="about__bow">
         </article>
+
         <img src="./assets/fleches/fleche_1.png" alt="" class="about__arrow" aria-hidden="true">
     </section>
 
     <section class="projects" id="projects" aria-labelledby="projects-title">
         <div class="projects__stage">
             <h2 id="projects-title" class="projects__title">Projets</h2>
+
             <img src="./maket/illustrations/ecran.png" alt="" class="projects__screen" aria-hidden="true">
             <img src="./maket/illustrations/souris.png" alt="" class="projects__mouse" aria-hidden="true">
 
             <div class="projects__carousel" data-project-carousel aria-label="Aperçu de mes projets">
-                <button type="button" class="projects__arrow projects__arrow--prev" data-project-prev aria-label="Projet précédent">←</button>
+
+                <button type="button" class="projects__arrow projects__arrow--prev" data-project-prev aria-label="Projet précédent">
+                    <img src="./assets/fleches/fleche_5.png" alt="" class="projects__arrow-icon" aria-hidden="true">
+                </button>
+
                 <div class="projects__slot" data-project-slot>
                     <a class="project-card project-card--dark project-card--hyunjin" href="projet.html?project=hyunjin" aria-label="Hyunjin.aep, catégorie Montage vidéo">
+
                         <span class="project-card__media">
                             <span class="project-card__graphic project-card__graphic--hyunjin" aria-hidden="true"></span>
                         </span>
+
                         <span class="project-card__content">
                             <span class="project-card__eyebrow">Projet 1</span>
                             <span class="project-card__name">Hyunjin.aep</span>
                             <span class="project-card__category">Montage vidéo</span>
                         </span>
+
                     </a>
                 </div>
-                <button type="button" class="projects__arrow projects__arrow--next" data-project-next aria-label="Projet suivant">→</button>
+
+                <button type="button" class="projects__arrow projects__arrow--next" data-project-next aria-label="Projet suivant">
+                    <img src="./assets/fleches/fleche_5.png" alt="" class="projects__arrow-icon" aria-hidden="true">
+                </button>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="skills" id="logiciels-competences" aria-labelledby="skills-title">
+        <ul class="skills__list" aria-label="Logiciels et compétences">
+
+            <li class="skills__item">
+                <figure class="skill-card">
+                    <img src="./assets/icones/adobe-after-effects-cc-icon.png" alt="Adobe After Effects" class="skill-card__icon">
+                    <figcaption class="skill-card__label">After Effects</figcaption>
+                </figure>
+            </li>
+
+            <li class="skills__item">
+                <figure class="skill-card">
+                    <img src="./assets/icones/Blender-Logo.png" alt="Blender" class="skill-card__icon">
+                    <figcaption class="skill-card__label">Blender</figcaption>
+                </figure>
+            </li>
+
+            <li class="skills__item">
+                <figure class="skill-card">
+                    <img src="./assets/icones/davinci_logo.webp" alt="DaVinci Resolve" class="skill-card__icon">
+                    <figcaption class="skill-card__label">DaVinci Resolve</figcaption>
+                </figure>
+            </li>
+
+            <li class="skills__item">
+                <figure class="skill-card">
+                    <img src="./assets/icones/krita-logo.png" alt="Krita" class="skill-card__icon skill-card__icon--krita">
+                    <figcaption class="skill-card__label">Krita</figcaption>
+                </figure>
+            </li>
+
+            <li class="skills__item">
+                <figure class="skill-card">
+                    <img src="./assets/icones/maya_logo.png" alt="Maya" class="skill-card__icon skill-card__icon--maya">
+                    <figcaption class="skill-card__label">Maya</figcaption>
+                </figure>
+            </li>
+
+            <li class="skills__item">
+                <figure class="skill-card">
+                    <img src="./assets/icones/Visual-Studio-Logo.png" alt="Visual Studio" class="skill-card__icon skill-card__icon--vs">
+                    <figcaption class="skill-card__label">Visual Studio</figcaption>
+                </figure>
+            </li>
+
+            <li class="skills__item">
+                <figure class="skill-card">
+                    <img src="./assets/icones/html_icone.png" alt="HTML" class="skill-card__icon">
+                    <figcaption class="skill-card__label">HTML</figcaption>
+                </figure>
+            </li>
+
+            <li class="skills__item">
+                <figure class="skill-card">
+                    <img src="./assets/icones/css_icone.png" alt="CSS" class="skill-card__icon">
+                    <figcaption class="skill-card__label">CSS</figcaption>
+                </figure>
+            </li>
+
+            <li class="skills__item">
+                <figure class="skill-card">
+                    <img src="./assets/icones/wordpress.png" alt="Wordpress" class="skill-card__icon skill-card__icon--wordpress">
+                    <figcaption class="skill-card__label">Wordpress</figcaption>
+                </figure>
+            </li>
+
+        </ul>
+    </section>
+
+    <!-- =========================================
+         CONTACT
+    ========================================= -->
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+
+        <!-- Wood background -->
+        <div class="contact__wood"></div>
+
+        <!-- Dark center area -->
+        <div class="contact__stage">
+
+            <!-- Envelope -->
+            <img
+                src="./maket/illustrations/enveloppe_illustration.png"
+                alt=""
+                class="contact__envelope"
+                aria-hidden="true"
+            >
+
+            <!-- Contact card -->
+            <div class="contact__card">
+
+                <img
+                    src="./maket/illustrations/Carte.png"
+                    alt=""
+                    class="contact__card-image"
+                >
+
+                <!-- Text on the left side -->
+                <div class="contact__card-text">
+                    <p>Vous pouvez me retrouver<br>sur mes réseaux.</p>
+                </div>
+
+                <!-- Vertical separator -->
+                <div class="contact__card-line"></div>
+
+                <!-- Social logos -->
+                <div class="contact__card-socials">
+
+                    <a
+                        href="#"
+                        class="contact__card-social contact__card-social--indeed"
+                        aria-label="Mon profil Indeed"
+                    >
+                        <img
+                            src="./assets/icones/linkedin.png"
+                            alt="Indeed"
+                        >
+                    </a>
+
+                    <a
+                        href="#"
+                        class="contact__card-social contact__card-social--instagram"
+                        aria-label="Mon Instagram"
+                    >
+                        <img
+                            src="./assets/icones/instagram.png"
+                            alt="Mon Instagram"
+                        >
+                    </a>
+
+                </div>
+
+                <!-- Email -->
+                <div class="contact__card-email">
+                    <a href="mailto:s.mullerfrancois17@gmail.com">
+                        s.mullerfrancois17@gmail.com
+                    </a>
+                </div>
+
             </div>
 
-            <p class="projects__hint" data-project-hint>Hyunjin.aep - Montage vidéo</p>
+            <!-- Arrow -->
+            <img
+                src="./assets/fleches/flecheR_1.png"
+                alt=""
+                class="contact__arrow"
+                aria-hidden="true"
+            >
+
+            <!-- Contact text -->
+            <div class="contact__message">
+                <h2 id="contact-title">Contactez moi!</h2>
+            </div>
+
         </div>
+
     </section>
 
     <script type="module" src="js/main.js"></script>
