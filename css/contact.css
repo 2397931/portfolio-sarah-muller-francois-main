@@ -8,7 +8,7 @@
 	min-height: 95vh;
 	overflow: hidden;
 	margin-top: 10vh;
-	padding: 7vh 5vw;
+	padding: 7vh 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -37,14 +37,13 @@
 
 .contact__stage {
 	position: relative;
-	width: 100vw;
-	min-width: 100vw;
+	width: 100%;
+	min-width: 0;
 	height: 80vh;
 	background: #191923;
 	overflow: visible;
 	z-index: 1;
-	margin-left: -5vw;
-	margin-right: -5vw;
+	margin: 0;
 }
 
 
@@ -235,11 +234,10 @@
 	}
 
 	.contact__stage {
-		width: 100vw;
-		min-width: 100vw;
+		width: 100%;
+		min-width: 0;
 		height: 70vh;
-		margin-left: -4vw;
-		margin-right: -4vw;
+		margin: 0;
 	}
 
 	.contact__envelope {
@@ -313,11 +311,10 @@
 	}
 
 	.contact__stage {
-		width: 100vw;
-		min-width: 100vw;
+		width: 100%;
+		min-width: 0;
 		height: 85vh;
-		margin-left: -3vw;
-		margin-right: -3vw;
+		margin: 0;
 	}
 
 	.contact__envelope {

@@ -232,12 +232,54 @@ function initProjectPage() {
     }
 }
 
+/* =========================================================
+   ANIMATION DU TITRE PORTFOLIO
+   ========================================================= */
+
+function initPortfolioAnimation() {
+
+    const title =
+        document.querySelector(".hero__title");
+
+    if (!title) {
+        return;
+    }
+
+    const text =
+        title.textContent.trim();
+
+    /*
+       On vide le titre pour reconstruire
+       chaque lettre individuellement.
+    */
+
+    title.innerHTML = "";
+
+    [...text].forEach((letter, index) => {
+
+        const span =
+            document.createElement("span");
+
+        span.textContent =
+            letter;
+
+        span.style.setProperty(
+            "--letter-index",
+            index
+        );
+
+        title.appendChild(span);
+    });
+}
+
 
 /* =========================================================
    INITIALISATION
    ========================================================= */
 
 loadProjects().then(() => {
+
+    initPortfolioAnimation();
 
     if (
         document.body.classList.contains(

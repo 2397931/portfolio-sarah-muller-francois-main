@@ -18,6 +18,7 @@
 
 html {
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -54,6 +55,7 @@ body {
     src: url("../assets/font/MeowScript-Regular.ttf") format("truetype");
     font-display: swap;
 }
+
 
 /* =========================================================
    NAVIGATION PRINCIPALE
@@ -122,16 +124,6 @@ body {
    DÉFILEMENT VERS LES SECTIONS
    ========================================================= */
 
-html {
-    scroll-behavior: smooth;
-}
-
-
-/*
-   Empêche la navigation fixe de cacher
-   le haut d'une section lorsqu'on clique dessus.
-*/
-
 #a-propos,
 #projets,
 #contact {
@@ -162,47 +154,117 @@ html {
     }
 }
 
+
+/* =========================================================
+   CONTENEUR PRINCIPAL
+   ========================================================= */
+
 main {
     min-height: 100vh;
+
     display: grid;
+
     place-items: start center;
-    padding: 1rem 1rem 2.5rem;
-    width: min(100%, 1200px);
-    margin: 0 auto;
+
+    width: 100%;
+
+    padding: 1rem 0 2.5rem;
+
+    margin: 0;
+
     position: relative;
+
     z-index: 1;
 }
 
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
 .hero {
-    width: min(100%, 1200px);
+    width: 100%;
 }
 
 .hero__art {
     position: relative;
+
     width: 100%;
+
     min-height: 100vh;
+
     padding: 0;
 }
 
 .hero__title {
     position: absolute;
+
     left: 50%;
     top: 44%;
+
     transform: translate(-50%, -50%);
+
     margin: 0;
+
     z-index: 2;
+
     text-align: center;
-    font-size: clamp(2.5rem, 6vw, 5rem);
-    line-height: 1;
-    letter-spacing: 0.1em;
+
+    font-size: clamp(4rem, 10vw, 9rem);
+
+    line-height: 0.9;
+
+    letter-spacing: 0.02em;
+
     color: var(--ink);
+
+    white-space: nowrap;
 }
+
+
+/* =========================================================
+   ANIMATION DU TITRE PORTFOLIO
+   ========================================================= */
+
+.hero__title span {
+    display: inline-block;
+
+    animation:
+        portfolioFontChange 1.6s steps(1) forwards;
+
+    animation-delay: calc(var(--letter-index) * 0.12s);
+}
+
+@keyframes portfolioFontChange {
+
+    0% {
+        font-family: "Myrtille Pixel", sans-serif;
+    }
+
+    25% {
+        font-family: "Mieszkanie", sans-serif;
+    }
+
+    50% {
+        font-family: "Nunito Local", sans-serif;
+    }
+
+    75%,
+    100% {
+        font-family: "Meow Script", cursive;
+    }
+}
+
 
 .hero__art img {
     position: absolute;
+
     width: 120px;
+
     height: auto;
+
     max-width: 100%;
+
     object-fit: contain;
 }
 
@@ -217,10 +279,11 @@ main {
     bottom: -14vh;
     width: 320px;
     transform: translateX(-50%) rotate(40deg);
+    z-index: 1;
 }
 
 .hero__art .barrette-bleu {
-    left: -27vw;
+    left: -6vw;
     top: -15vh;
     width: 320px;
     transform: rotate(-35deg);
@@ -269,7 +332,7 @@ main {
 }
 
 .hero__art .pin {
-    right: -20vw;
+    right: 2vw;
     top: -4vh;
     width: 180px;
 }
@@ -289,54 +352,90 @@ main {
 }
 
 .hero__art .paperball {
-    right: -20vw;
+    right: 4vw;
     top: 34vh;
     width: 450px;
 }
 
-/* About Section */
+
+/* =========================================================
+   ABOUT SECTION
+   ========================================================= */
 
 .about {
     position: relative;
+
     display: grid;
+
     grid-template-columns: 1fr 1fr;
-    width: 100vw;
+
+    width: 100%;
+
+    max-width: none;
+
     min-height: 100vh;
+
     margin: 0;
+
     overflow: hidden;
-    background: linear-gradient(90deg, var(--board-bg) 0 50%, var(--pink-strong) 50% 100%);
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--board-bg) 0 50%,
+            var(--pink-strong) 50% 100%
+        );
 }
 
 .about__paper {
     position: relative;
-    /* Augmenté: plus haut pour donner plus d'espace visuel */
+
     min-height: calc(120vh - 4rem);
-    /* Augmenté: papier plus large sur grands écrans */
+
     width: calc(100% - 8vw);
+
     margin: 2.5rem auto;
-    /* Augmenté: padding vertical et horizontal pour agrandir la zone */
-    padding: 8rem clamp(3rem, 6vw, 6rem) 4rem;
-    background-image: url("../assets/Img/white-ripped-crumpled-paper-piece-png.webp");
-    /* Recentrage et réduction de l'image pour éviter qu'elle déborde */
+
+    padding:
+        8rem
+        clamp(3rem, 6vw, 6rem)
+        4rem;
+
+    background-image:
+        url("../assets/Img/white-ripped-crumpled-paper-piece-png.webp");
+
     background-position: center top;
+
     background-size: contain;
+
     background-repeat: no-repeat;
+
     transform: rotate(-1deg);
+
+    opacity: 0.8;
 }
 
 .about__paper h2 {
     margin: 0 0 2rem;
+
     font-family: "Mieszkanie", sans-serif;
+
     font-weight: 300;
+
     font-size: 6.2vw;
+
     line-height: 0.9;
 }
 
 .about__paper p {
     max-width: 52ch;
+
     margin: 0 0 1rem;
+
     font-family: "Nunito Local", sans-serif;
-    font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+
+    font-size: clamp(1.3rem, 2vw, 1.6rem);
+
     line-height: 1.55;
 }
 
@@ -348,51 +447,77 @@ main {
 }
 
 .about__pin {
-    top: -1.8vw;
+    top: 0vw;
+
     left: 30vh;
+
     width: 150px;
+
     transform: rotate(8deg);
 }
 
 .about__clip {
     right: 1rem;
+
     bottom: 0.5rem;
-    width: 5rem;
+
+    width: 15vw;
+
+    z-index: 2;
+
     transform: rotate(20deg);
 }
 
 .about__pink-panel {
     position: relative;
+
     display: grid;
+
     place-items: center;
+
     min-height: 100vh;
+
     padding: 4rem;
+
     background: var(--pink-strong);
 }
 
 .about__image-placeholder {
     width: min(100%, 700px);
+
     height: min(100%, 900px);
+
     aspect-ratio: 1 / 1;
+
     background: var(--paper);
-    box-shadow: inset 0 0 0 1px rgba(14, 14, 18, 0.2);
+
+    box-shadow:
+        inset 0 0 0 1px rgba(14, 14, 18, 0.2);
 }
 
 .about__bow {
     right: 6%;
+
     top: 8%;
+
     width: clamp(100px, 16vw, 320px);
+
     transform: rotate(20deg);
 }
 
 .about__arrow {
     left: 41vw;
+
     bottom: 39vh;
+
     z-index: 3;
+
     width: 320px;
 }
 
+
 @media (max-width: 700px) {
+
     .about {
         grid-template-columns: 1fr;
     }
@@ -403,9 +528,10 @@ main {
     }
 
     .about__paper {
-        /* Sur mobile, limiter la largeur pour conserver lisibilité */
         width: calc(100% - 2rem);
+
         margin: 1.2rem auto 0;
+
         padding: 4rem 1.5rem 2rem;
     }
 
@@ -415,7 +541,78 @@ main {
 
     .about__arrow {
         left: auto;
+
         right: 8%;
+
         bottom: 46%;
+    }
+}
+
+
+/* =========================================================
+   LARGEUR DES SECTIONS
+   ========================================================= */
+
+.about,
+.projects,
+.skills,
+.contact {
+    width: 100%;
+    max-width: none;
+}
+
+
+/* =========================================================
+   PAGE PROJET
+   ========================================================= */
+
+body.project-page {
+    width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+}
+
+.project-page__main {
+    display: block;
+
+    width: 100%;
+    max-width: none;
+
+    min-height: 100vh;
+
+    margin: 0;
+
+    padding: 0;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.project-hero,
+.project-details,
+.project-page__footer {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.project-page__main img {
+    max-width: 100%;
+}
+
+
+@media (max-width: 700px) {
+
+    .project-page__main {
+        width: 100%;
+        padding: 0;
+    }
+
+    .project-hero,
+    .project-details,
+    .project-page__footer {
+        width: 100%;
+        max-width: 100%;
     }
 }

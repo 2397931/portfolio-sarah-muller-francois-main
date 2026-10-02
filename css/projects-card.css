@@ -952,7 +952,7 @@ body.project-page main {
 .projects__stage {
     position: relative;
 
-    width: min(100%, 1550px);
+    width: min(100%, 1220px);
 
     margin: 0 auto;
 }
@@ -969,9 +969,11 @@ body.project-page main {
 
     z-index: 2;
 
-    width: 100%;
+    width: min(100%, 1080px);
 
     height: auto;
+
+    margin: 0 auto;
 
     filter:
         drop-shadow(
@@ -1053,7 +1055,7 @@ body.project-page main {
 .projects__carousel {
     position: absolute;
 
-    inset: 29% 20% 22% 20%;
+    inset: 29% 12% 21% 12%;
 
     z-index: 2;
 }
@@ -1165,17 +1167,20 @@ body.project-page main {
 
     display: block;
 
-    width: 45vw;
+    width: min(52vw, 760px);
 
-    height: 75vh;
+    height: min(75vh, 640px);
 
-    right: 4vw;
+    right: auto;
+    left: 50%;
 
     bottom: 3.5vh;
 
     aspect-ratio: 1.45 / 1;
 
     border-radius: 22px;
+
+    transform: translateX(-50%);
 
     overflow: hidden;
 
@@ -1196,6 +1201,7 @@ body.project-page main {
 .project-card:hover,
 .project-card:focus-visible {
     transform:
+        translateX(-50%)
         translateY(-3px)
         scale(1.01);
 
