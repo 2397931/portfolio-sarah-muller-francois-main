@@ -328,10 +328,14 @@ main {
 .hero__title span {
     display: inline-block;
 
+    font-weight: 400;
+
     animation:
-        portfolioFontChange 1.6s steps(1) forwards;
+        portfolioFontChange 0.9s steps(1) forwards;
 
     animation-delay: calc(var(--letter-index) * 0.12s);
+
+    animation-fill-mode: forwards;
 }
 
 @keyframes portfolioFontChange {
@@ -348,12 +352,141 @@ main {
         font-family: "Nunito Local", sans-serif;
     }
 
-    75%,
-    100% {
+    75% {
         font-family: "Meow Script", cursive;
+    }
+
+    100% {
+        font-family: var(--final-font);
     }
 }
 
+
+/* =========================================================
+   POLICE FINALE DE CHAQUE LETTRE
+   ========================================================= */
+
+/* P — le plus grand */
+
+.hero__title span:nth-child(1) {
+    --final-font: "Myrtille Pixel";
+
+    font-size: 2.00em;
+
+    transform: translateY(0.03em);
+
+    margin-right: -0.08em;
+}
+
+
+/* o */
+
+.hero__title span:nth-child(2) {
+    --final-font: "Nunito Local";
+
+    font-size: 0.82em;
+
+    font-weight: 300;
+
+    transform: translateY(0.15em);
+
+    margin-left: -0.45em;
+}
+
+
+/* r */
+
+.hero__title span:nth-child(3) {
+    --final-font: "Nunito Local";
+
+    font-size: 0.82em;
+
+    font-weight: 300;
+
+    transform: translateY(0.15em);
+
+    margin-left: -0.03em;
+}
+
+
+/* t */
+
+.hero__title span:nth-child(4) {
+    --final-font: "Nunito Local";
+
+    font-size: 0.82em;
+
+    font-weight: 300;
+
+    transform: translateY(0.15em);
+
+    margin-left: 0;
+}
+
+
+/* f */
+
+.hero__title span:nth-child(5) {
+    --final-font: "Mieszkanie";
+
+    font-size: 0.98em;
+
+    transform: translateY(0.05em);
+
+    margin-left: -0.01em;
+}
+
+
+/* o */
+
+.hero__title span:nth-child(6) {
+    --final-font: "Mieszkanie";
+
+    font-size: 0.98em;
+
+    transform: translateY(0.05em);
+
+    margin-left: -0.07em;
+}
+
+
+/* l */
+
+.hero__title span:nth-child(7) {
+    --final-font: "Mieszkanie";
+
+    font-size: 0.98em;
+
+    transform: translateY(0.05em);
+
+    margin-left: -0.07em;
+}
+
+
+/* i */
+
+.hero__title span:nth-child(8) {
+    --final-font: "Mieszkanie";
+
+    font-size: 0.98em;
+
+    transform: translateY(0.05em);
+
+    margin-left: -0.05em;
+}
+
+
+/* dernier o — légèrement plus grand */
+
+.hero__title span:nth-child(9) {
+    --final-font: "Meow Script";
+
+    font-size: 1.35em;
+
+    transform: translateY(0.03em);
+
+    margin-left: -0.12em;
+}
 
 .hero__art img {
     position: absolute;
