@@ -1,4 +1,7 @@
-/* Styles globaux du portfolio */
+/* =========================================================
+   STYLES GLOBAUX DU PORTFOLIO
+   ========================================================= */
+
 :root {
     --black: #03070d;
     --board-bg: #e5d8bb;
@@ -26,11 +29,17 @@ body {
     min-height: 100vh;
     position: relative;
     overflow-x: hidden;
+
     background-image: url("../assets/Img/bois_bureau.png");
     background-repeat: repeat;
     background-position: center top;
     background-size: auto;
 }
+
+
+/* =========================================================
+   POLICES
+   ========================================================= */
 
 @font-face {
     font-family: "Myrtille Pixel";
@@ -128,129 +137,6 @@ body {
 #projets,
 #contact {
     scroll-margin-top: 12vh;
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 640px) {
-
-    .main-nav {
-        top: 1.5vh;
-
-        gap: 5vw;
-
-        width: auto;
-
-        padding:
-            1.2vh
-            4vw;
-    }
-
-    .main-nav a {
-        font-size: 3.2vw;
-    }
-
-    main {
-        padding-top: 0.5rem;
-    }
-
-    .hero__art {
-        min-height: 86svh;
-        overflow: hidden;
-    }
-
-    .hero__title {
-        top: 36%;
-
-        font-size: clamp(2.4rem, 11vw, 4rem);
-        letter-spacing: 0;
-        white-space: normal;
-    }
-
-    .hero__art img {
-        width: 72px;
-    }
-
-    .hero__art .bouton-bleu {
-        right: 0;
-        bottom: 5vh;
-        width: 150px;
-    }
-
-    .hero__art .barrette-beige {
-        left: 72vw;
-        bottom: -2vh;
-        width: 150px;
-    }
-
-    .hero__art .barrette-bleu {
-        left: -8vw;
-        top: -4vh;
-        width: 150px;
-    }
-
-    .hero__art .barrette-rose {
-        left: 50vw;
-        top: 14vh;
-        width: 150px;
-    }
-
-    .hero__art .trombone-bleu--first {
-        right: 24vw;
-        top: 64vh;
-        width: 120px;
-    }
-
-    .hero__art .trombone-bleu--second {
-        left: 10vw;
-        bottom: 10vh;
-        width: 120px;
-    }
-
-    .hero__art .trombone-rose {
-        left: 12vw;
-        bottom: 9vh;
-        width: 120px;
-    }
-
-    .hero__art .trombone-rose--second {
-        right: 12vw;
-        top: 62vh;
-        width: 120px;
-    }
-
-    .hero__art .trombone-bleu--third {
-        left: 18vw;
-        top: 61vh;
-        width: 120px;
-    }
-
-    .hero__art .pin {
-        right: 2vw;
-        top: -1vh;
-        width: 86px;
-    }
-
-    .hero__art .xppen {
-        left: 3vw;
-        top: 0;
-        width: 210px;
-    }
-
-    .hero__art .clip {
-        right: 44vw;
-        top: 31vh;
-        width: 140px;
-    }
-
-    .hero__art .paperball {
-        right: 2vw;
-        top: 32vh;
-        width: 170px;
-    }
 }
 
 
@@ -367,11 +253,10 @@ main {
    ========================================================= */
 
 /* P — le plus grand */
-
 .hero__title span:nth-child(1) {
     --final-font: "Myrtille Pixel";
 
-    font-size: 2.00em;
+    font-size: 2em;
 
     transform: translateY(0.03em);
 
@@ -379,8 +264,7 @@ main {
 }
 
 
-/* o */
-
+/* o — Nunito */
 .hero__title span:nth-child(2) {
     --final-font: "Nunito Local";
 
@@ -390,12 +274,11 @@ main {
 
     transform: translateY(0.15em);
 
-    margin-left: -0.45em;
+    margin-left: -0.30em;
 }
 
 
-/* r */
-
+/* r — Nunito */
 .hero__title span:nth-child(3) {
     --final-font: "Nunito Local";
 
@@ -405,12 +288,11 @@ main {
 
     transform: translateY(0.15em);
 
-    margin-left: -0.03em;
+    margin-left: 0.02em;
 }
 
 
-/* t */
-
+/* t — Nunito */
 .hero__title span:nth-child(4) {
     --final-font: "Nunito Local";
 
@@ -420,12 +302,11 @@ main {
 
     transform: translateY(0.15em);
 
-    margin-left: 0;
+    margin-left: 0.04em;
 }
 
 
-/* f */
-
+/* f — Mieszkanie */
 .hero__title span:nth-child(5) {
     --final-font: "Mieszkanie";
 
@@ -437,8 +318,7 @@ main {
 }
 
 
-/* o */
-
+/* o — Mieszkanie */
 .hero__title span:nth-child(6) {
     --final-font: "Mieszkanie";
 
@@ -450,8 +330,7 @@ main {
 }
 
 
-/* l */
-
+/* l — Mieszkanie */
 .hero__title span:nth-child(7) {
     --final-font: "Mieszkanie";
 
@@ -463,8 +342,7 @@ main {
 }
 
 
-/* i */
-
+/* i — Mieszkanie */
 .hero__title span:nth-child(8) {
     --final-font: "Mieszkanie";
 
@@ -476,8 +354,7 @@ main {
 }
 
 
-/* dernier o — légèrement plus grand */
-
+/* dernier o — Meow Script */
 .hero__title span:nth-child(9) {
     --final-font: "Meow Script";
 
@@ -487,6 +364,11 @@ main {
 
     margin-left: -0.12em;
 }
+
+
+/* =========================================================
+   OBJETS DU HERO
+   ========================================================= */
 
 .hero__art img {
     position: absolute;
@@ -510,7 +392,11 @@ main {
     left: 65vw;
     bottom: -14vh;
     width: 320px;
-    transform: translateX(-50%) rotate(40deg);
+
+    transform:
+        translateX(-50%)
+        rotate(40deg);
+
     z-index: 1;
 }
 
@@ -518,6 +404,7 @@ main {
     left: -6vw;
     top: -15vh;
     width: 320px;
+
     transform: rotate(-35deg);
 }
 
@@ -525,6 +412,7 @@ main {
     left: 45vw;
     top: 9vh;
     width: 320px;
+
     transform: rotate(35deg);
 }
 
@@ -532,6 +420,7 @@ main {
     right: 32vw;
     top: 73vh;
     width: 250px;
+
     transform: rotate(12deg);
 }
 
@@ -539,6 +428,7 @@ main {
     left: 17vw;
     bottom: 12vh;
     width: 250px;
+
     transform: rotate(-20deg);
 }
 
@@ -546,6 +436,7 @@ main {
     left: 19.5vw;
     bottom: 12vh;
     width: 250px;
+
     transform: rotate(32deg);
 }
 
@@ -553,6 +444,7 @@ main {
     right: 23vw;
     top: 70vh;
     width: 250px;
+
     transform: rotate(70deg);
 }
 
@@ -560,6 +452,7 @@ main {
     left: 24vw;
     top: 69vh;
     width: 250px;
+
     transform: rotate(34deg);
 }
 
@@ -573,6 +466,7 @@ main {
     left: 12vw;
     top: -4vh;
     width: 570px;
+
     transform: rotate(22deg);
 }
 
@@ -580,6 +474,7 @@ main {
     right: 55vw;
     top: 35vh;
     width: 320px;
+
     transform: rotate(-26deg);
 }
 
@@ -587,173 +482,6 @@ main {
     right: 4vw;
     top: 34vh;
     width: 450px;
-}
-
-
-@media (max-width: 1024px) {
-
-    .main-nav {
-        gap: 1.4rem;
-
-        padding:
-            1rem
-            1.5rem;
-    }
-
-    .main-nav a {
-        font-size: clamp(0.85rem, 1.35vw, 1rem);
-    }
-
-    .hero__art {
-        min-height: 92svh;
-    }
-
-    .hero__title {
-        top: 40%;
-
-        font-size: clamp(3rem, 7vw, 5.8rem);
-        letter-spacing: 0.01em;
-        white-space: normal;
-    }
-
-    .hero__art img {
-        width: 96px;
-    }
-
-    .hero__art .bouton-bleu {
-        right: 1vw;
-        bottom: 5vh;
-        width: 220px;
-    }
-
-    .hero__art .barrette-beige {
-        left: 68vw;
-        bottom: -8vh;
-        width: 220px;
-    }
-
-    .hero__art .barrette-bleu {
-        left: -3vw;
-        top: -10vh;
-        width: 220px;
-    }
-
-    .hero__art .barrette-rose {
-        left: 48vw;
-        top: 10vh;
-        width: 220px;
-    }
-
-    .hero__art .trombone-bleu--first {
-        right: 30vw;
-        top: 70vh;
-        width: 170px;
-    }
-
-    .hero__art .trombone-bleu--second {
-        left: 14vw;
-        bottom: 11vh;
-        width: 170px;
-    }
-
-    .hero__art .trombone-rose {
-        left: 17vw;
-        bottom: 10vh;
-        width: 170px;
-    }
-
-    .hero__art .trombone-rose--second {
-        right: 20vw;
-        top: 67vh;
-        width: 170px;
-    }
-
-    .hero__art .trombone-bleu--third {
-        left: 22vw;
-        top: 66vh;
-        width: 170px;
-    }
-
-    .hero__art .pin {
-        right: 2vw;
-        top: -3vh;
-        width: 120px;
-    }
-
-    .hero__art .xppen {
-        left: 8vw;
-        top: -1vh;
-        width: 360px;
-    }
-
-    .hero__art .clip {
-        right: 48vw;
-        top: 33vh;
-        width: 220px;
-    }
-
-    .hero__art .paperball {
-        right: 3vw;
-        top: 32vh;
-        width: 280px;
-    }
-
-    .about {
-        grid-template-columns: 1fr;
-    }
-
-    .about__paper,
-    .about__pink-panel {
-        min-height: 90svh;
-    }
-
-    .about__paper {
-        width: calc(100% - 4rem);
-
-        margin: 1.5rem auto 0;
-
-        padding:
-            5rem
-            2.5rem
-            2.5rem;
-    }
-
-    .about__paper h2 {
-        font-size: clamp(2rem, 5.8vw, 3.4rem);
-    }
-
-    .about__paper p {
-        font-size: clamp(0.98rem, 1.8vw, 1.2rem);
-    }
-
-    .about__paper .about__pin {
-        left: auto;
-        right: 10%;
-        width: 110px;
-    }
-
-    .about__clip {
-        width: 18vw;
-    }
-
-    .about__pink-panel {
-        padding: 3rem;
-    }
-
-    .about__image-placeholder {
-        width: min(100%, 560px);
-    }
-
-    .about__bow {
-        width: clamp(90px, 18vw, 220px);
-    }
-
-    .about__arrow {
-        left: auto;
-        right: 6%;
-        bottom: 18%;
-        width: 210px;
-    }
 }
 
 
@@ -915,47 +643,6 @@ main {
 }
 
 
-@media (max-width: 700px) {
-
-    .about {
-        grid-template-columns: 1fr;
-    }
-
-    .about__paper,
-    .about__pink-panel {
-        min-height: 100vh;
-    }
-
-    .about__paper {
-        width: calc(100% - 2rem);
-
-        margin: 1.2rem auto 0;
-
-        padding: 4rem 1.5rem 2rem;
-    }
-
-    .about__pink-panel {
-        padding: 2rem;
-    }
-
-    .about__arrow {
-        left: auto;
-
-        right: 8%;
-
-        bottom: 46%;
-    }
-
-    .about__paper h2 {
-        font-size: clamp(1.8rem, 10vw, 2.8rem);
-    }
-
-    .about__paper p {
-        font-size: 0.98rem;
-    }
-}
-
-
 /* =========================================================
    LARGEUR DES SECTIONS
    ========================================================= */
@@ -975,7 +662,9 @@ main {
 
 body.project-page {
     width: 100%;
+
     min-width: 0;
+
     overflow-x: hidden;
 }
 
@@ -983,6 +672,7 @@ body.project-page {
     display: block;
 
     width: 100%;
+
     max-width: none;
 
     min-height: 100vh;
@@ -1000,7 +690,9 @@ body.project-page {
 .project-details,
 .project-page__footer {
     width: 100%;
+
     max-width: 100%;
+
     min-width: 0;
 }
 
@@ -1009,17 +701,984 @@ body.project-page {
 }
 
 
-@media (max-width: 700px) {
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
 
-    .project-page__main {
+
+/* =========================================================
+   MOBILE
+   0px → 480px
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    html {
+        font-size: 16px;
+    }
+
+    body {
         width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    /* -----------------------------------------------------
+       NAVIGATION
+       ----------------------------------------------------- */
+
+    .main-nav {
+        position: fixed;
+
+        top: 1.5vh;
+        left: 50%;
+
+        width: max-content;
+
+        gap: 7vw;
+
+        padding:
+            1vh
+            4vw;
+
+        transform: translateX(-50%);
+
+        border-radius: 999px;
+
+        z-index: 1000;
+    }
+
+    .main-nav a {
+        font-size: 3.6vw;
+
+        font-weight: 500;
+
+        letter-spacing: 0;
+    }
+
+
+    /* -----------------------------------------------------
+       HERO
+       ----------------------------------------------------- */
+
+    main {
+        width: 100%;
+
+        padding: 0;
+
+        margin: 0;
+    }
+
+    .hero {
+        width: 100%;
+    }
+
+    .hero__art {
+        position: relative;
+
+        width: 100%;
+
+        height: 81vw;
+
+        min-height: 0;
+
+        max-height: none;
+
+        overflow: hidden;
+    }
+
+
+    /* -----------------------------------------------------
+       TITRE
+       ----------------------------------------------------- */
+
+    .hero__title {
+        left: 50%;
+
+        top: 51%;
+
+        width: max-content;
+
+        font-size: clamp(3rem, 15vw, 4.2rem);
+
+        line-height: 0.7;
+
+        letter-spacing: -0.03em;
+
+        white-space: nowrap;
+    }
+
+    .hero__title span:nth-child(1) {
+        font-size: 1.45em;
+    }
+
+    .hero__title span:nth-child(2),
+    .hero__title span:nth-child(3),
+    .hero__title span:nth-child(4) {
+        font-size: 0.82em;
+    }
+
+    .hero__title span:nth-child(5),
+    .hero__title span:nth-child(6),
+    .hero__title span:nth-child(7),
+    .hero__title span:nth-child(8) {
+        font-size: 0.98em;
+    }
+
+    .hero__title span:nth-child(9) {
+        font-size: 1.08em;
+    }
+
+
+    /* -----------------------------------------------------
+       OBJETS DU HERO
+       ----------------------------------------------------- */
+
+    .hero__art .xppen {
+        left: 13vw;
+
+        top: 17vw;
+
+        width: 45vw;
+
+        transform: rotate(-13deg);
+    }
+
+    .hero__art .barrette-bleu {
+        left: -5vw;
+
+        top: 20vw;
+
+        width: 14vw;
+
+        transform: rotate(-35deg);
+    }
+
+    .hero__art .barrette-rose {
+        left: auto;
+
+        right: 14vw;
+
+        top: 22vw;
+
+        width: 9vw;
+
+        transform: rotate(25deg);
+    }
+
+    .hero__art .pin {
+        right: 7vw;
+
+        top: 24vw;
+
+        width: 5vw;
+    }
+
+    .hero__art .clip {
+        left: 3vw;
+
+        right: auto;
+
+        top: 18vw;
+
+        width: 12vw;
+
+        transform: rotate(-28deg);
+    }
+
+    .hero__art .paperball {
+        right: 4vw;
+
+        top: 39vw;
+
+        width: 17vw;
+    }
+
+    .hero__art .bouton-bleu {
+        right: 8vw;
+
+        bottom: 14vw;
+
+        width: 9vw;
+    }
+
+    .hero__art .trombone-bleu--second {
+        left: 11vw;
+
+        bottom: 4vw;
+
+        width: 14vw;
+
+        transform: rotate(-20deg);
+    }
+
+    .hero__art .trombone-rose {
+        left: 14vw;
+
+        bottom: 3vw;
+
+        width: 14vw;
+
+        transform: rotate(32deg);
+    }
+
+    .hero__art .trombone-bleu--third {
+        left: 29vw;
+
+        top: 68vw;
+
+        width: 13vw;
+
+        transform: rotate(34deg);
+    }
+
+    .hero__art .trombone-bleu--first {
+        right: 25vw;
+
+        top: 67vw;
+
+        width: 13vw;
+
+        transform: rotate(12deg);
+    }
+
+    .hero__art .trombone-rose--second {
+        right: 15vw;
+
+        top: 67vw;
+
+        width: 13vw;
+
+        transform: rotate(70deg);
+    }
+
+    .hero__art .barrette-beige {
+        left: auto;
+
+        right: 7vw;
+
+        bottom: -5vw;
+
+        width: 17vw;
+
+        transform: rotate(40deg);
+    }
+
+
+    /* -----------------------------------------------------
+       ABOUT
+       ----------------------------------------------------- */
+
+    .about {
+        display: block;
+
+        width: 100%;
+
+        min-height: 0;
+
+        height: 72vw;
+
+        overflow: hidden;
+
+        background: var(--board-bg);
+    }
+
+    .about__paper {
+        position: relative;
+
+        width: 72vw;
+
+        height: 63vw;
+
+        min-height: 0;
+
+        margin:
+            5vw
+            auto
+            0;
+
+        padding:
+            11vw
+            8vw
+            4vw;
+
+        background-size: 100% 100%;
+
+        background-position: center;
+
+        transform: rotate(0);
+
+        opacity: 0.65;
+    }
+
+    .about__paper h2 {
+        margin: 0;
+
+        font-size: 4vw;
+
+        line-height: 1;
+
+        text-align: center;
+    }
+
+    .about__paper p {
+        max-width: 100%;
+
+        margin: 3vw 0 0;
+
+        font-size: 2.5vw;
+
+        line-height: 1.4;
+    }
+
+    .about__pin {
+        top: -1vw;
+
+        left: 50%;
+
+        width: 8vw;
+
+        transform:
+            translateX(-50%)
+            rotate(8deg);
+    }
+
+    .about__clip {
+        right: 13vw;
+
+        bottom: 7vw;
+
+        width: 12vw;
+
+        transform: rotate(20deg);
+
+        z-index: 5;
+    }
+
+    .about__arrow {
+        left: auto;
+
+        right: 51vw;
+
+        bottom: 25vw;
+
+        width: 13vw;
+
+        transform: rotate(-10deg);
+    }
+
+    .about__pink-panel {
+        display: none;
+    }
+
+
+    /* -----------------------------------------------------
+       PROJECTS
+       ----------------------------------------------------- */
+
+    .projects {
+        width: 100%;
+        min-height: 0;
+        overflow: hidden;
+        padding: 4vw 2.5vw 6vw;
+    }
+
+    /* Écran du projet caché sur mobile */
+    .projects__screen {
+        display: none;
+    }
+
+    /* Souris de l'écran cachée aussi */
+    .projects__mouse {
+        display: none;
+    }
+
+    .projects__stage {
+        width: 100%;
+        min-height: 0;
+        padding: 0;
+        margin: 0;
+        position: relative;
+        overflow: visible;
+    }
+
+    /* Titre */
+    .projects__title {
+        width: 100%;
+        margin-bottom: 3vw;
+        text-align: center;
+    }
+
+    /* Conteneur du carrousel */
+    .projects__carousel {
+        position: relative;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 2vw;
+        border: 1px solid rgba(14, 14, 18, 0.25);
+        overflow: visible;
+    }
+
+    /* Les flèches passent AU-DESSUS du carrousel */
+    .projects__arrow {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+
+        width: 11vw;
+        height: 11vw;
+        min-width: 11vw;
+        min-height: 11vw;
+
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        z-index: 20;
+    }
+
+    .projects__arrow--prev {
+        position: absolute;
+        top: -14vw;
+        left: 2vw;
+    }
+
+    .projects__arrow--next {
+        position: absolute;
+        top: -14vw;
+        right: 2vw;
+    }
+
+    .projects__arrow-icon {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    /* Emplacement des cartes */
+    .projects__slot {
+        width: 100%;
+        min-width: 0;
+        margin: 0;
         padding: 0;
     }
 
-    .project-hero,
-    .project-details,
-    .project-page__footer {
+    /* Carte */
+    .project-card {
         width: 100%;
-        max-width: 100%;
+        min-width: 0;
+        margin: 0;
+    }
+
+    .project-card__media {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+    }
+
+    .project-card__graphic {
+        width: 100%;
+        height: auto;
+    }
+
+    .project-card__content {
+        width: 100%;
+        padding: 4vw;
+    }
+
+
+    /* -----------------------------------------------------
+       SKILLS
+       ----------------------------------------------------- */
+
+    .skills {
+        width: 100%;
+
+        min-height: 0;
+
+        overflow: hidden;
+    }
+
+
+    /* -----------------------------------------------------
+       CONTACT
+       ----------------------------------------------------- */
+
+    .contact {
+        width: 100%;
+
+        min-height: 0;
+
+        overflow: hidden;
+    }
+}
+
+
+/* =========================================================
+   PETITS ÉCRANS / GRAND MOBILE
+   481px → 767px
+   ========================================================= */
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .main-nav {
+        top: 1.5vh;
+
+        gap: 5vw;
+
+        padding:
+            1vh
+            3vw;
+    }
+
+    .main-nav a {
+        font-size: 2.5vw;
+    }
+
+    .hero__art {
+        min-height: 85vh;
+    }
+
+    .hero__title {
+        top: 45%;
+
+        font-size: clamp(3.5rem, 13vw, 6rem);
+    }
+
+    .hero__art .bouton-bleu {
+        width: 30vw;
+    }
+
+    .hero__art .barrette-beige,
+    .hero__art .barrette-bleu,
+    .hero__art .barrette-rose {
+        width: 30vw;
+    }
+
+    .hero__art .trombone-bleu--first,
+    .hero__art .trombone-bleu--second,
+    .hero__art .trombone-rose,
+    .hero__art .trombone-rose--second,
+    .hero__art .trombone-bleu--third {
+        width: 23vw;
+    }
+
+    .hero__art .xppen {
+        width: 42vw;
+    }
+
+    .hero__art .paperball {
+        width: 34vw;
+    }
+
+    .about {
+        display: block;
+    }
+
+    .about__paper {
+        width: 94%;
+
+        min-height: 75vh;
+
+        margin: 0 auto;
+
+        padding:
+            8vh
+            9vw
+            5vh;
+    }
+
+    .about__pink-panel {
+        min-height: 80vh;
+    }
+}
+
+
+/* =========================================================
+   TABLETTE
+   768px → 1023px
+   MINI VERSION DU DESKTOP
+   ========================================================= */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .main-nav {
+        top: 2vh;
+
+        gap: 3vw;
+
+        padding:
+            1.2vh
+            2.5vw;
+    }
+
+    .main-nav a {
+        font-size: 1.7vw;
+    }
+
+
+    /* -----------------------------------------------------
+       HERO
+       ----------------------------------------------------- */
+
+    .hero__art {
+        min-height: 92vh;
+    }
+
+    .hero__title {
+        top: 43%;
+
+        font-size: clamp(4rem, 9vw, 6.5rem);
+
+        white-space: nowrap;
+    }
+
+
+    /* -----------------------------------------------------
+       HERO OBJECTS
+       ----------------------------------------------------- */
+
+    .hero__art .bouton-bleu {
+        width: 27vw;
+    }
+
+    .hero__art .barrette-beige,
+    .hero__art .barrette-bleu,
+    .hero__art .barrette-rose {
+        width: 27vw;
+    }
+
+    .hero__art .trombone-bleu--first,
+    .hero__art .trombone-bleu--second,
+    .hero__art .trombone-rose,
+    .hero__art .trombone-rose--second,
+    .hero__art .trombone-bleu--third {
+        width: 20vw;
+    }
+
+    .hero__art .pin {
+        width: 13vw;
+    }
+
+    .hero__art .xppen {
+        width: 43vw;
+    }
+
+    .hero__art .clip {
+        width: 24vw;
+    }
+
+    .hero__art .paperball {
+        width: 32vw;
+    }
+
+
+    /* -----------------------------------------------------
+       ABOUT
+       ----------------------------------------------------- */
+
+    .about {
+        min-height: 90vh;
+    }
+
+    .about__paper {
+        width: 90%;
+
+        min-height: 90vh;
+
+        padding:
+            8vh
+            5vw
+            4vh;
+    }
+
+    .about__paper h2 {
+        font-size: 5vw;
+    }
+
+    .about__paper p {
+        font-size: 1.7vw;
+    }
+
+    .about__pink-panel {
+        padding: 3vw;
+    }
+
+    .about__bow {
+        width: 15vw;
+    }
+
+    .about__arrow {
+        width: 18vw;
+    }
+
+
+    /* -----------------------------------------------------
+       PROJECTS / SKILLS / CONTACT
+       ----------------------------------------------------- */
+
+    .projects,
+    .skills,
+    .contact {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   DESKTOP
+   1024px → 1439px
+   ========================================================= */
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+
+    .main-nav {
+        gap: 2.5vw;
+    }
+
+    .main-nav a {
+        font-size: 1vw;
+    }
+
+    .hero__art {
+        min-height: 100vh;
+    }
+
+    .hero__title {
+        top: 44%;
+
+        font-size: clamp(5rem, 10vw, 9rem);
+    }
+
+    .about__paper h2 {
+        font-size: 6.2vw;
+    }
+
+    .about__paper p {
+        font-size: clamp(1.2rem, 1.7vw, 1.6rem);
+    }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1440px → 1919px
+   VERSION PLUS GRANDE DU DESKTOP
+   ========================================================= */
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+
+    .main-nav {
+        top: 2.5vh;
+
+        gap: 3vw;
+
+        padding:
+            1.4vh
+            2.5vw;
+    }
+
+    .main-nav a {
+        font-size: 1.05vw;
+    }
+
+
+    /* -----------------------------------------------------
+       HERO
+       ----------------------------------------------------- */
+
+    .hero__art {
+        min-height: 105vh;
+    }
+
+    .hero__title {
+        top: 44%;
+
+        font-size: clamp(6rem, 10vw, 11rem);
+    }
+
+
+    /* -----------------------------------------------------
+       HERO OBJECTS
+       ----------------------------------------------------- */
+
+    .hero__art .bouton-bleu {
+        width: 22vw;
+    }
+
+    .hero__art .barrette-beige,
+    .hero__art .barrette-bleu,
+    .hero__art .barrette-rose {
+        width: 22vw;
+    }
+
+    .hero__art .trombone-bleu--first,
+    .hero__art .trombone-bleu--second,
+    .hero__art .trombone-rose,
+    .hero__art .trombone-rose--second,
+    .hero__art .trombone-bleu--third {
+        width: 17vw;
+    }
+
+    .hero__art .pin {
+        width: 12vw;
+    }
+
+    .hero__art .xppen {
+        width: 37vw;
+    }
+
+    .hero__art .clip {
+        width: 21vw;
+    }
+
+    .hero__art .paperball {
+        width: 29vw;
+    }
+
+
+    /* -----------------------------------------------------
+       ABOUT
+       ----------------------------------------------------- */
+
+    .about {
+        min-height: 105vh;
+    }
+
+    .about__paper {
+        min-height: 120vh;
+    }
+
+    .about__paper h2 {
+        font-size: 6vw;
+    }
+
+    .about__paper p {
+        font-size: 1.55vw;
+    }
+}
+
+
+/* =========================================================
+   ULTRA-WIDE
+   1920px+
+   ========================================================= */
+
+@media (min-width: 1920px) {
+
+    .main-nav {
+        top: 2.5vh;
+
+        gap: 3vw;
+
+        padding:
+            1.5vh
+            2.8vw;
+    }
+
+    .main-nav a {
+        font-size: 1vw;
+    }
+
+
+    /* -----------------------------------------------------
+       HERO
+       ----------------------------------------------------- */
+
+    .hero__art {
+        min-height: 110vh;
+    }
+
+    .hero__title {
+        top: 44%;
+
+        font-size: clamp(7rem, 9vw, 13rem);
+    }
+
+
+    /* -----------------------------------------------------
+       HERO OBJECTS
+       ----------------------------------------------------- */
+
+    .hero__art .bouton-bleu {
+        width: 20vw;
+    }
+
+    .hero__art .barrette-beige,
+    .hero__art .barrette-bleu,
+    .hero__art .barrette-rose {
+        width: 20vw;
+    }
+
+    .hero__art .trombone-bleu--first,
+    .hero__art .trombone-bleu--second,
+    .hero__art .trombone-rose,
+    .hero__art .trombone-rose--second,
+    .hero__art .trombone-bleu--third {
+        width: 15vw;
+    }
+
+    .hero__art .pin {
+        width: 10vw;
+    }
+
+    .hero__art .xppen {
+        width: 34vw;
+    }
+
+    .hero__art .clip {
+        width: 19vw;
+    }
+
+    .hero__art .paperball {
+        width: 26vw;
+    }
+
+
+    /* -----------------------------------------------------
+       ABOUT
+       ----------------------------------------------------- */
+
+    .about {
+        min-height: 110vh;
+    }
+
+    .about__paper {
+        min-height: 125vh;
+
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+
+    .about__paper h2 {
+        font-size: 5.8vw;
+    }
+
+    .about__paper p {
+        font-size: 1.4vw;
+
+        max-width: 48ch;
+    }
+
+    .about__pin {
+        width: 8vw;
+    }
+
+    .about__clip {
+        width: 12vw;
+    }
+
+    .about__bow {
+        width: 14vw;
+    }
+
+    .about__arrow {
+        width: 16vw;
     }
 }
