@@ -933,16 +933,17 @@
     }
 
 
+
     /* HERO OBJECTS */
 
     .hero__art .bouton-bleu {
-        width: 20vw;
+        width: 16vw;
     }
 
     .hero__art .barrette-beige,
     .hero__art .barrette-bleu,
     .hero__art .barrette-rose {
-        width: 20vw;
+        width: 16vw;
     }
 
     .hero__art .trombone-bleu--first,
@@ -950,25 +951,60 @@
     .hero__art .trombone-rose,
     .hero__art .trombone-rose--second,
     .hero__art .trombone-bleu--third {
-        width: 15vw;
+        width: 12vw;
     }
 
     .hero__art .pin {
-        width: 10vw;
+        width: 8vw;
     }
 
     .hero__art .xppen {
-        width: 34vw;
+        width: 29vw;
     }
 
     .hero__art .clip {
-        width: 19vw;
+        width: 15vw;
     }
 
     .hero__art .paperball {
-        width: 26vw;
+        width: 20vw;
     }
 
+    /* HERO OBJECTS */
+
+    .hero__art .bouton-bleu {
+        width: 15vw;
+    }
+
+    .hero__art .barrette-beige,
+    .hero__art .barrette-bleu,
+    .hero__art .barrette-rose {
+        width: 15vw;
+    }
+
+    .hero__art .trombone-bleu--first,
+    .hero__art .trombone-bleu--second,
+    .hero__art .trombone-rose,
+    .hero__art .trombone-rose--second,
+    .hero__art .trombone-bleu--third {
+        width: 11vw;
+    }
+
+    .hero__art .pin {
+        width: 7vw;
+    }
+
+    .hero__art .xppen {
+        width: 27vw;
+    }
+
+    .hero__art .clip {
+        width: 14vw;
+    }
+
+    .hero__art .paperball {
+        width: 19vw;
+    }
 
     /* ABOUT */
 
