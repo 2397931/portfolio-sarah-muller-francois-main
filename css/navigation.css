@@ -1,0 +1,63 @@
+/* =========================================================
+   NAVIGATION PRINCIPALE
+   ========================================================= */
+
+.main-nav {
+    position: fixed;
+    top: 2vh;
+    left: 50%;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 2.5vw;
+
+    transform: translateX(-50%);
+
+    padding:
+        1.2vh
+        2vw;
+
+    background-color: #f7c5da;
+
+    border-radius: 999px;
+
+    box-shadow:
+        0 8px 25px rgba(14, 14, 18, 0.15);
+
+    white-space: nowrap;
+}
+
+.main-nav a {
+    color: #111016;
+    text-decoration: none;
+
+    font-family: "Nunito Local", sans-serif;
+    font-size: 1vw;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+    color: #ffffff;
+    transform: translateY(-2px);
+    outline: none;
+}
+
+
+/* =========================================================
+   DÉFILEMENT VERS LES SECTIONS
+   ========================================================= */
+
+#a-propos,
+#projets,
+#contact {
+    scroll-margin-top: 12vh;
+}

@@ -7,7 +7,8 @@ import {
     projects,
     renderProjectDetails,
     renderProjectHero,
-    renderProjectPreview
+    renderProjectPreview,
+    renderProjectProcess
 } from "./components/project-card.js";
 
 
@@ -137,6 +138,9 @@ function initProjectPage() {
     const detailsSlot =
         document.querySelector("[data-project-details]");
 
+    const processSlot =
+        document.querySelector("[data-project-process]");
+
     if (!heroSlot || !detailsSlot) {
         return;
     }
@@ -164,38 +168,83 @@ function initProjectPage() {
         project.theme ?? {};
 
 
-    document.body.style.setProperty(
+    /* =====================================================
+       COULEURS DU PROJET
+    ====================================================== */
+
+    document.documentElement.style.setProperty(
         "--project-accent",
         theme.accent ?? "#ef8db6"
     );
 
-    document.body.style.setProperty(
+    document.documentElement.style.setProperty(
         "--project-surface",
         theme.surface ?? "#f4f1eb"
     );
 
-    document.body.style.setProperty(
+    document.documentElement.style.setProperty(
         "--project-ink",
         theme.ink ?? "#0e0e12"
     );
 
-    document.body.style.setProperty(
+    document.documentElement.style.setProperty(
         "--project-background",
         theme.background ?? "#f4f1eb"
     );
 
 
+    /* =====================================================
+       HERO
+    ====================================================== */
+
     heroSlot.innerHTML =
         renderProjectHero(project);
 
+
+    /* =====================================================
+       DÉTAILS
+    ====================================================== */
 
     detailsSlot.innerHTML =
         renderProjectDetails(project);
 
 
+    /* =====================================================
+       PROCESSUS
+       
+       Le processus est généré uniquement si le projet
+       possède des données "process".
+    ====================================================== */
+
+    if (processSlot) {
+
+        const processMarkup =
+            renderProjectProcess(project);
+
+        if (processMarkup) {
+
+            processSlot.outerHTML =
+                processMarkup;
+
+        } else {
+
+            processSlot.remove();
+
+        }
+    }
+
+
+    /* =====================================================
+       TITRE DE LA PAGE
+    ====================================================== */
+
     document.title =
         `${project.title} | Projet`;
 
+
+    /* =====================================================
+       NAVIGATION PROJET PRÉCÉDENT / SUIVANT
+    ====================================================== */
 
     const previousLink =
         document.querySelector("[data-project-prev]");
@@ -231,6 +280,7 @@ function initProjectPage() {
         );
     }
 }
+
 
 /* =========================================================
    ANIMATION DU TITRE PORTFOLIO

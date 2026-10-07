@@ -1,0 +1,320 @@
+/* =========================================================
+   PROJECTS - DESKTOP / TABLET
+   ========================================================= */
+
+.projects {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 105vh;
+
+    margin: 0;
+
+    padding: 0;
+
+    overflow: hidden;
+
+    background-image: url("../assets/Img/plaid.png");
+    background-repeat: repeat;
+    background-position: center top;
+    background-size: auto;
+}
+
+
+.projects__stage {
+    position: relative;
+
+    width: min(100%, 1600px);
+
+    min-height: 105vh;
+
+    margin: 0 auto;
+
+    padding: 0;
+
+    overflow: hidden;
+}
+
+.projects__title {
+    position: relative;
+
+    z-index: 10;
+
+    margin: 0;
+
+    padding-top: 7vh;
+
+    text-align: center;
+
+    font-family: "Myrtille Pixel", sans-serif;
+
+    font-size: clamp(4rem, 6vw, 7rem);
+
+    font-weight: 400;
+
+    line-height: 0.9;
+
+    color: var(--ink);
+}
+
+.projects__screen {
+    position: absolute;
+
+    top: 8vh;
+    left: 50%;
+
+    z-index: 1;
+
+    display: block;
+
+    width: min(78vw, 1250px);
+
+    height: auto;
+
+    max-width: none;
+
+    transform: translateX(-50%);
+
+    pointer-events: none;
+}
+
+.projects__mouse {
+    position: absolute;
+
+    right: 5vw;
+    bottom: 4vh;
+
+    z-index: 5;
+
+    display: block;
+
+    width: min(13vw, 190px);
+
+    height: auto;
+
+    pointer-events: none;
+}
+
+.projects__carousel {
+    position: absolute;
+
+    top: 27vh;
+    right: 6%;
+    bottom: 18%;
+    left: 6%;
+
+    z-index: 3;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 2vw;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: visible;
+}
+
+
+.projects__slot {
+    flex: 1 1 auto;
+
+    width: 100%;
+
+    max-width: 760px;
+
+    min-width: 0;
+}
+
+.projects__arrow {
+    flex: 0 0 auto;
+
+    width: clamp(45px, 5vw, 80px);
+
+    height: clamp(45px, 5vw, 80px);
+
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 10;
+}
+
+.projects__arrow-icon {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    transition: transform 0.2s ease;
+}
+
+.projects__arrow:hover .projects__arrow-icon,
+.projects__arrow:focus-visible .projects__arrow-icon {
+    transform: scale(1.08);
+}
+
+.projects__arrow:focus-visible {
+    outline: 2px solid var(--ink);
+
+    outline-offset: 0.4vw;
+
+    border-radius: 50%;
+}
+
+
+/* ---------------------------------------------------------
+   RIGHT ARROW
+   --------------------------------------------------------- */
+
+.projects__arrow--next .projects__arrow-icon {
+    transform: scaleX(-1);
+}
+
+.projects__arrow--next:hover .projects__arrow-icon,
+.projects__arrow--next:focus-visible .projects__arrow-icon {
+    transform: scaleX(-1.08) scaleY(1.08);
+}
+
+
+/* =========================================================
+   PROJECT CARD
+   ========================================================= */
+
+.project-card {
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    border-radius: 1.5vw;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    background: var(--paper);
+
+    box-shadow:
+        0 1.5vh 3vw rgba(14, 14, 18, 0.22);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.project-card:hover,
+.project-card:focus-visible {
+    transform: translateY(-0.6vh);
+
+    box-shadow:
+        0 2vh 4vw rgba(14, 14, 18, 0.28);
+}
+
+.project-card:focus-visible {
+    outline: 2px solid var(--ink);
+
+    outline-offset: 0.4vw;
+}
+
+.project-card__media {
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    background: #111;
+}
+
+.project-card__graphic {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+}
+
+.project-card__graphic--hyunjin {
+    background-color: #111;
+}
+
+.project-card__content {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.7vh;
+
+    width: 100%;
+
+    padding:
+        2.2vh
+        2vw
+        2.5vh;
+
+    background: #f4f1eb;
+}
+
+.project-card__eyebrow {
+    font-family: "Nunito Local", sans-serif;
+
+    font-size: clamp(0.75rem, 0.9vw, 1rem);
+
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+    color: var(--gray-ink);
+}
+
+.project-card__name {
+    font-family: "Myrtille Pixel", sans-serif;
+
+    font-size: clamp(1.8rem, 3vw, 3.5rem);
+
+    line-height: 0.95;
+
+    color: var(--ink);
+}
+
+.project-card__category {
+    font-family: "Nunito Local", sans-serif;
+
+    font-size: clamp(0.9rem, 1.1vw, 1.2rem);
+
+    line-height: 1.3;
+
+    color: var(--gray-ink);
+}
