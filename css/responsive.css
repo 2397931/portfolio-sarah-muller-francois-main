@@ -1010,17 +1010,27 @@
     }
 
 
-    /* PROJECTS */
+     /* PROJECTS */
 
     .projects {
-        min-height: 105vh;
+        min-height: 140vh;
     }
 
     .projects__stage {
-        min-height: 105vh;
+        min-height: 140vh;
     }
 
     .projects__screen {
-        width: min(74vw, 1350px);
+        width: min(77vw, 1350px);
+    }
+
+    .projects__arrow--prev {
+        left: 0;
+        transform: translateX(-19vw);
+    }
+
+    .projects__arrow--next {
+        right: 0;
+        transform: translateX(7vw);
     }
 }

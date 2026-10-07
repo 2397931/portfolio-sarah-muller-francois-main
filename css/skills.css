@@ -7,84 +7,106 @@
 
     width: 100%;
 
-    min-height: 70vh;
+    min-height: 45vh;
 
     margin: 0;
 
     padding:
         9vh
-        6vw
+        4vw
         10vh;
 
     overflow: hidden;
 
-    background: var(--paper);
+    background: var(--board-bg);
 }
 
+
+/* ---------------------------------------------------------
+   LISTE DES COMPÉTENCES
+   --------------------------------------------------------- */
+
 .skills__list {
-    display: grid;
+    display: flex;
 
-    grid-template-columns:
-        repeat(5, minmax(0, 1fr));
+    flex-direction: row;
 
-    align-items: start;
+    align-items: center;
 
-    justify-items: center;
+    justify-content: center;
 
-    gap:
-        6vh
-        3vw;
+    gap: 3vw;
 
     width: 100%;
 
-    max-width: 1300px;
+    max-width: 1500px;
 
     margin: 0 auto;
 
     padding: 0;
 
     list-style: none;
+
+    flex-wrap: nowrap;
 }
 
-.skills__item {
-    width: 100%;
 
-    min-width: 0;
+/* ---------------------------------------------------------
+   ITEM
+   --------------------------------------------------------- */
+
+.skills__item {
+    flex: 0 0 auto;
 
     display: flex;
 
     justify-content: center;
+
+    align-items: center;
 }
 
-.skill-card {
-    width: 100%;
 
-    max-width: 190px;
+/* ---------------------------------------------------------
+   CARTE DE COMPÉTENCE
+   --------------------------------------------------------- */
+
+.skill-card {
+    position: relative;
+
+    width: 120px;
+
+    height: 150px;
 
     margin: 0;
 
     display: flex;
 
-    flex-direction: column;
-
     align-items: center;
 
-    justify-content: flex-start;
-
-    gap: 1.5vh;
+    justify-content: center;
 
     text-align: center;
 }
 
+
+/* ---------------------------------------------------------
+   ICÔNE
+   --------------------------------------------------------- */
+
 .skill-card__icon {
     display: block;
 
-    width: min(9vw, 125px);
+    width: 100px;
 
-    height: min(9vw, 125px);
+    height: 100px;
 
     object-fit: contain;
+
+    transition:
+        transform 0.25s ease,
+        filter 0.25s ease;
 }
+
 
 .skill-card__icon--krita,
 .skill-card__icon--maya,
@@ -93,16 +115,75 @@
     object-fit: contain;
 }
 
+
+/* ---------------------------------------------------------
+   EFFET AU SURVOL
+   --------------------------------------------------------- */
+
+.skill-card:hover .skill-card__icon {
+    transform: scale(1.12);
+}
+
+
+/* ---------------------------------------------------------
+   NOM DU LOGICIEL
+   Caché avant le survol
+   --------------------------------------------------------- */
+
 .skill-card__label {
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 0;
+
+    transform:
+        translateX(-50%)
+        translateY(8px);
+
     margin: 0;
+
+    padding: 0;
+
+    white-space: nowrap;
 
     font-family: "Nunito Local", sans-serif;
 
-    font-size: clamp(0.95rem, 1.25vw, 1.35rem);
+    font-size: 0.95rem;
 
     font-weight: 700;
 
-    line-height: 1.2;
+    line-height: 1;
 
     color: var(--ink);
+
+    background: none;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        visibility 0.2s ease;
+
+    z-index: 10;
 }
+
+.skill-card:hover .skill-card__label {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+}
+
