@@ -83,8 +83,6 @@
   .contact__arrow { width: 19vw; right: 16vw; bottom: 5vw; transform: rotate(-200deg); }
   .contact__message { right: 3vw; bottom: 1vw; }
   .contact__message h2 { font-size: 6vw; }
-<<<<<<< HEAD
-=======
   .contact__text-desktop { display: none; }
   .contact__text-mobile { display: inline; }
   #a-propos, #projets, #contact { scroll-margin-top: 16vw; }
@@ -176,5 +174,103 @@
   .contact__arrow { right: 18vw; bottom: 1vw; width: 15vw; }
   .contact__message { right: 2vw; bottom: 0; }
   .contact__message h2 { font-size: 5vw; }
->>>>>>> c0e0ff18fff75fedea025ce9901465619ed1c4d9
+}
+
+/* =========================================================
+   PROJETS — SURVOL, DÉGRADÉ TRANSPARENT ET ZOOM
+   Placé après les règles de taille pour tous les écrans.
+   ========================================================= */
+
+/* Cadre fixe : l’image agrandie reste à l’intérieur de l’écran. */
+.projects .project-card {
+  position: relative;
+  background: transparent;
+  isolation: isolate;
+}
+
+/* Supprime l’ancien déplacement de toute la carte au survol. */
+.projects .project-card:hover,
+.projects .project-card:focus-visible {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Zoom léger de 4 % du média ; changer 1.04 pour ajuster sa force. */
+.projects .project-card__image,
+.projects .project-card__graphic {
+  transform: scale(1);
+  transition: transform 0.4s ease;
+}
+.projects .project-card:hover .project-card__image,
+.projects .project-card:hover .project-card__graphic,
+.projects .project-card:focus-visible .project-card__image,
+.projects .project-card:focus-visible .project-card__graphic {
+  transform: scale(1.04);
+}
+
+/* Texte superposé au média : dégradé sombre de 0 à 28 % d’opacité.
+   opacity: 0 masque les informations au repos, sans aplat de couleur. */
+.projects .project-card__content {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.6em;
+  padding: clamp(12px, 2vw, 32px);
+  background: linear-gradient(to top,
+    rgba(14, 14, 18, 0.28),
+    rgba(14, 14, 18, 0.08) 55%,
+    rgba(14, 14, 18, 0));
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+/* Retire les anciens fonds gris et les bordures du titre et de la catégorie.
+   L’ombre du texte aide à le lire tout en gardant le dégradé léger. */
+.projects .project-card__name,
+.projects .project-card__category {
+  align-self: flex-start;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  color: white;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+  transform: translateY(8px);
+  transition: transform 0.35s ease;
+}
+
+/* Le survol et la sélection au clavier révèlent le texte en douceur. */
+.projects .project-card:hover .project-card__content,
+.projects .project-card:focus-visible .project-card__content { opacity: 1; }
+
+.projects .project-card:hover .project-card__name,
+.projects .project-card:hover .project-card__category,
+.projects .project-card:focus-visible .project-card__name,
+.projects .project-card:focus-visible .project-card__category {
+  transform: translateY(0);
+}
+
+/* Écrans tactiles : garde le texte visible, car il n’y a pas de survol. */
+@media (hover: none) {
+  .projects .project-card__content { opacity: 1; }
+  .projects .project-card__name,
+  .projects .project-card__category { transform: none; }
+}
+
+/* Préférence d’accessibilité : retire les transitions et le zoom. */
+@media (prefers-reduced-motion: reduce) {
+  .projects .project-card__image,
+  .projects .project-card__graphic,
+  .projects .project-card__content,
+  .projects .project-card__name,
+  .projects .project-card__category { transition: none; }
+  .projects .project-card:hover .project-card__image,
+  .projects .project-card:hover .project-card__graphic,
+  .projects .project-card:focus-visible .project-card__image,
+  .projects .project-card:focus-visible .project-card__graphic,
+  .projects .project-card__name,
+  .projects .project-card__category { transform: none; }
 }
