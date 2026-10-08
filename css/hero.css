@@ -1,4 +1,4 @@
-/* Bannière d’accueil : titre lettre par lettre, objets décoratifs et animations d’entrée. responsive.css, chargé ensuite, ajuste les dimensions et désactive les animations des objets selon la largeur. */
+/* Bannière d’accueil : titre lettre par lettre, objets décoratifs et animations d’entrée. responsive.css, chargé ensuite, ajuste les dimensions et la position finale des objets selon la largeur. */
 
 /* =========================================================
    BANNIÈRE D’ACCUEIL
@@ -145,7 +145,7 @@
 
 
 /* =========================================================
-   OBJETS DU BANNIÈRE D’ACCUEIL
+   OBJETS DE LA BANNIÈRE D’ACCUEIL
    ========================================================= */
 
 /* Règles communes aux images décoratives ; height: auto conserve leurs proportions. */
@@ -163,6 +163,7 @@
    --------------------------------------------------------- */
 
 .hero__art .bouton-bleu {
+    --hero-rest-transform: rotate(0deg);
     right: 17vw;
     bottom: 6vh;
     width: var(--hero-bouton-size, 320px);
@@ -174,6 +175,7 @@
    --------------------------------------------------------- */
 
 .hero__art .barrette-beige {
+    --hero-rest-transform: translateX(-50%) rotate(40deg);
     left: 85vw;
     bottom: -16vh;
     width: var(--hero-barrette-size, 320px);
@@ -189,6 +191,7 @@
    --------------------------------------------------------- */
 
 .hero__art .barrette-bleu {
+    --hero-rest-transform: rotate(-35deg);
     left: -6vw;
     top: -15vh;
     width: var(--hero-barrette-size, 320px);
@@ -201,6 +204,7 @@
    --------------------------------------------------------- */
 
 .hero__art .barrette-rose {
+    --hero-rest-transform: rotate(35deg);
     left: 65vw;
     top: 9vh;
     width: var(--hero-barrette-size, 320px);
@@ -213,6 +217,7 @@
    --------------------------------------------------------- */
 
 .hero__art .trombone-bleu--first {
+    --hero-rest-transform: rotate(12deg);
     right: 62vw;
     top: 73vh;
     width: var(--hero-trombone-size, 250px);
@@ -225,6 +230,7 @@
    --------------------------------------------------------- */
 
 .hero__art .trombone-bleu--second {
+    --hero-rest-transform: rotate(-20deg);
     left: 17vw;
     bottom: 12vh;
     width: var(--hero-trombone-size, 250px);
@@ -237,6 +243,7 @@
    --------------------------------------------------------- */
 
 .hero__art .trombone-rose {
+    --hero-rest-transform: rotate(32deg);
     left: 19.5vw;
     bottom: 12vh;
     width: var(--hero-trombone-size, 250px);
@@ -249,6 +256,7 @@
    --------------------------------------------------------- */
 
 .hero__art .trombone-rose--second {
+    --hero-rest-transform: rotate(70deg);
     right: 23vw;
     top: 70vh;
     width: var(--hero-trombone-size, 250px);
@@ -261,6 +269,7 @@
    --------------------------------------------------------- */
 
 .hero__art .trombone-bleu--third {
+    --hero-rest-transform: rotate(34deg);
     left: 24vw;
     top: 69vh;
     width: var(--hero-trombone-size, 250px);
@@ -273,6 +282,7 @@
    --------------------------------------------------------- */
 
 .hero__art .pin {
+    --hero-rest-transform: rotate(0deg);
     right: 2vw;
     top: -4vh;
     width: var(--hero-pin-size, 180px);
@@ -284,6 +294,7 @@
    --------------------------------------------------------- */
 
 .hero__art .xppen {
+    --hero-rest-transform: rotate(22deg);
     left: 12vw;
     top: -8vh;
     width: var(--hero-xppen-size, 570px);
@@ -292,10 +303,11 @@
 
 
 /* ---------------------------------------------------------
-   PUNAISECE
+   PINCE
    --------------------------------------------------------- */
 
 .hero__art .clip {
+    --hero-rest-transform: rotate(-26deg);
     right: 70vw;
     top: 35vh;
     width: var(--hero-clip-size, 320px);
@@ -308,6 +320,7 @@
    --------------------------------------------------------- */
 
 .hero__art .paperball {
+    --hero-rest-transform: rotate(0deg);
     right: 4vw;
     top: 34vh;
     width: var(--hero-paperball-size, 450px);
@@ -327,6 +340,8 @@
 
 /* =========================================================
    ANIMATIONS DES OBJETS
+   Les déplacements s’ajoutent à --hero-rest-transform.
+   À 100 %, chaque objet retrouve exactement sa position responsive.
    ========================================================= */
 
 .hero__art .bouton-bleu {
@@ -390,21 +405,21 @@
 
     0% {
         opacity: 0;
-        transform: translate(120vw, 120vh) rotate(-20deg);
+        transform: translate(120vw, 120vh) var(--hero-rest-transform) rotate(-20deg);
     }
 
     65% {
         opacity: 1;
-        transform: translate(-1.5vw, -1.5vh) rotate(3deg);
+        transform: translate(-1.5vw, -1.5vh) var(--hero-rest-transform) rotate(3deg);
     }
 
     82% {
-        transform: translate(0.5vw, 0.5vh) rotate(-1deg);
+        transform: translate(0.5vw, 0.5vh) var(--hero-rest-transform) rotate(-1deg);
     }
 
     100% {
         opacity: 1;
-        transform: translate(0, 0) rotate(0deg);
+        transform: var(--hero-rest-transform);
     }
 
 }
@@ -418,21 +433,21 @@
 
     0% {
         opacity: 0;
-        transform: translate(120vw, 120vh) rotate(80deg);
+        transform: translate(120vw, 120vh) var(--hero-rest-transform) rotate(40deg);
     }
 
     65% {
         opacity: 1;
-        transform: translate(-2vw, -1.5vh) rotate(35deg);
+        transform: translate(-2vw, -1.5vh) var(--hero-rest-transform) rotate(-5deg);
     }
 
     82% {
-        transform: translate(0.6vw, 0.4vh) rotate(41deg);
+        transform: translate(0.6vw, 0.4vh) var(--hero-rest-transform) rotate(1deg);
     }
 
     100% {
         opacity: 1;
-        transform: translate(-50%, 0) rotate(40deg);
+        transform: var(--hero-rest-transform);
     }
 
 }
@@ -446,21 +461,21 @@
 
     0% {
         opacity: 0;
-        transform: translate(-120vw, -100vh) rotate(-70deg);
+        transform: translate(-120vw, -100vh) var(--hero-rest-transform) rotate(-35deg);
     }
 
     65% {
         opacity: 1;
-        transform: translate(2vw, 1.5vh) rotate(-29deg);
+        transform: translate(2vw, 1.5vh) var(--hero-rest-transform) rotate(6deg);
     }
 
     82% {
-        transform: translate(-0.6vw, -0.4vh) rotate(-36deg);
+        transform: translate(-0.6vw, -0.4vh) var(--hero-rest-transform) rotate(-1deg);
     }
 
     100% {
         opacity: 1;
-        transform: translate(0, 0) rotate(-35deg);
+        transform: var(--hero-rest-transform);
     }
 
 }
@@ -474,21 +489,21 @@
 
     0% {
         opacity: 0;
-        transform: translate(120vw, -100vh) rotate(80deg);
+        transform: translate(120vw, -100vh) var(--hero-rest-transform) rotate(45deg);
     }
 
     65% {
         opacity: 1;
-        transform: translate(-2vw, 1.5vh) rotate(41deg);
+        transform: translate(-2vw, 1.5vh) var(--hero-rest-transform) rotate(6deg);
     }
 
     82% {
-        transform: translate(0.6vw, -0.4vh) rotate(34deg);
+        transform: translate(0.6vw, -0.4vh) var(--hero-rest-transform) rotate(-1deg);
     }
 
     100% {
         opacity: 1;
-        transform: translate(0, 0) rotate(35deg);
+        transform: var(--hero-rest-transform);
     }
 
 }
@@ -502,21 +517,21 @@
 
     0% {
         opacity: 0;
-        transform: translate(0, 120vh) rotate(-20deg);
+        transform: translate(0, 120vh) var(--hero-rest-transform) rotate(-32deg);
     }
 
     65% {
         opacity: 1;
-        transform: translate(1.5vw, -2vh) rotate(15deg);
+        transform: translate(1.5vw, -2vh) var(--hero-rest-transform) rotate(3deg);
     }
 
     82% {
-        transform: translate(-0.5vw, 0.5vh) rotate(13deg);
+        transform: translate(-0.5vw, 0.5vh) var(--hero-rest-transform) rotate(1deg);
     }
 
     100% {
         opacity: 1;
-        transform: translate(0, 0) rotate(12deg);
+        transform: var(--hero-rest-transform);
     }
 
 }
@@ -530,21 +545,21 @@
 
     0% {
         opacity: 0;
-        transform: translate(-120vw, 100vh) rotate(-60deg);
+        transform: translate(-120vw, 100vh) var(--hero-rest-transform) rotate(-40deg);
     }
 
     65% {
         opacity: 1;
-        transform: translate(2vw, -2vh) rotate(-14deg);
+        transform: translate(2vw, -2vh) var(--hero-rest-transform) rotate(6deg);
     }
 
     82% {
-        transform: translate(-0.5vw, 0.5vh) rotate(-21deg);
+        transform: translate(-0.5vw, 0.5vh) var(--hero-rest-transform) rotate(-1deg);
     }
 
     100% {
         opacity: 1;
-        transform: translate(0, 0) rotate(-20deg);
+        transform: var(--hero-rest-transform);
     }
 
 }
@@ -558,21 +573,21 @@
 
     0% {
         opacity: 0;
-        transform: translate(-120vw, 100vh) rotate(80deg);
+        transform: translate(-120vw, 100vh) var(--hero-rest-transform) rotate(48deg);
     }
 
     65% {
         opacity: 1;
-        transform: translate(2vw, -2vh) rotate(38deg);
+        transform: translate(2vw, -2vh) var(--hero-rest-transform) rotate(6deg);
     }
 
     82% {
-        transform: translate(-0.5vw, 0.5vh) rotate(31deg);
+        transform: translate(-0.5vw, 0.5vh) var(--hero-rest-transform) rotate(-1deg);
     }
 
     100% {
         opacity: 1;
-        transform: translate(0, 0) rotate(32deg);
+        transform: var(--hero-rest-transform);
     }
 
 }
@@ -586,21 +601,21 @@
 
     0% {
         opacity: 0;
-        transform: translate(120vw, 100vh) rotate(120deg);
+        transform: translate(120vw, 100vh) var(--hero-rest-transform) rotate(50deg);
     }
 
     65% {
         opacity: 1;
-        transform: translate(-2vw, -2vh) rotate(74deg);
+        transform: translate(-2vw, -2vh) var(--hero-rest-transform) rotate(4deg);
     }
 
     82% {
-        transform: translate(0.5vw, 0.5vh) rotate(68deg);
+        transform: translate(0.5vw, 0.5vh) var(--hero-rest-transform) rotate(-2deg);
     }
 
     100% {
         opacity: 1;
-        transform: translate(0, 0) rotate(70deg);
+        transform: var(--hero-rest-transform);
     }
 
 }
@@ -614,21 +629,21 @@
 
     0% {
         opacity: 0;
-        transform: translate(-100vw, 100vh) rotate(90deg);
+        transform: translate(-100vw, 100vh) var(--hero-rest-transform) rotate(56deg);
     }
 
     65% {
         opacity: 1;
-        transform: translate(2vw, -2vh) rotate(40deg);
+        transform: translate(2vw, -2vh) var(--hero-rest-transform) rotate(6deg);
     }
 
     82% {
-        transform: translate(-0.5vw, 0.5vh) rotate(33deg);
+        transform: translate(-0.5vw, 0.5vh) var(--hero-rest-transform) rotate(-1deg);
     }
 
     100% {
         opacity: 1;
-        transform: translate(0, 0) rotate(34deg);
+        transform: var(--hero-rest-transform);
     }
 
 }
@@ -642,21 +657,21 @@
 
     0% {
         opacity: 0;
-        transform: translate(100vw, -100vh) rotate(35deg);
+        transform: translate(100vw, -100vh) var(--hero-rest-transform) rotate(35deg);
     }
 
     65% {
         opacity: 1;
-        transform: translate(-2vw, 2vh) rotate(-5deg);
+        transform: translate(-2vw, 2vh) var(--hero-rest-transform) rotate(-5deg);
     }
 
     82% {
-        transform: translate(0.5vw, -0.5vh) rotate(2deg);
+        transform: translate(0.5vw, -0.5vh) var(--hero-rest-transform) rotate(2deg);
     }
 
     100% {
         opacity: 1;
-        transform: translate(0, 0) rotate(0deg);
+        transform: var(--hero-rest-transform);
     }
 
 }
@@ -670,49 +685,49 @@
 
     0% {
         opacity: 0;
-        transform: translate(-120vw, -100vh) rotate(-25deg);
+        transform: translate(-120vw, -100vh) var(--hero-rest-transform) rotate(-47deg);
     }
 
     65% {
         opacity: 1;
-        transform: translate(2.5vw, 2vh) rotate(25deg);
+        transform: translate(2.5vw, 2vh) var(--hero-rest-transform) rotate(3deg);
     }
 
     82% {
-        transform: translate(-0.7vw, -0.5vh) rotate(21deg);
+        transform: translate(-0.7vw, -0.5vh) var(--hero-rest-transform) rotate(-1deg);
     }
 
     100% {
         opacity: 1;
-        transform: translate(0, 0) rotate(22deg);
+        transform: var(--hero-rest-transform);
     }
 
 }
 
 
 /* =========================================================
-   PUNAISECE — ARRIVE DE LA GAUCHE
+   PINCE — ARRIVE DE LA GAUCHE
    ========================================================= */
 
 @keyframes clipEnter {
 
     0% {
         opacity: 0;
-        transform: translate(-120vw, 0) rotate(-55deg);
+        transform: translate(-120vw, 0) var(--hero-rest-transform) rotate(-29deg);
     }
 
     65% {
         opacity: 1;
-        transform: translate(2vw, 0) rotate(-20deg);
+        transform: translate(2vw, 0) var(--hero-rest-transform) rotate(6deg);
     }
 
     82% {
-        transform: translate(-0.5vw, 0) rotate(-28deg);
+        transform: translate(-0.5vw, 0) var(--hero-rest-transform) rotate(-2deg);
     }
 
     100% {
         opacity: 1;
-        transform: translate(0, 0) rotate(-26deg);
+        transform: var(--hero-rest-transform);
     }
 
 }
@@ -726,21 +741,21 @@
 
     0% {
         opacity: 0;
-        transform: translate(120vw, 0) rotate(80deg);
+        transform: translate(120vw, 0) var(--hero-rest-transform) rotate(80deg);
     }
 
     65% {
         opacity: 1;
-        transform: translate(-2vw, 0) rotate(-8deg);
+        transform: translate(-2vw, 0) var(--hero-rest-transform) rotate(-8deg);
     }
 
     82% {
-        transform: translate(0.7vw, 0) rotate(3deg);
+        transform: translate(0.7vw, 0) var(--hero-rest-transform) rotate(3deg);
     }
 
     100% {
         opacity: 1;
-        transform: translate(0, 0) rotate(0deg);
+        transform: var(--hero-rest-transform);
     }
 
 }
