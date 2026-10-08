@@ -11,7 +11,7 @@ import {
     renderProjectHero,
     renderProjectPreview,
     renderProjectProcess
-} from "./components/project-card.js";
+} from "./components/project-card.js?v=20261008-contraste-17";
 
 
 /* =========================================================
