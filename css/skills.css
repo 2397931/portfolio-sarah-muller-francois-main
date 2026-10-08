@@ -193,3 +193,10 @@
         translateY(0);
 }
 
+
+/* Le libellé occupe sa propre ligne sous le logo, sans chevauchement. */
+.skill-card { flex-direction: column; justify-content: flex-start; gap: 0.6rem; height: auto; min-height: 150px; }
+.skill-card__icon { flex: 0 0 auto; }
+.skill-card:hover .skill-card__icon { transform: none; }
+.skill-card__label { position: static; flex: 0 0 auto; transform: translateY(6px); white-space: normal; overflow-wrap: anywhere; max-width: 100%; line-height: 1.25; }
+.skill-card:hover .skill-card__label { transform: translateY(0); }
