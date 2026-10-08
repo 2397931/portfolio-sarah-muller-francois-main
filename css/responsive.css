@@ -136,7 +136,7 @@
   .projects__stage { max-width: none; }
   .projects__title { padding-top: 1vw; font-size: 6vw; }
   .projects__screen { width: 62vw; max-width: none; top: -6vw; left: 50%; }
-  .projects__mouse { width: 24vw; right: 10vw; bottom: -1vw; }
+  .projects__mouse { width: min(9vw, 105px); right: 18vw; bottom: -1vw; }
   .projects__carousel { top: 11vw; bottom: auto; left: 17vw; right: 17vw; height: 27vw; gap: 3vw; }
   .projects__slot { flex: 0 0 45vw; width: 45vw; max-width: 45vw; }
   .projects__arrow { width: 5vw; height: 7vw; }
@@ -320,4 +320,19 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+
+/* Souris du projet : position et taille adaptées aux largeurs d'écran. */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .projects__mouse { width: 9vw; right: 18vw; bottom: -1vw; }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .projects__mouse { width: 8vw; right: 18vw; bottom: 1vw; }
+}
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .projects__mouse { width: min(7.5vw, 125px); right: 19vw; bottom: 1vw; }
+}
+@media (min-width: 1920px) {
+  .projects__mouse { width: min(7vw, 135px); right: 19vw; bottom: 1vw; }
 }
