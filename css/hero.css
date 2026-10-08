@@ -162,14 +162,14 @@
 }
 
 .hero__art .bouton-bleu {
-    right: 2vw;
+    right: 17vw;
     bottom: 6vh;
     width: 320px;
 }
 
 .hero__art .barrette-beige {
-    left: 65vw;
-    bottom: -14vh;
+    left: 85vw;
+    bottom: -16vh;
     width: 320px;
 
     transform:
@@ -187,14 +187,14 @@
 }
 
 .hero__art .barrette-rose {
-    left: 45vw;
+    left: 65vw;
     top: 9vh;
     width: 320px;
     transform: rotate(35deg);
 }
 
 .hero__art .trombone-bleu--first {
-    right: 32vw;
+    right: 62vw;
     top: 73vh;
     width: 250px;
     transform: rotate(12deg);
@@ -242,7 +242,7 @@
 }
 
 .hero__art .clip {
-    right: 55vw;
+    right: 70vw;
     top: 35vh;
     width: 320px;
     transform: rotate(-26deg);
