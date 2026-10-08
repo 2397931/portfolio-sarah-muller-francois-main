@@ -80,104 +80,83 @@
   #a-propos, #projets, #contact { scroll-margin-top: 16vw; }
 }
 
-/* Tablet and desktop retain the positions from the section stylesheets. */
-@media (min-width: 768px) {
-  .main-nav { gap: 2.5vw; padding: 1.2vh 2.5vw; }
-  .main-nav a { font-size: clamp(14px, 1.25vw, 24px); }
 
-  .hero {
-    --hero-bouton-size: clamp(125px, 17vw, 360px);
-    --hero-barrette-size: clamp(130px, 17vw, 360px);
-    --hero-trombone-size: clamp(100px, 13vw, 280px);
-    --hero-pin-size: clamp(65px, 8vw, 180px);
-    --hero-xppen-size: clamp(240px, 30vw, 650px);
-    --hero-clip-size: clamp(125px, 16vw, 340px);
-    --hero-paperball-size: clamp(170px, 22vw, 460px);
-  }
-  .hero__art { height: 100svh; min-height: 100svh; }
-  .hero__title { font-size: clamp(64px, 9vw, 180px); }
-
-  .about { min-height: 100vh; }
-  .about__paper {
-    width: calc(100% - 6vw);
-    min-height: calc(100vh - 5rem);
-    padding: clamp(60px, 7vw, 128px) clamp(24px, 3vw, 64px) clamp(40px, 5vw, 96px);
-  }
-  .about__paper::before { background-size: 100% 100%; }
-  .about__paper h2 { font-size: clamp(38px, 5vw, 100px); }
-  .about__paper p { font-size: clamp(14px, 1.4vw, 26px); line-height: 1.55; }
-  .about__pink-panel { min-height: 100vh; padding: clamp(24px, 4vw, 80px); }
-  .about__image-placeholder { width: 100%; height: 100%; max-width: 700px; max-height: 900px; }
-  .about__pin { width: clamp(65px, 8vw, 160px); }
-  .about__clip { width: clamp(95px, 12vw, 250px); }
-  .about__bow { width: clamp(100px, 14vw, 300px); }
-  .about__arrow { width: clamp(120px, 16vw, 320px); }
-
-  .projects, .projects__stage { min-height: 105vh; }
-  .projects__screen { width: min(78vw, 1250px); }
-  .projects__mouse { width: min(13vw, 220px); }
-  .projects__title { font-size: clamp(40px, 6vw, 112px); }
-  .projects__slot { max-width: min(48vw, 760px); }
-  .projects__arrow { width: clamp(40px, 5vw, 80px); height: clamp(40px, 5vw, 80px); }
-  .projects .project-card__media { aspect-ratio: 16 / 9; }
-  .projects .project-card__image { display: block; width: 100%; height: 100%; object-fit: cover; }
-  .projects .project-card__content { padding: clamp(10px, 1.3vw, 24px); gap: .5vh; }
-  .projects .project-card__name { font-size: clamp(24px, 2.6vw, 48px); }
-  .projects .project-card__category { font-size: clamp(12px, 1.1vw, 21px); }
-  .projects .project-card__eyebrow { font-size: clamp(10px, .8vw, 16px); }
-
-  .skills { min-height: 0; padding: 2vw 4vw 3vw; }
-  .skills__list { width: 100%; max-width: 1600px; gap: 1.5vw; }
-  .skills__item { flex: 1 1 0; min-width: 0; }
-  .skill-card { width: 100%; height: clamp(80px, 9vw, 160px); }
-  .skill-card__icon { width: min(100%, 110px); height: clamp(52px, 7vw, 110px); object-fit: contain; }
-  .skill-card__label { font-size: clamp(10px, .9vw, 16px); }
-
-  .contact__card-image { width: 100%; }
-  .contact__card-text p { font-size: clamp(12px, 1.2vw, 24px); }
-  .contact__card-social img { width: clamp(25px, 3.2vw, 65px); }
-  .contact__card-email a { font-size: clamp(9px, .9vw, 18px); }
-  .contact__message h2 { font-size: clamp(32px, 5vw, 88px); }
-}
-
-/* Allow the beige barrette to cross the Hero/About boundary at every size. */
+/* Desktop reference composition, scaled identically for tablet and desktop. */
 .hero { position: relative; z-index: 10; overflow: visible; }
 .hero__art { overflow: visible; }
 .hero__art .barrette-beige { z-index: 20; }
 .about { isolation: isolate; z-index: 1; }
-
-/* Explicit equal tracks prevent the photo's intrinsic width shrinking the paper. */
 @media (min-width: 768px) {
-  .about { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .about__paper, .about__pink-panel { min-width: 0; max-width: 100%; }
-  .about__image-placeholder { min-width: 0; max-width: 100%; width: 100%; height: auto; aspect-ratio: 1 / 1; }
-  .skills__list { display: grid; grid-template-columns: repeat(9, minmax(0, 1fr)); max-width: 1600px; gap: 1.5vw; }
+  body:not(.project-page) main { padding: 0; }
+  .main-nav { top: 1vw; gap: 3vw; padding: 1vw 2vw; }
+  .main-nav a { font-size: clamp(14px, 2vw, 28px); }
+  .hero, .hero__art { height: 56vw; min-height: 0; }
+  .hero__title { top: 45%; font-size: 8.5vw; }
+  .hero__art img { animation: none; height: auto; }
+  .hero__art .xppen { width: 49vw; left: 13vw; top: 0; transform: rotate(22deg); }
+  .hero__art .barrette-bleu { width: 25vw; left: -9vw; top: -11vw; }
+  .hero__art .barrette-rose { width: 25vw; left: 65vw; top: 7vw; }
+  .hero__art .pin { width: 10vw; right: 7vw; top: 4vw; }
+  .hero__art .clip { width: 25vw; right: 78vw; top: 14vw; }
+  .hero__art .paperball { width: 25vw; right: 0; top: 32vw; }
+  .hero__art .bouton-bleu { width: 18vw; right: 20vw; bottom: 2vw; }
+  .hero__art .trombone-bleu--first { width: 22vw; right: 71vw; top: 32vw; }
+  .hero__art .trombone-bleu--second { width: 22vw; left: 9vw; bottom: 4vw; }
+  .hero__art .trombone-rose { width: 22vw; left: 11vw; bottom: 5vw; }
+  .hero__art .trombone-bleu--third { width: 22vw; left: 15vw; top: 35vw; }
+  .hero__art .trombone-rose--second { width: 17vw; left: auto; right: 44vw; top: 46vw; }
+  .hero__art .barrette-beige { width: 25vw; left: 85vw; bottom: -9vw; }
+
+  .about { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); width: 100%; min-height: 56vw; background: linear-gradient(90deg, var(--board-bg) 50%, var(--pink-strong) 50%); }
+  .about__paper { min-width: 0; width: 46vw; min-height: 50vw; margin: 3vw auto; padding: 5vw 6vw 8vw; overflow: visible; }
+  .about__paper::before { background-size: 100% 100%; opacity: .85; }
+  .about__paper h2 { font-size: 5vw; text-align: center; margin: 0 0 4vw; }
+  .about__paper p { font-size: clamp(14px, 1.5vw, 26px); line-height: 1.5; margin-bottom: 2vw; }
+  .about__pin { width: 8vw; left: 40%; top: -2vw; }
+  .about__clip { width: 15vw; right: 0; bottom: 0; }
+  .about__pink-panel { min-width: 0; width: 100%; min-height: 56vw; padding: 7vw 6vw; }
+  .about__image-placeholder { width: 100%; min-width: 0; height: auto; aspect-ratio: 4 / 5; max-width: 100%; background: linear-gradient(45deg, transparent 49.8%, #999 49.8% 50.2%, transparent 50.2%), linear-gradient(-45deg, transparent 49.8%, #999 49.8% 50.2%, transparent 50.2%), white; }
+  .about__bow { width: 18vw; right: 2vw; top: 3vw; }
+  .about__arrow { width: 19vw; left: 40vw; bottom: 20vw; }
+
+  .projects, .projects__stage { width: 100%; min-height: 56vw; height: 56vw; }
+  .projects__stage { max-width: none; }
+  .projects__title { padding-top: 1vw; font-size: 6vw; }
+  .projects__screen { width: 62vw; max-width: none; top: -6vw; left: 50%; }
+  .projects__mouse { width: 25vw; right: 1vw; bottom: -1vw; }
+  .projects__carousel { top: 11vw; bottom: auto; left: 17vw; right: 17vw; height: 27vw; gap: 3vw; }
+  .projects__slot { flex: 0 0 45vw; width: 45vw; max-width: 45vw; }
+  .projects__arrow { width: 5vw; height: 7vw; }
+  .projects .project-card { position: relative; height: 27vw; border-radius: 0; box-shadow: none; background: #d6d8d8; }
+  .projects .project-card__media { width: 100%; height: 100%; aspect-ratio: auto; }
+  .projects .project-card__image, .projects .project-card__graphic { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .projects .project-card__content { position: absolute; inset: 0; padding: 1vw; background: transparent; pointer-events: none; }
+  .projects .project-card__eyebrow { display: none; }
+  .projects .project-card__name { align-self: flex-start; font-family: "Nunito Local", sans-serif; font-size: 2.8vw; line-height: 1.1; border-bottom: 2px solid var(--ink); background: #d6d8d8cc; }
+  .projects .project-card__category { margin-top: auto; align-self: flex-end; font-size: 1.6vw; background: #d6d8d8cc; border-bottom: 1px solid var(--ink); }
+
+  .skills { min-height: 0; padding: 1vw 2vw 2vw; }
+  .skills__list { display: grid; grid-template-columns: repeat(9, minmax(0, 1fr)); width: 100%; max-width: none; gap: 1vw; }
   .skills__item, .skill-card { min-width: 0; max-width: 100%; }
-  .skill-card__icon { max-width: 100%; }
-}
+  .skill-card { width: 100%; height: 8vw; }
+  .skill-card__icon { width: 100%; height: 7vw; max-width: 100%; object-fit: contain; }
+  .skill-card__label { font-size: 1vw; }
 
-/* Tablet portrait and landscape: contain the desktop composition within its panels. */
-@media (min-width: 768px) and (max-width: 1279px) {
-  .about, .about__pink-panel { min-height: 65vw; }
-  .about__paper { min-height: 59vw; margin: 3vw auto; padding: 7vw 3vw 8vw; }
-  .about__paper h2 { font-size: 5vw; margin-bottom: 3vw; }
-  .about__paper p { font-size: clamp(14px, 1.6vw, 20px); }
-  .about__pink-panel { padding: 5vw; }
-  .about__image-placeholder { aspect-ratio: 4 / 5; }
-  .about__pin { left: 50%; transform: translateX(-50%) rotate(8deg); }
-  .about__arrow { bottom: 22vw; }
-  .skills { min-height: 0; padding: 2vw 4vw 3vw; }
-  .skill-card { height: 10vw; }
-  .skill-card__icon { width: 100%; height: 7vw; }
-
-  .contact { min-height: 0; margin-top: 0; padding: 10vw 0 6vw; }
-  .contact__stage { width: 100%; height: 52vw; min-height: 0; }
-  .contact__envelope { width: 50vw; left: 15vw; top: -8vw; bottom: auto; }
-  .contact__card { width: 44vw; right: 25vw; top: 8vw; }
+  .contact { min-height: 0; height: 56vw; margin: 0; padding: 3vw 0 5vw; }
+  .contact__stage { width: 100%; height: 48vw; min-height: 0; margin: 0; }
+  .contact__envelope { width: 50vw; top: -6vw; left: 0; bottom: auto; }
+  .contact__card { width: 50vw; top: 9vw; right: 20vw; transform: rotate(10deg); }
   .contact__card-image { width: 100%; }
-  .contact__card-text p { font-size: 1.8vw; }
-  .contact__card-social img { width: 4.5vw; }
-  .contact__card-email a { font-size: 1.15vw; }
-  .contact__arrow { right: 20vw; bottom: 1vw; width: 10vw; }
-  .contact__message { right: 3vw; bottom: 0; }
+  .contact__card-text { left: 5%; top: 45%; width: 43%; }
+  .contact__card-text p { font-family: "Meow Script", cursive; font-size: 4vw; line-height: 1.3; }
+  .contact__text-desktop { display: none; }
+  .contact__text-mobile { display: inline; }
+  .contact__card-socials { left: 64%; top: 45%; gap: 4vw; }
+  .contact__card-social img { width: 6vw; height: 6vw; object-fit: contain; }
+  .contact__card-line { top: 18%; height: 55%; width: 1px; }
+  .contact__card-email { bottom: 8%; }
+  .contact__card-email a { font-size: 1.2vw; }
+  .contact__arrow { right: 18vw; bottom: 1vw; width: 15vw; }
+  .contact__message { right: 2vw; bottom: 0; }
+  .contact__message h2 { font-size: 5vw; }
 }
