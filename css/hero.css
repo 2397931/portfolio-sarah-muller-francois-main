@@ -15,23 +15,16 @@
 
 .hero__title {
     position: absolute;
-
     left: 50%;
     top: 44%;
-
     transform: translate(-50%, -50%);
-
     margin: 0;
     z-index: 2;
-
     text-align: center;
-
     font-size: clamp(4rem, 10vw, 9rem);
     line-height: 0.9;
     letter-spacing: 0.02em;
-
     color: var(--ink);
-
     white-space: nowrap;
 }
 
@@ -42,12 +35,9 @@
 
 .hero__title span {
     display: inline-block;
-
     font-weight: 400;
-
     animation:
         portfolioFontChange 0.9s steps(1) forwards;
-
     animation-delay: calc(var(--letter-index) * 0.12s);
     animation-fill-mode: forwards;
 }
@@ -73,6 +63,7 @@
     100% {
         font-family: var(--final-font);
     }
+
 }
 
 
@@ -153,13 +144,16 @@
 
 .hero__art img {
     position: absolute;
-
     width: 120px;
     height: auto;
     max-width: 100%;
-
     object-fit: contain;
 }
+
+
+/* ---------------------------------------------------------
+   BOUTON BLEU
+   --------------------------------------------------------- */
 
 .hero__art .bouton-bleu {
     right: 17vw;
@@ -167,17 +161,25 @@
     width: 320px;
 }
 
+
+/* ---------------------------------------------------------
+   BARRETTE BEIGE
+   --------------------------------------------------------- */
+
 .hero__art .barrette-beige {
     left: 85vw;
     bottom: -16vh;
     width: 320px;
-
     transform:
         translateX(-50%)
         rotate(40deg);
-
     z-index: 1;
 }
+
+
+/* ---------------------------------------------------------
+   BARRETTE BLEUE
+   --------------------------------------------------------- */
 
 .hero__art .barrette-bleu {
     left: -6vw;
@@ -186,12 +188,22 @@
     transform: rotate(-35deg);
 }
 
+
+/* ---------------------------------------------------------
+   BARRETTE ROSE
+   --------------------------------------------------------- */
+
 .hero__art .barrette-rose {
     left: 65vw;
     top: 9vh;
     width: 320px;
     transform: rotate(35deg);
 }
+
+
+/* ---------------------------------------------------------
+   TROMBONE BLEU #1
+   --------------------------------------------------------- */
 
 .hero__art .trombone-bleu--first {
     right: 62vw;
@@ -200,12 +212,22 @@
     transform: rotate(12deg);
 }
 
+
+/* ---------------------------------------------------------
+   TROMBONE BLEU #2
+   --------------------------------------------------------- */
+
 .hero__art .trombone-bleu--second {
     left: 17vw;
     bottom: 12vh;
     width: 250px;
     transform: rotate(-20deg);
 }
+
+
+/* ---------------------------------------------------------
+   TROMBONE ROSE
+   --------------------------------------------------------- */
 
 .hero__art .trombone-rose {
     left: 19.5vw;
@@ -214,12 +236,22 @@
     transform: rotate(32deg);
 }
 
+
+/* ---------------------------------------------------------
+   TROMBONE ROSE #2
+   --------------------------------------------------------- */
+
 .hero__art .trombone-rose--second {
     right: 23vw;
     top: 70vh;
     width: 250px;
     transform: rotate(70deg);
 }
+
+
+/* ---------------------------------------------------------
+   TROMBONE BLEU #3
+   --------------------------------------------------------- */
 
 .hero__art .trombone-bleu--third {
     left: 24vw;
@@ -228,11 +260,21 @@
     transform: rotate(34deg);
 }
 
+
+/* ---------------------------------------------------------
+   PIN
+   --------------------------------------------------------- */
+
 .hero__art .pin {
     right: 2vw;
     top: -4vh;
     width: 180px;
 }
+
+
+/* ---------------------------------------------------------
+   XP-PEN
+   --------------------------------------------------------- */
 
 .hero__art .xppen {
     left: 12vw;
@@ -241,6 +283,11 @@
     transform: rotate(22deg);
 }
 
+
+/* ---------------------------------------------------------
+   CLIP
+   --------------------------------------------------------- */
+
 .hero__art .clip {
     right: 70vw;
     top: 35vh;
@@ -248,8 +295,445 @@
     transform: rotate(-26deg);
 }
 
+
+/* ---------------------------------------------------------
+   PAPERBALL
+   --------------------------------------------------------- */
+
 .hero__art .paperball {
     right: 4vw;
     top: 34vh;
     width: 450px;
+}
+
+
+/* =========================================================
+   HERO — ARRIVÉE DES OBJETS
+   ========================================================= */
+
+.hero__art img {
+    animation-duration: 1.25s;
+    animation-timing-function: cubic-bezier(0.22, 0.8, 0.25, 1);
+    animation-fill-mode: both;
+}
+
+
+/* =========================================================
+   ANIMATIONS DES OBJETS
+   ========================================================= */
+
+.hero__art .bouton-bleu {
+    animation-name: boutonBleuEnter;
+}
+
+.hero__art .barrette-beige {
+    animation-name: barretteBeigeEnter;
+}
+
+.hero__art .barrette-bleu {
+    animation-name: barretteBleuEnter;
+}
+
+.hero__art .barrette-rose {
+    animation-name: barretteRoseEnter;
+}
+
+.hero__art .trombone-bleu--first {
+    animation-name: tromboneBlueFirstEnter;
+}
+
+.hero__art .trombone-bleu--second {
+    animation-name: tromboneBlueSecondEnter;
+}
+
+.hero__art .trombone-rose {
+    animation-name: tromboneRoseEnter;
+}
+
+.hero__art .trombone-rose--second {
+    animation-name: tromboneRoseSecondEnter;
+}
+
+.hero__art .trombone-bleu--third {
+    animation-name: tromboneBlueThirdEnter;
+}
+
+.hero__art .pin {
+    animation-name: pinEnter;
+}
+
+.hero__art .xppen {
+    animation-name: xppenEnter;
+}
+
+.hero__art .clip {
+    animation-name: clipEnter;
+}
+
+.hero__art .paperball {
+    animation-name: paperballEnter;
+}
+
+
+/* =========================================================
+   BOUTON BLEU — ARRIVE DU BAS DROITE
+   ========================================================= */
+
+@keyframes boutonBleuEnter {
+
+    0% {
+        opacity: 0;
+        transform: translate(120vw, 120vh) rotate(-20deg);
+    }
+
+    65% {
+        opacity: 1;
+        transform: translate(-1.5vw, -1.5vh) rotate(3deg);
+    }
+
+    82% {
+        transform: translate(0.5vw, 0.5vh) rotate(-1deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+}
+
+
+/* =========================================================
+   BARRETTE BEIGE — ARRIVE DU BAS DROITE
+   ========================================================= */
+
+@keyframes barretteBeigeEnter {
+
+    0% {
+        opacity: 0;
+        transform: translate(120vw, 120vh) rotate(80deg);
+    }
+
+    65% {
+        opacity: 1;
+        transform: translate(-2vw, -1.5vh) rotate(35deg);
+    }
+
+    82% {
+        transform: translate(0.6vw, 0.4vh) rotate(41deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, 0) rotate(40deg);
+    }
+
+}
+
+
+/* =========================================================
+   BARRETTE BLEUE — ARRIVE DU HAUT GAUCHE
+   ========================================================= */
+
+@keyframes barretteBleuEnter {
+
+    0% {
+        opacity: 0;
+        transform: translate(-120vw, -100vh) rotate(-70deg);
+    }
+
+    65% {
+        opacity: 1;
+        transform: translate(2vw, 1.5vh) rotate(-29deg);
+    }
+
+    82% {
+        transform: translate(-0.6vw, -0.4vh) rotate(-36deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0) rotate(-35deg);
+    }
+
+}
+
+
+/* =========================================================
+   BARRETTE ROSE — ARRIVE DU HAUT DROITE
+   ========================================================= */
+
+@keyframes barretteRoseEnter {
+
+    0% {
+        opacity: 0;
+        transform: translate(120vw, -100vh) rotate(80deg);
+    }
+
+    65% {
+        opacity: 1;
+        transform: translate(-2vw, 1.5vh) rotate(41deg);
+    }
+
+    82% {
+        transform: translate(0.6vw, -0.4vh) rotate(34deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0) rotate(35deg);
+    }
+
+}
+
+
+/* =========================================================
+   TROMBONE BLEU #1 — ARRIVE DU BAS
+   ========================================================= */
+
+@keyframes tromboneBlueFirstEnter {
+
+    0% {
+        opacity: 0;
+        transform: translate(0, 120vh) rotate(-20deg);
+    }
+
+    65% {
+        opacity: 1;
+        transform: translate(1.5vw, -2vh) rotate(15deg);
+    }
+
+    82% {
+        transform: translate(-0.5vw, 0.5vh) rotate(13deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0) rotate(12deg);
+    }
+
+}
+
+
+/* =========================================================
+   TROMBONE BLEU #2 — ARRIVE DU BAS GAUCHE
+   ========================================================= */
+
+@keyframes tromboneBlueSecondEnter {
+
+    0% {
+        opacity: 0;
+        transform: translate(-120vw, 100vh) rotate(-60deg);
+    }
+
+    65% {
+        opacity: 1;
+        transform: translate(2vw, -2vh) rotate(-14deg);
+    }
+
+    82% {
+        transform: translate(-0.5vw, 0.5vh) rotate(-21deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0) rotate(-20deg);
+    }
+
+}
+
+
+/* =========================================================
+   TROMBONE ROSE — ARRIVE DU BAS GAUCHE
+   ========================================================= */
+
+@keyframes tromboneRoseEnter {
+
+    0% {
+        opacity: 0;
+        transform: translate(-120vw, 100vh) rotate(80deg);
+    }
+
+    65% {
+        opacity: 1;
+        transform: translate(2vw, -2vh) rotate(38deg);
+    }
+
+    82% {
+        transform: translate(-0.5vw, 0.5vh) rotate(31deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0) rotate(32deg);
+    }
+
+}
+
+
+/* =========================================================
+   TROMBONE ROSE #2 — ARRIVE DU BAS DROITE
+   ========================================================= */
+
+@keyframes tromboneRoseSecondEnter {
+
+    0% {
+        opacity: 0;
+        transform: translate(120vw, 100vh) rotate(120deg);
+    }
+
+    65% {
+        opacity: 1;
+        transform: translate(-2vw, -2vh) rotate(74deg);
+    }
+
+    82% {
+        transform: translate(0.5vw, 0.5vh) rotate(68deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0) rotate(70deg);
+    }
+
+}
+
+
+/* =========================================================
+   TROMBONE BLEU #3 — ARRIVE DU BAS GAUCHE
+   ========================================================= */
+
+@keyframes tromboneBlueThirdEnter {
+
+    0% {
+        opacity: 0;
+        transform: translate(-100vw, 100vh) rotate(90deg);
+    }
+
+    65% {
+        opacity: 1;
+        transform: translate(2vw, -2vh) rotate(40deg);
+    }
+
+    82% {
+        transform: translate(-0.5vw, 0.5vh) rotate(33deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0) rotate(34deg);
+    }
+
+}
+
+
+/* =========================================================
+   PIN — ARRIVE DU HAUT DROITE
+   ========================================================= */
+
+@keyframes pinEnter {
+
+    0% {
+        opacity: 0;
+        transform: translate(100vw, -100vh) rotate(35deg);
+    }
+
+    65% {
+        opacity: 1;
+        transform: translate(-2vw, 2vh) rotate(-5deg);
+    }
+
+    82% {
+        transform: translate(0.5vw, -0.5vh) rotate(2deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+}
+
+
+/* =========================================================
+   XP-PEN — ARRIVE DU HAUT GAUCHE
+   ========================================================= */
+
+@keyframes xppenEnter {
+
+    0% {
+        opacity: 0;
+        transform: translate(-120vw, -100vh) rotate(-25deg);
+    }
+
+    65% {
+        opacity: 1;
+        transform: translate(2.5vw, 2vh) rotate(25deg);
+    }
+
+    82% {
+        transform: translate(-0.7vw, -0.5vh) rotate(21deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0) rotate(22deg);
+    }
+
+}
+
+
+/* =========================================================
+   CLIP — ARRIVE DE LA GAUCHE
+   ========================================================= */
+
+@keyframes clipEnter {
+
+    0% {
+        opacity: 0;
+        transform: translate(-120vw, 0) rotate(-55deg);
+    }
+
+    65% {
+        opacity: 1;
+        transform: translate(2vw, 0) rotate(-20deg);
+    }
+
+    82% {
+        transform: translate(-0.5vw, 0) rotate(-28deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0) rotate(-26deg);
+    }
+
+}
+
+
+/* =========================================================
+   PAPERBALL — ARRIVE DE LA DROITE
+   ========================================================= */
+
+@keyframes paperballEnter {
+
+    0% {
+        opacity: 0;
+        transform: translate(120vw, 0) rotate(80deg);
+    }
+
+    65% {
+        opacity: 1;
+        transform: translate(-2vw, 0) rotate(-8deg);
+    }
+
+    82% {
+        transform: translate(0.7vw, 0) rotate(3deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0) rotate(0deg);
+    }
+
 }
