@@ -1,9 +1,13 @@
-/* Mobile composition: dimensions follow the 430px reference. */
+/* Adaptation des sections à la largeur de la fenêtre. Jusqu’à 767 px : composition mobile. À partir de 768 px : composition tablette et ordinateur. Ce fichier est chargé en dernier pour remplacer les règles de base. 1vw vaut 1 % de la largeur de la fenêtre ; 1vh vaut 1 % de sa hauteur. min() limite une taille, clamp() impose une valeur minimale et maximale. */
+
+/* Composition mobile : proportions adaptées à la référence de 430 px. */
 @media (max-width: 767px) {
   body { width: 100%; overflow-x: hidden; }
   body:not(.project-page) main { margin: 0; padding: 0; width: 100%; }
+  /* Navigation adaptée à cette largeur. */
   .main-nav { position: fixed; top: 3.3vw; left: 50%; width: 66vw; gap: 0; padding: 2vw 3vw; justify-content: space-between; transform: translateX(-50%); border-radius: 999px; }
   .main-nav a { font-size: 3.7vw; letter-spacing: 0; font-weight: 500; }
+  /* Bannière : hauteur, titre et placement des objets. */
   .hero, .hero__art { height: 100vw; min-height: 0; max-height: none; padding: 0; }
   .hero__art { overflow: visible; z-index: 2; }
   .hero__title { top: 49%; left: 50%; width: max-content; font-size: 13vw; line-height: .9; letter-spacing: -.03em; }
@@ -24,6 +28,7 @@
   .hero__art .trombone-rose--second { width: 14vw; left: 44vw; right: auto; top: 80vw; bottom: auto; transform: rotate(70deg); }
   .hero__art .barrette-beige { width: 20vw; left: auto; right: 8vw; top: 84vw; bottom: auto; transform: rotate(40deg); z-index: 5; }
 
+  /* À propos : disposition du texte, de la photo et des décorations. */
   .about { display: block; height: auto; min-height: 0; padding: 5vw 0 10vw; margin: 0; overflow: visible; background: linear-gradient(#f4eee5dd, #f4eee5dd); position: relative; }
   .about__paper { width: 72vw; height: auto; min-height: 62vw; margin: 0 auto; padding: 10vw 8vw 9vw; transform: none; opacity: 1; overflow: visible; }
   .about__paper::before { background-size: 100% 100%; background-position: center; opacity: .85; }
@@ -36,6 +41,7 @@
   .about__bow { top: -1vw; right: 0; width: 9vw; transform: rotate(20deg); }
   .about__arrow { left: 37vw; right: auto; bottom: 30vw; width: 18vw; transform: rotate(55deg); z-index: 6; }
 
+  /* Projets sur mobile : carte seule, sans écran ni souris. */
   .projects { min-height: 0; margin: 0; padding: 1vw; overflow: hidden; background-image: url("../assets/Img/plaid.jpg"); }
   .projects__stage { position: relative; width: 100%; min-height: 0; margin: 0; padding: 0; overflow: visible; }
   .projects__title, .projects__screen, .projects__mouse { display: none; }
@@ -52,6 +58,7 @@
   .projects__arrow--prev { left: 1vw; right: auto; }
   .projects__arrow--next { right: 1vw; left: auto; }
 
+  /* Logiciels : taille des icônes et répartition dans la rangée. */
   .skills { min-height: 0; padding: 2vw 1vw 3vw; background: #fff4de; overflow: visible; }
   .skills__list { display: flex; flex-wrap: nowrap; gap: 1vw; width: 100%; justify-content: space-between; }
   .skills__item { flex: 1 1 0; min-width: 0; }
@@ -60,6 +67,7 @@
   .skill-card__icon { width: 100%; height: 10vw; max-width: 100%; max-height: none; object-fit: contain; }
   .skill-card__label { font-size: 2.5vw; }
 
+  /* Contact : placement de l’enveloppe, de la carte et de ses éléments. */
   .contact { width: 100%; height: 80vw; min-height: 0; margin: 0; padding: 8vw 0 11vw; overflow: hidden; }
   .contact__stage { width: 100%; height: 61vw; min-height: 0; margin: 0; overflow: visible; background: #1e1e2a; }
   .contact__card { width: 63vw; right: 20vw; top: 0; transform: rotate(8deg); z-index: 3; }
@@ -81,15 +89,17 @@
 }
 
 
-/* Desktop reference composition, scaled identically for tablet and desktop. */
+/* Composition de référence pour tablette et ordinateur. */
 .hero { position: relative; z-index: 10; overflow: visible; }
 .hero__art { overflow: visible; }
 .hero__art .barrette-beige { z-index: 20; }
 .about { isolation: isolate; z-index: 1; }
 @media (min-width: 768px) {
   body:not(.project-page) main { padding: 0; }
+  /* Navigation adaptée à cette largeur. */
   .main-nav { top: 1vw; gap: 3vw; padding: 1vw 2vw; }
   .main-nav a { font-size: clamp(14px, 2vw, 28px); }
+  /* Bannière : hauteur, titre et placement des objets. */
   .hero, .hero__art { height: 56vw; min-height: 0; }
   .hero__title { top: 45%; font-size: 8.5vw; }
   .hero__art img { animation: none; height: auto; }
@@ -97,7 +107,8 @@
   .hero__art .barrette-bleu { width: min(16vw, 300px); left: -7vw; top: -8vw; }
   .hero__art .barrette-rose { width: min(16vw, 300px); left: 65vw; top: 7vw; }
   .hero__art .pin { width: min(6.5vw, 120px); right: 7vw; top: 4vw; }
-  .hero__art .clip { width: min(16vw, 300px); right: 78vw; top: 14vw; }
+  /* Pince abaissée pour laisser un espace sous le XP-Pen. */
+  .hero__art .clip { width: min(16vw, 300px); right: 78vw; top: 19vw; }
   .hero__art .paperball { width: min(16vw, 300px); right: 0; top: 32vw; }
   .hero__art .bouton-bleu { width: min(12vw, 220px); right: 20vw; bottom: 2vw; }
   .hero__art .trombone-bleu--first { width: min(14vw, 260px); right: 72vw; top: 34vw; }
@@ -107,6 +118,7 @@
   .hero__art .trombone-rose--second { width: min(11vw, 200px); left: auto; right: 44vw; top: 46vw; }
   .hero__art .barrette-beige { width: min(16vw, 300px); left: 85vw; bottom: -9vw; }
 
+  /* À propos : disposition du texte, de la photo et des décorations. */
   .about { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); width: 100%; min-height: 56vw; background: linear-gradient(90deg, var(--board-bg) 50%, var(--pink-strong) 50%); }
   .about__paper { min-width: 0; width: 46vw; min-height: 50vw; margin: 3vw auto; padding: 5vw 6vw 8vw; overflow: visible; }
   .about__paper::before { background-size: 100% 100%; opacity: .85; }
@@ -119,6 +131,7 @@
   .about__bow { width: 18vw; right: 2vw; top: 3vw; }
   .about__arrow { width: 19vw; left: 40vw; bottom: 20vw; }
 
+  /* Projets sur tablette et ordinateur : carte cadrée dans l’écran. */
   .projects, .projects__stage { width: 100%; min-height: 56vw; height: 56vw; }
   .projects__stage { max-width: none; }
   .projects__title { padding-top: 1vw; font-size: 6vw; }
@@ -135,6 +148,7 @@
   .projects .project-card__name { align-self: flex-start; font-family: "Nunito Local", sans-serif; font-size: 2.8vw; line-height: 1.1; border-bottom: 2px solid var(--ink); background: #d6d8d8cc; }
   .projects .project-card__category { margin-top: auto; align-self: flex-end; font-size: 1.6vw; background: #d6d8d8cc; border-bottom: 1px solid var(--ink); }
 
+  /* Logiciels : taille des icônes et répartition dans la rangée. */
   .skills { min-height: 0; padding: 1vw 2vw 2vw; }
   .skills__list { display: grid; grid-template-columns: repeat(9, minmax(0, 1fr)); width: 100%; max-width: none; gap: 1vw; }
   .skills__item, .skill-card { min-width: 0; max-width: 100%; }
@@ -142,6 +156,7 @@
   .skill-card__icon { width: 100%; height: 7vw; max-width: 100%; object-fit: contain; }
   .skill-card__label { font-size: 1vw; }
 
+  /* Contact : placement de l’enveloppe, de la carte et de ses éléments. */
   .contact { min-height: 0; height: 56vw; margin: 0; padding: 3vw 0 5vw; }
   .contact__stage { width: 100%; height: 48vw; min-height: 0; margin: 0; }
   .contact__envelope { width: 60vw; top: -6vw; left: -6vw; right: auto; bottom: auto; transform: rotate(-10deg); }
