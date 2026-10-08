@@ -336,3 +336,15 @@
 @media (min-width: 1920px) {
   .projects__mouse { width: min(7vw, 135px); right: 19vw; bottom: 1vw; }
 }
+
+/* Libellés toujours sous les icônes, y compris sur mobile et tablette. */
+@media (max-width: 767px) {
+  .skill-card { height: auto; min-height: 14vw; gap: 0.5vw; justify-content: flex-start; }
+  .skill-card__icon { flex: 0 0 auto; }
+  .skill-card__label { font-size: clamp(8px, 2vw, 12px); }
+}
+@media (min-width: 768px) {
+  .skill-card { height: auto; min-height: 10vw; gap: 0.5vw; justify-content: flex-start; }
+  .skill-card__icon { flex: 0 0 auto; }
+  .skill-card__label { font-size: clamp(11px, 1vw, 16px); }
+}
