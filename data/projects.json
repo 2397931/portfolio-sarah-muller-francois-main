@@ -90,10 +90,10 @@
         ],
         "theme": {
             "accent": "#e66b37",
-            "surface": "#fff6e8",
+            "surface": "#f7c5da",
             "ink": "#2a2020",
             "backgroundImage": "assets/Img/No_background.jpg",
-            "background": "#f3d7b5",
+            "background": "#f7c5da",
             "textBackground": "#f7c5da"
         },
         "process": {
