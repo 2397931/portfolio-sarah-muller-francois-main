@@ -88,14 +88,14 @@
 .projects__mouse {
     position: absolute;
 
-    right: 15vw;
+    right: 18vw;
     bottom: 4vh;
 
     z-index: 0;
 
     display: block;
 
-    width: min(10vw, 150px);
+    width: min(8vw, 125px);
 
     height: auto;
 
