@@ -13,20 +13,20 @@
   .hero__title { top: 49%; left: 50%; width: max-content; font-size: 13vw; line-height: .9; letter-spacing: -.03em; }
   .hero__title span:nth-child(1) { font-size: 1.45em; }
   .hero__title span:nth-child(9) { font-size: 1.08em; }
-  .hero__art img { animation: none; max-width: none; min-width: 0; height: auto; opacity: 1; }
-  .hero__art .xppen { width: 49vw; left: 16vw; right: auto; top: 10vw; bottom: auto; transform: rotate(22deg); }
-  .hero__art .barrette-bleu { width: 22vw; left: -6vw; right: auto; top: 20vw; bottom: auto; transform: rotate(-35deg); }
-  .hero__art .barrette-rose { width: 22vw; left: auto; right: 5vw; top: 20vw; bottom: auto; transform: rotate(35deg); }
+  .hero__art img { max-width: none; min-width: 0; height: auto; opacity: 1; }
+  .hero__art .xppen { width: 49vw; left: 16vw; right: auto; top: 10vw; bottom: auto; --hero-rest-transform: rotate(22deg); transform: rotate(22deg); }
+  .hero__art .barrette-bleu { width: 22vw; left: -6vw; right: auto; top: 20vw; bottom: auto; --hero-rest-transform: rotate(-35deg); transform: rotate(-35deg); }
+  .hero__art .barrette-rose { width: 22vw; left: auto; right: 5vw; top: 20vw; bottom: auto; --hero-rest-transform: rotate(35deg); transform: rotate(35deg); }
   .hero__art .pin { width: 9vw; left: auto; right: 2vw; top: 18vw; bottom: auto; }
-  .hero__art .clip { width: 24vw; left: 0; right: auto; top: 64vw; bottom: auto; transform: rotate(-26deg); }
+  .hero__art .clip { width: 24vw; left: 0; right: auto; top: 64vw; bottom: auto; --hero-rest-transform: rotate(-26deg); transform: rotate(-26deg); }
   .hero__art .paperball { width: 24vw; left: auto; right: 0; top: 67vw; bottom: auto; }
   .hero__art .bouton-bleu { width: 18vw; left: auto; right: 23vw; top: 67vw; bottom: auto; }
-  .hero__art .trombone-bleu--second { width: 20vw; left: 6vw; right: auto; top: 77vw; bottom: auto; transform: rotate(-20deg); }
-  .hero__art .trombone-rose:not(.trombone-rose--second) { width: 20vw; left: 9vw; right: auto; top: 78vw; bottom: auto; transform: rotate(32deg); }
-  .hero__art .trombone-bleu--third { width: 20vw; left: 16vw; right: auto; top: 80vw; bottom: auto; transform: rotate(34deg); }
+  .hero__art .trombone-bleu--second { width: 20vw; left: 6vw; right: auto; top: 77vw; bottom: auto; --hero-rest-transform: rotate(-20deg); transform: rotate(-20deg); }
+  .hero__art .trombone-rose:not(.trombone-rose--second) { width: 20vw; left: 9vw; right: auto; top: 78vw; bottom: auto; --hero-rest-transform: rotate(32deg); transform: rotate(32deg); }
+  .hero__art .trombone-bleu--third { width: 20vw; left: 16vw; right: auto; top: 80vw; bottom: auto; --hero-rest-transform: rotate(34deg); transform: rotate(34deg); }
   .hero__art .trombone-bleu--first { display: none; }
-  .hero__art .trombone-rose--second { width: 14vw; left: 44vw; right: auto; top: 80vw; bottom: auto; transform: rotate(70deg); }
-  .hero__art .barrette-beige { width: 20vw; left: auto; right: 8vw; top: 84vw; bottom: auto; transform: rotate(40deg); z-index: 5; }
+  .hero__art .trombone-rose--second { width: 14vw; left: 44vw; right: auto; top: 80vw; bottom: auto; --hero-rest-transform: rotate(70deg); transform: rotate(70deg); }
+  .hero__art .barrette-beige { width: 20vw; left: auto; right: 8vw; top: 84vw; bottom: auto; --hero-rest-transform: rotate(40deg); transform: rotate(40deg); z-index: 5; }
 
   /* À propos : disposition du texte, de la photo et des décorations. */
   .about { display: block; height: auto; min-height: 0; padding: 5vw 0 10vw; margin: 0; overflow: visible; background: linear-gradient(#f4eee5dd, #f4eee5dd); position: relative; }
@@ -102,8 +102,8 @@
   /* Bannière : hauteur, titre et placement des objets. */
   .hero, .hero__art { height: 56vw; min-height: 0; }
   .hero__title { top: 45%; font-size: 8.5vw; }
-  .hero__art img { animation: none; height: auto; }
-  .hero__art .xppen { width: min(40vw, 760px); left: 10vw; right: auto; top: -7vw; bottom: auto; transform: rotate(32deg); }
+  .hero__art img { height: auto; }
+  .hero__art .xppen { width: min(40vw, 760px); left: 10vw; right: auto; top: -7vw; bottom: auto; --hero-rest-transform: rotate(32deg); transform: rotate(32deg); }
   .hero__art .barrette-bleu { width: min(16vw, 300px); left: -7vw; top: -8vw; }
   .hero__art .barrette-rose { width: min(16vw, 300px); left: 65vw; top: 7vw; }
   .hero__art .pin { width: min(6.5vw, 120px); right: 7vw; top: 4vw; }
@@ -273,4 +273,19 @@
   .projects .project-card:focus-visible .project-card__graphic,
   .projects .project-card__name,
   .projects .project-card__category { transform: none; }
+}
+
+/* =========================================================
+   ANIMATIONS DU HERO — ACCESSIBILITÉ
+   Les animations d’entrée de hero.css fonctionnent sur toutes
+   les tailles. La position finale est définie par la variable
+   --hero-rest-transform dans les règles des objets ci-dessus.
+   ========================================================= */
+@media (prefers-reduced-motion: reduce) {
+  /* Affiche directement les objets si les animations sont réduites. */
+  .hero__art img {
+    animation: none;
+    opacity: 1;
+    transform: var(--hero-rest-transform);
+  }
 }
