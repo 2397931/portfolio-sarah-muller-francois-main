@@ -1,3 +1,6 @@
+/* Données de secours et génération des projets. Pour modifier les projets chargés, éditer data/projects.json. Les noms de propriétés restent identiques à ceux attendus par le programme. */
+
+/* Champs : id = identifiant ; title = titre ; category = catégorie ; year = année ; image = aperçu ; link = média ou site ; concept = description ; visual = direction visuelle ; support = logiciels. theme définit les couleurs et peut contenir backgroundImage pour un fond propre au projet. process décrit les étapes et leurs images. */
 export const projects = [
 
     /* =====================================================
@@ -203,6 +206,7 @@ Lorsque j’ai vu la vidéo « I Choose You » du groupe japonais F5ve, j’ai t
    CHARGEMENT DES PROJETS
    ========================================================= */
 
+/* Charge data/projects.json. Si le chargement échoue, garde les projets de secours ci-dessus. Les champs absents sont complétés et le processus est normalisé. */
 export async function loadProjects() {
 
     try {
@@ -221,6 +225,7 @@ export async function loadProjects() {
             await response.json();
 
 
+        /* Remplace le contenu du tableau sans changer sa référence, partagée avec main.js. */
         projects.splice(
             0,
             projects.length,
@@ -240,6 +245,7 @@ export async function loadProjects() {
                     );
 
 
+                /* Accepte le format steps du JSON et le convertit en champs utilisés par le rendu. */
                 const normalizedProcess =
                     project.process?.steps
                         ? {
@@ -315,6 +321,7 @@ export async function loadProjects() {
    THÈME DU PROJET
    ========================================================= */
 
+/* Applique les couleurs du projet aux variables CSS. Une image de fond propre au projet peut remplacer le fond uni. */
 export function applyProjectTheme(project) {
 
     const theme =
@@ -392,6 +399,7 @@ export function applyProjectTheme(project) {
    PROTECTION DU HTML
    ========================================================= */
 
+/* Échappe les caractères spéciaux avant l’insertion d’un texte dans le HTML généré. */
 function escapeHtml(value) {
 
     return String(value)
@@ -407,6 +415,7 @@ function escapeHtml(value) {
    LIENS / PROJETS
    ========================================================= */
 
+/* Encode l’identifiant pour pouvoir l’utiliser dans le paramètre de l’URL. */
 function getProjectSlug(project) {
 
     return encodeURIComponent(
@@ -415,6 +424,7 @@ function getProjectSlug(project) {
 }
 
 
+/* Trouve la position du projet sans tenir compte des majuscules ; utilise 0 si l’identifiant est inconnu. */
 export function getProjectIndex(projectId) {
 
     return Math.max(
@@ -429,6 +439,7 @@ export function getProjectIndex(projectId) {
 }
 
 
+/* Renvoie le projet demandé ou le premier projet comme solution de secours. */
 export function getProjectById(projectId) {
 
     const foundProject =
@@ -442,6 +453,7 @@ export function getProjectById(projectId) {
 }
 
 
+/* Recule dans la liste ; le calcul modulo revient au dernier projet après le premier. */
 export function getPreviousProject(projectId) {
 
     const currentIndex =
@@ -454,6 +466,7 @@ export function getPreviousProject(projectId) {
 }
 
 
+/* Avance dans la liste ; le calcul modulo revient au premier projet après le dernier. */
 export function getNextProject(projectId) {
 
     const currentIndex =
@@ -466,6 +479,7 @@ export function getNextProject(projectId) {
 }
 
 
+/* Construit le lien vers la page de détails à partir de l’identifiant du projet. */
 export function getProjectHref(project) {
 
     return `projet.html?project=${getProjectSlug(project)}`;
@@ -476,6 +490,7 @@ export function getProjectHref(project) {
    SUPPORT
    ========================================================= */
 
+/* Renvoie les logiciels renseignés ; sinon, propose une valeur selon la catégorie. */
 function getProjectSupport(project) {
 
     return project.support ??
@@ -488,9 +503,10 @@ function getProjectSupport(project) {
 
 
 /* =========================================================
-   MEDIA DES CARTES
+   MÉDIAS DES CARTES
    ========================================================= */
 
+/* Choisit une image, une vidéo ou un fond graphique selon le type de projet et le contexte d’affichage. */
 function getProjectMediaMarkup(
     project,
     context
@@ -561,6 +577,7 @@ function getProjectMediaMarkup(
    CARTE DE PROJET
    ========================================================= */
 
+/* Génère le lien de prévisualisation affiché dans le carrousel avec média, titre et catégorie. */
 export function renderProjectPreview(project) {
 
     const isImageProject =
@@ -619,6 +636,7 @@ export function renderProjectPreview(project) {
    PROCESSUS DU PROJET
    ========================================================= */
 
+/* Génère uniquement les étapes disponibles. Les paragraphes d’introduction sont séparés par les doubles retours à la ligne. */
 export function renderProjectProcess(project) {
 
     if (!project.process) {
@@ -723,6 +741,7 @@ export function renderProjectProcess(project) {
    PAGE DU PROJET
    ========================================================= */
 
+/* Applique le thème et crée l’image principale ; ajoute un lecteur si le projet est une vidéo. */
 export function renderProjectHero(project) {
 
     applyProjectTheme(project);
@@ -771,6 +790,7 @@ export function renderProjectHero(project) {
    DÉTAILS
    ========================================================= */
 
+/* Crée les panneaux Concept, Direction visuelle et Support à partir des données du projet. */
 export function renderProjectDetails(project) {
 
     const concept = project.concept ?? project.summary ?? project.description ?? "";
