@@ -1,7 +1,10 @@
+/* Base commune aux deux pages : couleurs, polices locales, fond en bois et largeur des sections. Les variables définies dans :root sont réutilisées avec var(). */
+
 /* =========================================================
    STYLES GLOBAUX DU PORTFOLIO
    ========================================================= */
 
+/* Palette commune : modifier une variable met à jour tous les éléments qui l’utilisent. */
 :root {
     --black: #03070d;
     --board-bg: #e5d8bb;
@@ -15,15 +18,18 @@
     --metal-dark: #b9a99d;
 }
 
+/* Inclut les bordures et les marges internes dans la largeur et la hauteur annoncées. */
 * {
     box-sizing: border-box;
 }
 
+/* Taille de base du texte et défilement doux vers les ancres du menu. */
 html {
     font-size: 16px;
     scroll-behavior: smooth;
 }
 
+/* Supprime la marge par défaut et répète la texture du bureau en arrière-plan. */
 body {
     margin: 0;
     min-height: 100vh;
@@ -40,6 +46,7 @@ body {
    POLICES
    ========================================================= */
 
+/* Charge une police depuis assets/font ; swap affiche une police de secours pendant le chargement. */
 @font-face {
     font-family: "Myrtille Pixel";
     src: url("../assets/font/myrtille-pixel.otf") format("opentype");
@@ -69,6 +76,7 @@ body {
    CONTENEUR PRINCIPAL
    ========================================================= */
 
+/* Conteneur principal commun : occupe toute la largeur de la page. */
 main {
     min-height: 100vh;
     display: block;
@@ -88,6 +96,7 @@ main {
 .about,
 .projects,
 .skills,
+/* Conteneur de la composition ; réserve les bandes de bois autour de la zone sombre. */
 .contact {
     width: 100%;
     max-width: none;
