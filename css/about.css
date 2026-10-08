@@ -1,7 +1,10 @@
+/* Section À propos : papier à gauche, panneau photo à droite et décorations. responsive.css adapte cette structure aux petits écrans. */
+
 /* =========================================================
-   ABOUT SECTION
+   SECTION À PROPOS
    ========================================================= */
 
+/* Deux colonnes et deux couleurs de fond pour séparer le texte et la photo. */
 .about {
     position: relative;
     display: grid;
@@ -22,9 +25,10 @@
 
 
 /* =========================================================
-   PAPER
+   PAPIER
    ========================================================= */
 
+/* Cadre du texte : padding réserve l’espace intérieur et margin centre le papier. */
 .about__paper {
     position: relative;
 
@@ -49,9 +53,10 @@
 
 
 /* ---------------------------------------------------------
-   PAPER IMAGE ONLY
+   IMAGE DE FOND DU PAPIER
    --------------------------------------------------------- */
 
+/* Ajoute la texture dans un calque séparé pour garder le texte lisible. */
 .about__paper::before {
     content: "";
 
@@ -72,10 +77,12 @@
 
 
 /* =========================================================
-   PAPER CONTENT
+   CONTENU DU PAPIER
    ========================================================= */
 
+/* Place le texte au-dessus de la texture du papier. */
 .about__paper h2,
+/* Limite la longueur des lignes et règle leur espacement pour la lecture. */
 .about__paper p {
     position: relative;
 
@@ -107,7 +114,7 @@
 
 
 /* =========================================================
-   DECORATIONS
+   DÉCORATIONS
    ========================================================= */
 
 .about__pin,
@@ -139,9 +146,10 @@
 
 
 /* =========================================================
-   PINK PHOTO PANEL
+   PANNEAU ROSE DE LA PHOTO
    ========================================================= */
 
+/* Fond rose et centrage du cadre prévu pour la photo. */
 .about__pink-panel {
     position: relative;
 
@@ -162,6 +170,7 @@
    PHOTO
    ========================================================= */
 
+/* Emplacement de la future photo ; aspect-ratio fixe ses proportions. */
 .about__image-placeholder {
     width: min(100%, 700px);
     height: min(100%, 900px);
@@ -178,7 +187,7 @@
 
 
 /* =========================================================
-   BOW
+   NŒUD
    ========================================================= */
 
 .about__bow {
@@ -192,9 +201,10 @@
 
 
 /* =========================================================
-   ARROW
+   FLÈCHE
    ========================================================= */
 
+/* Décoration entre le texte et la photo ; ses coordonnées sont relatives à la section. */
 .about__arrow {
     left: 41vw;
     bottom: 39vh;
