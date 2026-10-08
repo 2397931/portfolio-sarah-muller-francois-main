@@ -192,8 +192,8 @@
 
 .hero__art .barrette-bleu {
     --hero-rest-transform: rotate(-35deg);
-    left: -6vw;
-    top: -15vh;
+    left: 2vw;
+    top: -8vh;
     width: var(--hero-barrette-size, 320px);
     transform: rotate(-35deg);
 }
