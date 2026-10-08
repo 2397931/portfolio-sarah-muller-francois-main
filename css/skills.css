@@ -1,5 +1,7 @@
+/* Rangée des logiciels : les icônes restent visibles et le nom apparaît au survol. responsive.css ajuste le nombre de colonnes et les tailles. */
+
 /* =========================================================
-   SKILLS / COMPÉTENCES - DESKTOP / TABLET
+   LOGICIELS ET COMPÉTENCES — ORDINATEUR ET TABLETTETE
    ========================================================= */
 
 .skills {
@@ -26,6 +28,7 @@
    LISTE DES COMPÉTENCES
    --------------------------------------------------------- */
 
+/* Aligne les logiciels et retire les puces de la liste. */
 .skills__list {
     display: flex;
 
@@ -52,7 +55,7 @@
 
 
 /* ---------------------------------------------------------
-   ITEM
+   ÉLÉMENT DE LA LISTE
    --------------------------------------------------------- */
 
 .skills__item {
@@ -70,6 +73,7 @@
    CARTE DE COMPÉTENCE
    --------------------------------------------------------- */
 
+/* Cadre d’une icône avec son nom positionné à l’intérieur. */
 .skill-card {
     position: relative;
 
@@ -93,6 +97,7 @@
    ICÔNE
    --------------------------------------------------------- */
 
+/* Conserve les proportions du logo et prépare l’animation au survol. */
 .skill-card__icon {
     display: block;
 
@@ -130,6 +135,7 @@
    Caché avant le survol
    --------------------------------------------------------- */
 
+/* Nom masqué par défaut ; le survol le rend visible sous l’icône. */
 .skill-card__label {
     position: absolute;
 
