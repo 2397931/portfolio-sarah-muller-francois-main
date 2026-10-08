@@ -214,3 +214,11 @@
 
     width: 320px;
 }
+
+/* Nom dans la section À propos */
+.about__paper .about__name,
+.about__paper .about__name strong {
+    font-family: "Nunito Local", sans-serif;
+    font-weight: 900;
+    font-synthesis: weight;
+}
