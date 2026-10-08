@@ -1,7 +1,10 @@
+/* Mise en page de projet.html : bannière du projet, vidéo, détails et étapes de création. Les couleurs proviennent du thème chargé en JavaScript. */
+
 /* =========================================================
    PAGE PROJET
    ========================================================= */
 
+/* Couleurs propres au projet ; les variables sont renseignées par JavaScript. */
 body.project-page {
     --project-background: var(--project-surface, #f5f7f2);
     --project-text: var(--project-ink, #172016);
@@ -32,7 +35,7 @@ body.project-page main {
 
 
 /* =========================================================
-   HERO
+   BANNIÈRE D’ACCUEIL
    ========================================================= */
 
 .project-hero {
@@ -48,9 +51,10 @@ body.project-page main {
 
 
 /* =========================================================
-   IMAGE HERO
+   IMAGE DE LA BANNIÈRE
    ========================================================= */
 
+/* Cadre de l’image principale, avec une hauteur minimale sur ordinateur. */
 .project-hero__image-wrapper {
     position: relative;
 
@@ -81,9 +85,10 @@ body.project-page main {
 
 
 /* =========================================================
-   ASSOMBRISSEMENT HERO
+   ASSOMBRISSEMENT DE LA BANNIÈRE
    ========================================================= */
 
+/* Dégradé sombre au-dessus de l’image pour améliorer le contraste du titre. */
 .project-hero__image-wrapper::after {
     content: "";
 
@@ -104,9 +109,10 @@ body.project-page main {
 
 
 /* =========================================================
-   OVERLAY HERO
+   TEXTE SUPERPOSÉ À LA BANNIÈRE
    ========================================================= */
 
+/* Regroupe et centre les informations superposées à l’image. */
 .project-hero__overlay {
     position: absolute;
     inset: 0;
@@ -201,6 +207,7 @@ body.project-page main {
    VIDÉO
    ========================================================= */
 
+/* Cadre du lecteur vidéo, limité en largeur pour la lecture. */
 .project-hero__video {
     position: relative;
 
@@ -237,6 +244,7 @@ body.project-page main {
    DÉTAILS DU PROJET
    ========================================================= */
 
+/* Grille des informations du projet : deux colonnes sur ordinateur. */
 .project-details {
     display: grid;
 
@@ -269,6 +277,7 @@ body.project-page main {
         0 26px 60px rgba(14, 14, 18, 0.14);
 }
 
+/* Étend le panneau Concept sur toutes les colonnes de la grille. */
 .project-panel--full {
     grid-column: 1 / -1;
 }
@@ -307,6 +316,7 @@ body.project-page main {
    PROCESSUS
    ========================================================= */
 
+/* Sépare les étapes de création des informations principales. */
 .project-process {
     width: min(100%, 1100px);
 
@@ -451,6 +461,7 @@ body.project-page main {
     box-sizing: border-box;
 }
 
+/* Lien pour revenir à la section Projets du portfolio. */
 .project-page__back {
     display: inline-flex;
     align-items: center;
@@ -495,7 +506,7 @@ body.project-page main {
 
 
 /* =========================================================
-   RESPONSIVE — TABLETTE
+   ADAPTATION AUX ÉCRANS — TABLETTETE
    ========================================================= */
 
 @media (max-width: 900px) {
@@ -525,7 +536,7 @@ body.project-page main {
 
 
 /* =========================================================
-   RESPONSIVE — MOBILE
+   ADAPTATION AUX ÉCRANS — MOBILE
    ========================================================= */
 
 @media (max-width: 640px) {
