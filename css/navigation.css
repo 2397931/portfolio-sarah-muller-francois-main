@@ -1,7 +1,10 @@
+/* Menu fixe au-dessus des sections. Le décalage des ancres évite que les titres soient cachés derrière le menu. */
+
 /* =========================================================
    NAVIGATION PRINCIPALE
    ========================================================= */
 
+/* Centre le menu fixe ; son z-index élevé le garde au-dessus du contenu. */
 .main-nav {
     position: fixed;
     top: 2vh;
@@ -30,6 +33,7 @@
     white-space: nowrap;
 }
 
+/* Apparence des liens du menu : police, couleur et transition. */
 .main-nav a {
     color: #111016;
     text-decoration: none;
@@ -44,6 +48,7 @@
         transform 0.2s ease;
 }
 
+/* Retour visuel lorsque le lien est survolé ou sélectionné au clavier. */
 .main-nav a:hover,
 .main-nav a:focus-visible {
     color: #ffffff;
@@ -56,6 +61,7 @@
    DÉFILEMENT VERS LES SECTIONS
    ========================================================= */
 
+/* Décale la destination des ancres sous le menu fixe. */
 #a-propos,
 #projets,
 #contact {
