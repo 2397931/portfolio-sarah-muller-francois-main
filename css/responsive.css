@@ -30,9 +30,7 @@
         left: 50%;
         width: max-content;
         gap: 7vw;
-        padding:
-            1vh
-            4vw;
+        padding: 1vh 4vw;
         transform: translateX(-50%);
         border-radius: 999px;
         z-index: 1000;
@@ -57,15 +55,23 @@
 
     .hero {
         width: 100%;
+
+        --hero-bouton-size: 25vw;
+        --hero-barrette-size: 28vw;
+        --hero-trombone-size: 30vw;
+        --hero-pin-size: 15vw;
+        --hero-xppen-size: 70vw;
+        --hero-clip-size: 28vw;
+        --hero-paperball-size: 35vw;
     }
 
     .hero__art {
         position: relative;
         width: 100%;
-        height: 81vw;
-        min-height: 0;
+        height: 100svh;
+        min-height: 100svh;
         max-height: none;
-        overflow: hidden;
+        overflow: visible;
     }
 
 
@@ -75,9 +81,9 @@
 
     .hero__title {
         left: 50%;
-        top: 51%;
+        top: 49%;
         width: max-content;
-        font-size: clamp(3rem, 15vw, 4.2rem);
+        font-size: clamp(4rem, 16vw, 5.5rem);
         line-height: 0.7;
         letter-spacing: -0.03em;
         white-space: nowrap;
@@ -106,98 +112,121 @@
 
 
     /* -----------------------------------------------------
-       OBJETS DU HERO
+       HERO OBJECTS — MOBILE
        ----------------------------------------------------- */
 
-    .hero__art .xppen {
-        left: 13vw;
-        top: 17vw;
-        width: 34vw;
-        transform: rotate(-13deg);
+    .hero__art img {
+        max-width: none !important;
+        min-width: 0 !important;
+        height: auto !important;
+        object-fit: contain !important;
     }
+
+
+    /* XP-PEN */
+
+    .hero__art .xppen {
+        --hero-xppen-size: 45vw !important;
+        left: 10vw !important;
+        top: -8vw !important;
+    }
+
+    /* BLUE BARRETTE */
 
     .hero__art .barrette-bleu {
-        left: -3vw;
-        top: 20vw;
-        width: 10vw;
-        transform: rotate(-35deg);
+        left: -4vw !important;
+        top: 5vw !important;
     }
+
+
+    /* PINK BARRETTE */
 
     .hero__art .barrette-rose {
-        left: auto;
-        right: 14vw;
-        top: 22vw;
-        width: 7vw;
-        transform: rotate(25deg);
+        left: auto !important;
+        right: 7vw !important;
+        top: 9vh !important;
     }
+
+
+    /* PIN */
 
     .hero__art .pin {
-        right: 7vw;
-        top: 24vw;
-        width: 4vw;
+        right: -1vw !important;
+        top: 0 !important;
     }
+
+
+    /* CLIP */
 
     .hero__art .clip {
-        left: 3vw;
-        right: auto;
-        top: 18vw;
-        width: 9vw;
-        transform: rotate(-28deg);
+        left: 15vw !important;
+        right: auto !important;
+        top: 68vh !important;
     }
+
+
+    /* PAPER BALL */
 
     .hero__art .paperball {
-        right: 4vw;
-        top: 39vw;
-        width: 12vw;
+        right: -2vw !important;
+        top: 35vh !important;
     }
+
+
+    /* BLUE BUTTON */
 
     .hero__art .bouton-bleu {
-        right: 8vw;
-        bottom: 14vw;
-        width: 7vw;
+        right: 1vw !important;
+        bottom: 4vw !important;
     }
+
+
+    /* LOWER BLUE TROMBONE */
 
     .hero__art .trombone-bleu--second {
-        left: 11vw;
-        bottom: 4vw;
-        width: 10vw;
-        transform: rotate(-20deg);
+        left: 1vw !important;
+        bottom: 0 !important;
     }
+
+
+    /* LOWER PINK TROMBONE */
 
     .hero__art .trombone-rose {
-        left: 14vw;
-        bottom: 3vw;
-        width: 10vw;
-        transform: rotate(32deg);
+        left: 8vw !important;
+        bottom: -1vw !important;
     }
+
+
+    /* MIDDLE BLUE TROMBONE */
 
     .hero__art .trombone-bleu--third {
-        left: 29vw;
-        top: 68vw;
-        width: 9vw;
-        transform: rotate(34deg);
+        left: 25vw !important;
+        top: 72vh !important;
     }
+
+
+    /* MIDDLE BLUE TROMBONE — FIRST */
 
     .hero__art .trombone-bleu--first {
-        right: 25vw;
-        top: 67vw;
-        width: 9vw;
-        transform: rotate(12deg);
+        right: 18vw !important;
+        top: 72vh !important;
     }
+
+
+    /* MIDDLE PINK TROMBONE */
 
     .hero__art .trombone-rose--second {
-        right: 15vw;
-        top: 67vw;
-        width: 9vw;
-        transform: rotate(70deg);
+        right: 6vw !important;
+        top: 72vh !important;
     }
 
+
+    /* BEIGE BARRETTE */
+
     .hero__art .barrette-beige {
-        left: auto;
-        right: 7vw;
-        bottom: -5vw;
-        width: 12vw;
-        transform: rotate(40deg);
+        left: auto !important;
+        right: -1vw !important;
+        bottom: -4vw !important;
     }
 
 
@@ -219,14 +248,8 @@
         width: 72vw;
         height: 63vw;
         min-height: 0;
-        margin:
-            5vw
-            auto
-            0;
-        padding:
-            11vw
-            8vw
-            4vw;
+        margin: 5vw auto 0;
+        padding: 11vw 8vw 4vw;
         background-size: 100% 100%;
         background-position: center;
         transform: rotate(0);
@@ -251,9 +274,7 @@
         top: -1vw;
         left: 50%;
         width: 8vw;
-        transform:
-            translateX(-50%)
-            rotate(8deg);
+        transform: translateX(-50%) rotate(8deg);
     }
 
     .about__clip {
@@ -464,63 +485,49 @@
     .main-nav {
         top: 1.5vh;
         gap: 5vw;
-        padding:
-            1vh
-            3vw;
+        padding: 1vh 3vw;
     }
 
     .main-nav a {
         font-size: 2.5vw;
     }
 
+
+    /* -----------------------------------------------------
+       HERO
+       ----------------------------------------------------- */
+
+    .hero {
+        --hero-bouton-size: 13vw;
+        --hero-barrette-size: 14vw;
+        --hero-trombone-size: 11vw;
+        --hero-xppen-size: 25vw;
+        --hero-pin-size: 6vw;
+        --hero-clip-size: 12vw;
+        --hero-paperball-size: 17vw;
+    }
+
     .hero__art {
-        min-height: 85vh;
+        min-height: 88vh;
+        overflow: hidden;
     }
 
     .hero__title {
         top: 45%;
-        font-size: clamp(3.5rem, 13vw, 6rem);
+        font-size: clamp(3.5rem, 12vw, 6rem);
+        white-space: nowrap;
+    }
+
+    .hero__art img {
+        max-width: none !important;
+        height: auto !important;
+        min-width: 0 !important;
     }
 
 
     /* -----------------------------------------------------
-       HERO OBJECTS
+       ABOUT
        ----------------------------------------------------- */
-
-    .hero__art .bouton-bleu {
-        width: 22vw;
-    }
-
-    .hero__art .barrette-beige,
-    .hero__art .barrette-bleu,
-    .hero__art .barrette-rose {
-        width: 22vw;
-    }
-
-    .hero__art .trombone-bleu--first,
-    .hero__art .trombone-bleu--second,
-    .hero__art .trombone-rose,
-    .hero__art .trombone-rose--second,
-    .hero__art .trombone-bleu--third {
-        width: 17vw;
-    }
-
-    .hero__art .xppen {
-        width: 34vw;
-    }
-
-    .hero__art .pin {
-        width: 9vw;
-    }
-
-    .hero__art .clip {
-        width: 18vw;
-    }
-
-    .hero__art .paperball {
-        width: 26vw;
-    }
-
 
     .about {
         display: block;
@@ -530,10 +537,7 @@
         width: 94%;
         min-height: 75vh;
         margin: 0 auto;
-        padding:
-            8vh
-            9vw
-            5vh;
+        padding: 8vh 9vw 5vh;
     }
 
     .about__pink-panel {
@@ -568,9 +572,7 @@
     .main-nav {
         top: 2vh;
         gap: 3vw;
-        padding:
-            1.2vh
-            2.5vw;
+        padding: 1.2vh 2.5vw;
     }
 
     .main-nav a {
@@ -582,53 +584,25 @@
        HERO
        ----------------------------------------------------- */
 
+    .hero {
+        --hero-bouton-size: 20vw;
+        --hero-barrette-size: 19vw;
+        --hero-trombone-size: 14vw;
+        --hero-pin-size: 8vw;
+        --hero-xppen-size: 32vw;
+        --hero-clip-size: 17vw;
+        --hero-paperball-size: 23vw;
+    }
+
     .hero__art {
         min-height: 92vh;
+        overflow: hidden;
     }
 
     .hero__title {
         top: 43%;
-        font-size: clamp(4rem, 9vw, 6.5rem);
+        font-size: clamp(4rem, 8.5vw, 6.5rem);
         white-space: nowrap;
-    }
-
-
-    /* -----------------------------------------------------
-       HERO OBJECTS
-       ----------------------------------------------------- */
-
-    .hero__art .bouton-bleu {
-        width: 21vw;
-    }
-
-    .hero__art .barrette-beige,
-    .hero__art .barrette-bleu,
-    .hero__art .barrette-rose {
-        width: 21vw;
-    }
-
-    .hero__art .trombone-bleu--first,
-    .hero__art .trombone-bleu--second,
-    .hero__art .trombone-rose,
-    .hero__art .trombone-rose--second,
-    .hero__art .trombone-bleu--third {
-        width: 15vw;
-    }
-
-    .hero__art .pin {
-        width: 9vw;
-    }
-
-    .hero__art .xppen {
-        width: 34vw;
-    }
-
-    .hero__art .clip {
-        width: 18vw;
-    }
-
-    .hero__art .paperball {
-        width: 25vw;
     }
 
 
@@ -643,10 +617,7 @@
     .about__paper {
         width: 90%;
         min-height: 90vh;
-        padding:
-            8vh
-            5vw
-            4vh;
+        padding: 8vh 5vw 4vh;
     }
 
     .about__paper h2 {
@@ -713,54 +684,35 @@
         font-size: 1vw;
     }
 
+
+    /* -----------------------------------------------------
+       HERO
+       ----------------------------------------------------- */
+
+    .hero {
+        --hero-bouton-size: 17vw;
+        --hero-barrette-size: 17vw;
+        --hero-trombone-size: 13vw;
+        --hero-pin-size: 8vw;
+        --hero-xppen-size: 30vw;
+        --hero-clip-size: 16vw;
+        --hero-paperball-size: 22vw;
+    }
+
     .hero__art {
         min-height: 100vh;
+        overflow: hidden;
     }
 
     .hero__title {
         top: 44%;
-        font-size: clamp(5rem, 10vw, 9rem);
+        font-size: clamp(5rem, 9vw, 9rem);
     }
 
 
     /* -----------------------------------------------------
-       HERO OBJECTS
+       ABOUT
        ----------------------------------------------------- */
-
-    .hero__art .bouton-bleu {
-        width: 18vw;
-    }
-
-    .hero__art .barrette-beige,
-    .hero__art .barrette-bleu,
-    .hero__art .barrette-rose {
-        width: 18vw;
-    }
-
-    .hero__art .trombone-bleu--first,
-    .hero__art .trombone-bleu--second,
-    .hero__art .trombone-rose,
-    .hero__art .trombone-rose--second,
-    .hero__art .trombone-bleu--third {
-        width: 14vw;
-    }
-
-    .hero__art .pin {
-        width: 9vw;
-    }
-
-    .hero__art .xppen {
-        width: 32vw;
-    }
-
-    .hero__art .clip {
-        width: 17vw;
-    }
-
-    .hero__art .paperball {
-        width: 24vw;
-    }
-
 
     .about__paper h2 {
         font-size: 6.2vw;
@@ -799,9 +751,7 @@
     .main-nav {
         top: 2.5vh;
         gap: 3vw;
-        padding:
-            1.4vh
-            2.5vw;
+        padding: 1.4vh 2.5vw;
     }
 
     .main-nav a {
@@ -813,52 +763,24 @@
        HERO
        ----------------------------------------------------- */
 
+    .hero {
+        --hero-bouton-size: 16vw;
+        --hero-barrette-size: 16vw;
+        --hero-trombone-size: 12vw;
+        --hero-pin-size: 8vw;
+        --hero-xppen-size: 29vw;
+        --hero-clip-size: 15vw;
+        --hero-paperball-size: 21vw;
+    }
+
     .hero__art {
         min-height: 105vh;
+        overflow: hidden;
     }
 
     .hero__title {
         top: 44%;
-        font-size: clamp(6rem, 10vw, 11rem);
-    }
-
-
-    /* -----------------------------------------------------
-       HERO OBJECTS
-       ----------------------------------------------------- */
-
-    .hero__art .bouton-bleu {
-        width: 17vw;
-    }
-
-    .hero__art .barrette-beige,
-    .hero__art .barrette-bleu,
-    .hero__art .barrette-rose {
-        width: 17vw;
-    }
-
-    .hero__art .trombone-bleu--first,
-    .hero__art .trombone-bleu--second,
-    .hero__art .trombone-rose,
-    .hero__art .trombone-rose--second,
-    .hero__art .trombone-bleu--third {
-        width: 13vw;
-    }
-
-    .hero__art .pin {
-        width: 9vw;
-    }
-
-    .hero__art .xppen {
-        width: 31vw;
-    }
-
-    .hero__art .clip {
-        width: 17vw;
-    }
-
-    .hero__art .paperball {
-        width: 23vw;
+        font-size: clamp(6rem, 9vw, 11rem);
     }
 
 
@@ -911,9 +833,7 @@
     .main-nav {
         top: 2.5vh;
         gap: 3vw;
-        padding:
-            1.5vh
-            2.8vw;
+        padding: 1.5vh 2.8vw;
     }
 
     .main-nav a {
@@ -925,52 +845,24 @@
        HERO
        ----------------------------------------------------- */
 
+    .hero {
+        --hero-bouton-size: 12vw;
+        --hero-barrette-size: 12vw;
+        --hero-trombone-size: 8vw;
+        --hero-pin-size: 5vw;
+        --hero-xppen-size: 21vw;
+        --hero-clip-size: 11vw;
+        --hero-paperball-size: 15vw;
+    }
+
     .hero__art {
         min-height: 110vh;
+        overflow: hidden;
     }
 
     .hero__title {
         top: 44%;
-        font-size: clamp(7rem, 9vw, 13rem);
-    }
-
-
-    /* -----------------------------------------------------
-       HERO OBJECTS
-       ----------------------------------------------------- */
-
-    .hero__art .bouton-bleu {
-        width: 13vw;
-    }
-
-    .hero__art .barrette-beige,
-    .hero__art .barrette-bleu,
-    .hero__art .barrette-rose {
-        width: 13vw;
-    }
-
-    .hero__art .trombone-bleu--first,
-    .hero__art .trombone-bleu--second,
-    .hero__art .trombone-rose,
-    .hero__art .trombone-rose--second,
-    .hero__art .trombone-bleu--third {
-        width: 9vw;
-    }
-
-    .hero__art .pin {
-        width: 6vw;
-    }
-
-    .hero__art .xppen {
-        width: 23vw;
-    }
-
-    .hero__art .clip {
-        width: 12vw;
-    }
-
-    .hero__art .paperball {
-        width: 16vw;
+        font-size: clamp(7rem, 8vw, 13rem);
     }
 
 
