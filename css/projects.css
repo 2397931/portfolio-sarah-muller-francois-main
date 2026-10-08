@@ -1,7 +1,10 @@
+/* Section Projets : fond à carreaux, écran, souris et carrousel. Les boutons changent la carte grâce à js/main.js. */
+
 /* =========================================================
-   PROJECTS - DESKTOP / TABLET
+   PROJETS — ORDINATEUR ET TABLETTETE
    ========================================================= */
 
+/* Fond à carreaux et cadre de la composition ; overflow masque ce qui dépasse. */
 .projects {
     position: relative;
 
@@ -22,6 +25,7 @@
 }
 
 
+/* Repère commun de l’écran, de la souris et du carrousel. */
 .projects__stage {
     position: relative;
 
@@ -58,6 +62,7 @@
     color: var(--ink);
 }
 
+/* Image de l’écran centrée horizontalement, au-dessus de la souris. */
 .projects__screen {
     position: absolute;
 
@@ -79,13 +84,14 @@
     pointer-events: none;
 }
 
+/* Calque de la souris derrière l’écran : z-index 0, contre 1 pour l’écran. */
 .projects__mouse {
     position: absolute;
 
     right: 5vw;
     bottom: 4vh;
 
-    z-index: 5;
+    z-index: 0;
 
     display: block;
 
@@ -96,6 +102,7 @@
     pointer-events: none;
 }
 
+/* Aligne les flèches et l’emplacement de la carte au-dessus de l’écran. */
 .projects__carousel {
     position: absolute;
 
@@ -121,6 +128,7 @@
 }
 
 
+/* Zone remplacée par JavaScript lors du changement de projet. */
 .projects__slot {
     flex: 1 1 auto;
 
@@ -131,6 +139,7 @@
     min-width: 0;
 }
 
+/* Bouton du carrousel : conserve une zone cliquable autour de la flèche. */
 .projects__arrow {
     flex: 0 0 auto;
 
@@ -181,9 +190,10 @@
 
 
 /* ---------------------------------------------------------
-   RIGHT ARROW
+   FLÈCHE DROITE
    --------------------------------------------------------- */
 
+/* Retourne la même image pour obtenir une flèche vers la droite. */
 .projects__arrow--next .projects__arrow-icon {
     transform: scaleX(-1);
 }
@@ -195,9 +205,10 @@
 
 
 /* =========================================================
-   PROJECT CARD
+   CARTE DE PROJET
    ========================================================= */
 
+/* Lien de prévisualisation : regroupe le média, le titre et la catégorie. */
 .project-card {
     display: flex;
 
@@ -239,6 +250,7 @@
     outline-offset: 0.4vw;
 }
 
+/* Cadre du média : masque les débordements et fixe les proportions de la prévisualisation. */
 .project-card__media {
     display: block;
 
@@ -251,6 +263,7 @@
     background: #111;
 }
 
+/* Prévisualisation utilisant une image de fond plutôt qu’une balise img. */
 .project-card__graphic {
     display: block;
 
@@ -268,6 +281,7 @@
     background-color: #111;
 }
 
+/* Zone des informations de la carte : disposition verticale. */
 .project-card__content {
     display: flex;
 
