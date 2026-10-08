@@ -18,12 +18,12 @@
         "theme": {
             "accent": "#7d9b72",
             "surface": "#f5f7f2",
-            "ink": "#172016",
+            "ink": "#ffffff",
             "backgroundImage": "assets/Img/grille.jpg",
-            "background": "#285d20"
+            "background": "#285d20",
+            "textBackground": "#285d20"
         }
     },
-
     {
         "id": "Sweeny",
         "title": "Sweeny",
@@ -44,10 +44,10 @@
             "accent": "#e887a7",
             "surface": "#fff8f2",
             "ink": "#3d2524",
-            "background": "#f7c5da"
+            "background": "#f7c5da",
+            "textBackground": "#f7c5da"
         }
     },
-
     {
         "id": "Imparfaite",
         "title": "Imparfaite",
@@ -68,10 +68,10 @@
             "accent": "#8f6874",
             "surface": "#f1eceb",
             "ink": "#ffffff",
-            "background": "#242024"
+            "background": "#242024",
+            "textBackground": "#242024"
         }
     },
-
     {
         "id": "IChooseF5ve",
         "title": "IChooseF5ve",
@@ -93,28 +93,28 @@
             "surface": "#fff6e8",
             "ink": "#2a2020",
             "backgroundImage": "assets/Img/No_background.jpg",
-            "background": "#f3d7b5"
+            "background": "#f3d7b5",
+            "textBackground": "#f3d7b5"
         },
-
         "process": {
-        "title": "Processus",
-        "steps": [
-            {
-                "text": "Ce projet a été créé pour mon portfolio. Tous les choix que j’ai faits pour ce montage vidéo ont été réfléchis afin de mettre en valeur mes compétences en montage et en effets visuels.\n\nLorsque j’ai vu la vidéo « I Choose You » du groupe japonais F5ve, j’ai tout de suite su que je voulais créer un montage vidéo à partir de celle-ci. J’ai donc commencé par réaliser un moodboard en recherchant des inspirations sur Pinterest. Cela m’a permis de définir le style visuel et l’ambiance que je voulais donner à mon montage.",
-                "image": "assets/Img/moodbaord_i_choose_f5ve.png"
-            },
-            {
-                "text": "Ensuite, après avoir trouvé mes inspirations, j’ai commencé le montage sur le logiciel After Effects. J’ai travaillé sur différents effets et transitions afin de créer un montage qui correspondait au style que j’avais choisi.",
-                "image": "assets/Img/F5VE_aftereffects.png"
-            },
-            {
-                "text": "Les étapes qui m’ont demandé le plus de temps pour ce montage vidéo ont été le rotobrush des cinq membres du groupe ainsi que la création du haut-parleur. Ce qui était difficile pour le rotobrush était de bien découper les membres dans les 61 frames qu'il y avait.",
-                "image": "assets/Img/F5VE_rotobrush.png"
-            },
-            {
-                "text": "Au total, ce montage vidéo m’a pris quatre jours à réaliser."
-            }
-        ]
+            "title": "Processus",
+            "steps": [
+                {
+                    "text": "Ce projet a été créé pour mon portfolio. Tous les choix que j’ai faits pour ce montage vidéo ont été réfléchis afin de mettre en valeur mes compétences en montage et en effets visuels.\n\nLorsque j’ai vu la vidéo « I Choose You » du groupe japonais F5ve, j’ai tout de suite su que je voulais créer un montage vidéo à partir de celle-ci. J’ai donc commencé par réaliser un moodboard en recherchant des inspirations sur Pinterest. Cela m’a permis de définir le style visuel et l’ambiance que je voulais donner à mon montage.",
+                    "image": "assets/Img/moodbaord_i_choose_f5ve.png"
+                },
+                {
+                    "text": "Ensuite, après avoir trouvé mes inspirations, j’ai commencé le montage sur le logiciel After Effects. J’ai travaillé sur différents effets et transitions afin de créer un montage qui correspondait au style que j’avais choisi.",
+                    "image": "assets/Img/F5VE_aftereffects.png"
+                },
+                {
+                    "text": "Les étapes qui m’ont demandé le plus de temps pour ce montage vidéo ont été le rotobrush des cinq membres du groupe ainsi que la création du haut-parleur. Ce qui était difficile pour le rotobrush était de bien découper les membres dans les 61 frames qu'il y avait.",
+                    "image": "assets/Img/F5VE_rotobrush.png"
+                },
+                {
+                    "text": "Au total, ce montage vidéo m’a pris quatre jours à réaliser."
+                }
+            ]
         }
     }
 ]
