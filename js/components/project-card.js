@@ -212,7 +212,8 @@ export async function loadProjects() {
     try {
 
         const response =
-            await fetch("data/projects.json");
+            /* Revalide le JSON pour afficher les dernières couleurs après une modification. */
+            await fetch("data/projects.json", { cache: "no-cache" });
 
         if (!response.ok) {
 
