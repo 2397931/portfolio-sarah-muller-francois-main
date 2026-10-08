@@ -11,14 +11,14 @@
     <title>Portfolio Sarah Muller François</title>
 
         <!-- Charger les bases avant les styles de section. responsive.css arrive en dernier pour adapter la mise en page. La version dans les URL force le navigateur à récupérer les fichiers actualisés. -->
-        <link rel="stylesheet" href="css/global.css?v=20261008-hero-13">
-        <link rel="stylesheet" href="css/navigation.css?v=20261008-hero-13">
-        <link rel="stylesheet" href="css/hero.css?v=20261008-hero-13">
-        <link rel="stylesheet" href="css/about.css?v=20261008-hero-13">
-        <link rel="stylesheet" href="css/projects.css?v=20261008-hero-13">
-        <link rel="stylesheet" href="css/skills.css?v=20261008-hero-13">
-        <link rel="stylesheet" href="css/contact.css?v=20261008-hero-13">
-        <link rel="stylesheet" href="css/responsive.css?v=20261008-hero-13">
+        <link rel="stylesheet" href="css/global.css?v=20261008-photo-14">
+        <link rel="stylesheet" href="css/navigation.css?v=20261008-photo-14">
+        <link rel="stylesheet" href="css/hero.css?v=20261008-photo-14">
+        <link rel="stylesheet" href="css/about.css?v=20261008-photo-14">
+        <link rel="stylesheet" href="css/projects.css?v=20261008-photo-14">
+        <link rel="stylesheet" href="css/skills.css?v=20261008-photo-14">
+        <link rel="stylesheet" href="css/contact.css?v=20261008-photo-14">
+        <link rel="stylesheet" href="css/responsive.css?v=20261008-photo-14">
 </head>
 
 <body>
@@ -175,8 +175,13 @@
             <article class="about__pink-panel">
 
                 <div
-                    class="about__image-placeholder"
-                    aria-label="Espace image du portfolio">
+                    class="about__image-placeholder">
+                    <!-- Portrait : déposer photo.jpg dans assets/Img, en respectant les majuscules du dossier. -->
+                    <img
+                        src="./assets/Img/photo.jpg"
+                        alt="Portrait de Sarah Muller François"
+                        class="about__photo"
+                        loading="lazy">
                 </div>
 
                 <img
@@ -577,7 +582,7 @@
     <!-- Le module charge les projets puis initialise les interactions après le HTML. -->
     <script
         type="module"
-        src="js/main.js?v=20261008-hero-13">
+        src="js/main.js?v=20261008-photo-14">
     </script>
 
 </body>
