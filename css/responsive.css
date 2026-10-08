@@ -80,390 +80,62 @@
   #a-propos, #projets, #contact { scroll-margin-top: 16vw; }
 }
 
-/* =========================================================
-   TABLETTE
-   768px → 1023px
-   ========================================================= */
+/* Tablet and desktop retain the positions from the section stylesheets. */
+@media (min-width: 768px) {
+  .main-nav { gap: 2.5vw; padding: 1.2vh 2.5vw; }
+  .main-nav a { font-size: clamp(14px, 1.25vw, 24px); }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+  .hero {
+    --hero-bouton-size: clamp(125px, 17vw, 360px);
+    --hero-barrette-size: clamp(130px, 17vw, 360px);
+    --hero-trombone-size: clamp(100px, 13vw, 280px);
+    --hero-pin-size: clamp(65px, 8vw, 180px);
+    --hero-xppen-size: clamp(240px, 30vw, 650px);
+    --hero-clip-size: clamp(125px, 16vw, 340px);
+    --hero-paperball-size: clamp(170px, 22vw, 460px);
+  }
+  .hero__art { height: 100svh; min-height: 100svh; }
+  .hero__title { font-size: clamp(64px, 9vw, 180px); }
 
-    .skills {
-        padding: 8vh 5vw;
-    }
+  .about { min-height: 100vh; }
+  .about__paper {
+    width: calc(100% - 6vw);
+    min-height: calc(100vh - 5rem);
+    padding: clamp(60px, 7vw, 128px) clamp(24px, 3vw, 64px) clamp(40px, 5vw, 96px);
+  }
+  .about__paper::before { background-size: 100% 100%; }
+  .about__paper h2 { font-size: clamp(38px, 5vw, 100px); }
+  .about__paper p { font-size: clamp(14px, 1.4vw, 26px); line-height: 1.55; }
+  .about__pink-panel { min-height: 100vh; padding: clamp(24px, 4vw, 80px); }
+  .about__image-placeholder { width: 100%; height: 100%; max-width: 700px; max-height: 900px; }
+  .about__pin { width: clamp(65px, 8vw, 160px); }
+  .about__clip { width: clamp(95px, 12vw, 250px); }
+  .about__bow { width: clamp(100px, 14vw, 300px); }
+  .about__arrow { width: clamp(120px, 16vw, 320px); }
 
-    .skills__list {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 5vh 3vw;
-    }
+  .projects, .projects__stage { min-height: 105vh; }
+  .projects__screen { width: min(78vw, 1250px); }
+  .projects__mouse { width: min(13vw, 220px); }
+  .projects__title { font-size: clamp(40px, 6vw, 112px); }
+  .projects__slot { max-width: min(48vw, 760px); }
+  .projects__arrow { width: clamp(40px, 5vw, 80px); height: clamp(40px, 5vw, 80px); }
+  .projects .project-card__media { aspect-ratio: 16 / 9; }
+  .projects .project-card__image { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .projects .project-card__content { padding: clamp(10px, 1.3vw, 24px); gap: .5vh; }
+  .projects .project-card__name { font-size: clamp(24px, 2.6vw, 48px); }
+  .projects .project-card__category { font-size: clamp(12px, 1.1vw, 21px); }
+  .projects .project-card__eyebrow { font-size: clamp(10px, .8vw, 16px); }
 
-    .skill-card__icon {
-        width: 12vw;
-        height: 12vw;
-        max-width: 110px;
-        max-height: 110px;
-    }
+  .skills { min-height: 0; padding: 2vw 4vw 3vw; }
+  .skills__list { width: 100%; max-width: 1600px; gap: 1.5vw; }
+  .skills__item { flex: 1 1 0; min-width: 0; }
+  .skill-card { width: 100%; height: clamp(80px, 9vw, 160px); }
+  .skill-card__icon { width: min(100%, 110px); height: clamp(52px, 7vw, 110px); object-fit: contain; }
+  .skill-card__label { font-size: clamp(10px, .9vw, 16px); }
 
-    .main-nav {
-        top: 2vh;
-        gap: 3vw;
-        padding: 1.2vh 2.5vw;
-    }
-
-    .main-nav a {
-        font-size: 1.7vw;
-    }
-
-
-    /* -----------------------------------------------------
-       HERO
-       ----------------------------------------------------- */
-
-    .hero {
-        --hero-bouton-size: 20vw;
-        --hero-barrette-size: 19vw;
-        --hero-trombone-size: 14vw;
-        --hero-pin-size: 8vw;
-        --hero-xppen-size: 32vw;
-        --hero-clip-size: 17vw;
-        --hero-paperball-size: 23vw;
-    }
-
-    .hero__art {
-        min-height: 92vh;
-        overflow: hidden;
-    }
-
-    .hero__title {
-        top: 43%;
-        font-size: clamp(4rem, 8.5vw, 6.5rem);
-        white-space: nowrap;
-    }
-
-
-    /* -----------------------------------------------------
-       ABOUT
-       ----------------------------------------------------- */
-
-    .about {
-        min-height: 90vh;
-    }
-
-    .about__paper {
-        width: 90%;
-        min-height: 90vh;
-        padding: 8vh 5vw 4vh;
-    }
-
-    .about__paper h2 {
-        font-size: 5vw;
-    }
-
-    .about__paper p {
-        font-size: 1.7vw;
-    }
-
-    .about__pink-panel {
-        padding: 3vw;
-    }
-
-    .about__bow {
-        width: 15vw;
-    }
-
-    .about__arrow {
-        width: 18vw;
-    }
-
-
-    /* -----------------------------------------------------
-       PROJECTS
-       ----------------------------------------------------- */
-
-    .projects {
-        min-height: 100vh;
-    }
-
-    .projects__stage {
-        min-height: 100vh;
-    }
-
-    .projects__screen {
-        width: min(82vw, 850px);
-    }
-
-
-    /* -----------------------------------------------------
-       SKILLS / CONTACT
-       ----------------------------------------------------- */
-
-    .skills,
-    .contact {
-        width: 100%;
-    }
+  .contact__card-image { width: 100%; }
+  .contact__card-text p { font-size: clamp(12px, 1.2vw, 24px); }
+  .contact__card-social img { width: clamp(25px, 3.2vw, 65px); }
+  .contact__card-email a { font-size: clamp(9px, .9vw, 18px); }
+  .contact__message h2 { font-size: clamp(32px, 5vw, 88px); }
 }
-
-
-/* =========================================================
-   DESKTOP
-   1024px → 1439px
-   ========================================================= */
-
-@media (min-width: 1024px) and (max-width: 1439px) {
-
-    .main-nav {
-        gap: 2.5vw;
-    }
-
-    .main-nav a {
-        font-size: 1vw;
-    }
-
-
-    /* -----------------------------------------------------
-       HERO
-       ----------------------------------------------------- */
-
-    .hero {
-        --hero-bouton-size: 17vw;
-        --hero-barrette-size: 17vw;
-        --hero-trombone-size: 13vw;
-        --hero-pin-size: 8vw;
-        --hero-xppen-size: 30vw;
-        --hero-clip-size: 16vw;
-        --hero-paperball-size: 22vw;
-    }
-
-    .hero__art {
-        min-height: 100vh;
-        overflow: hidden;
-    }
-
-    .hero__title {
-        top: 44%;
-        font-size: clamp(5rem, 9vw, 9rem);
-    }
-
-
-    /* -----------------------------------------------------
-       ABOUT
-       ----------------------------------------------------- */
-
-    .about__paper h2 {
-        font-size: 6.2vw;
-    }
-
-    .about__paper p {
-        font-size: clamp(1.2rem, 1.7vw, 1.6rem);
-    }
-
-
-    /* -----------------------------------------------------
-       PROJECTS
-       ----------------------------------------------------- */
-
-    .projects {
-        min-height: 105vh;
-    }
-
-    .projects__stage {
-        min-height: 105vh;
-    }
-
-    .projects__screen {
-        width: min(78vw, 1100px);
-    }
-}
-
-
-/* =========================================================
-   LARGE DESKTOP
-   1440px → 1919px
-   ========================================================= */
-
-@media (min-width: 1440px) and (max-width: 1919px) {
-
-    .main-nav {
-        top: 2.5vh;
-        gap: 3vw;
-        padding: 1.4vh 2.5vw;
-    }
-
-    .main-nav a {
-        font-size: 1.05vw;
-    }
-
-
-    /* -----------------------------------------------------
-       HERO
-       ----------------------------------------------------- */
-
-    .hero {
-        --hero-bouton-size: 16vw;
-        --hero-barrette-size: 16vw;
-        --hero-trombone-size: 12vw;
-        --hero-pin-size: 8vw;
-        --hero-xppen-size: 29vw;
-        --hero-clip-size: 15vw;
-        --hero-paperball-size: 21vw;
-    }
-
-    .hero__art {
-        min-height: 105vh;
-        overflow: hidden;
-    }
-
-    .hero__title {
-        top: 44%;
-        font-size: clamp(6rem, 9vw, 11rem);
-    }
-
-
-    /* -----------------------------------------------------
-       ABOUT
-       ----------------------------------------------------- */
-
-    .about {
-        min-height: 105vh;
-    }
-
-    .about__paper {
-        min-height: 120vh;
-    }
-
-    .about__paper h2 {
-        font-size: 6vw;
-    }
-
-    .about__paper p {
-        font-size: 1.55vw;
-    }
-
-
-    /* -----------------------------------------------------
-       PROJECTS
-       ----------------------------------------------------- */
-
-    .projects {
-        min-height: 105vh;
-    }
-
-    .projects__stage {
-        min-height: 105vh;
-    }
-
-    .projects__screen {
-        width: min(76vw, 1250px);
-    }
-}
-
-
-/* =========================================================
-   ULTRA-WIDE
-   1920px+
-   ========================================================= */
-
-@media (min-width: 1920px) {
-
-    .main-nav {
-        top: 2.5vh;
-        gap: 3vw;
-        padding: 1.5vh 2.8vw;
-    }
-
-    .main-nav a {
-        font-size: 1vw;
-    }
-
-
-    /* -----------------------------------------------------
-       HERO
-       ----------------------------------------------------- */
-
-    .hero {
-        --hero-bouton-size: 12vw;
-        --hero-barrette-size: 12vw;
-        --hero-trombone-size: 8vw;
-        --hero-pin-size: 5vw;
-        --hero-xppen-size: 21vw;
-        --hero-clip-size: 11vw;
-        --hero-paperball-size: 15vw;
-    }
-
-    .hero__art {
-        min-height: 110vh;
-        overflow: hidden;
-    }
-
-    .hero__title {
-        top: 44%;
-        font-size: clamp(7rem, 8vw, 13rem);
-    }
-
-
-    /* -----------------------------------------------------
-       ABOUT
-       ----------------------------------------------------- */
-
-    .about {
-        min-height: 110vh;
-    }
-
-    .about__paper {
-        min-height: 125vh;
-        padding-left: 6vw;
-        padding-right: 6vw;
-    }
-
-    .about__paper h2 {
-        font-size: 5.8vw;
-    }
-
-    .about__paper p {
-        font-size: 1.4vw;
-        max-width: 48ch;
-    }
-
-    .about__pin {
-        width: 8vw;
-    }
-
-    .about__clip {
-        width: 12vw;
-    }
-
-    .about__bow {
-        width: 14vw;
-    }
-
-    .about__arrow {
-        width: 16vw;
-    }
-
-
-    /* -----------------------------------------------------
-       PROJECTS
-       ----------------------------------------------------- */
-
-    .projects {
-        min-height: 140vh;
-    }
-
-    .projects__stage {
-        min-height: 140vh;
-    }
-
-    .projects__screen {
-        width: min(77vw, 1350px);
-    }
-
-    .projects__arrow--prev {
-        left: 0;
-        transform: translateX(-19vw);
-    }
-
-    .projects__arrow--next {
-        right: 0;
-        transform: translateX(7vw);
-    }
-}
-
