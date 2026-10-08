@@ -1,7 +1,10 @@
+/* Composition du contact : fond en bois, zone sombre, enveloppe et carte. Les éléments internes utilisent des pourcentages de la carte pour rester alignés lors du redimensionnement. */
+
 /* =========================================
    CONTACT
 ========================================= */
 
+/* Conteneur de la composition ; réserve les bandes de bois autour de la zone sombre. */
 .contact {
 	position: relative;
 	width: 100%;
@@ -17,9 +20,10 @@
 
 
 /* =========================================
-   WOOD BACKGROUND
+   FOND EN BOIS
 ========================================= */
 
+/* Calque de fond en bois qui couvre toute la section. */
 .contact__wood {
 	position: absolute;
 	inset: 0;
@@ -32,9 +36,10 @@
 
 
 /* =========================================
-   DARK CENTER
+   ZONE CENTRALE SOMBRE
 ========================================= */
 
+/* Repère de positionnement sur le fond sombre. */
 .contact__stage {
 	position: relative;
 	width: 100%;
@@ -48,9 +53,10 @@
 
 
 /* =========================================
-   ENVELOPE
+   ENVELOPPE
 ========================================= */
 
+/* Enveloppe décorative derrière la carte ; la rotation donne l’effet posé sur le bureau. */
 .contact__envelope {
 	position: absolute;
 	top: -19vh;
@@ -64,9 +70,10 @@
 
 
 /* =========================================
-   CONTACT CARD
+   CARTE DE CONTACT
 ========================================= */
 
+/* Cadre de la carte : tous ses éléments internes suivent sa taille et sa rotation. */
 .contact__card {
 	position: absolute;
 	width: 30vw;
@@ -84,9 +91,10 @@
 
 
 /* =========================================
-   TEXT INSIDE CARD
+   TEXTE DANS LA CARTE
 ========================================= */
 
+/* Texte centré dans la moitié gauche de la carte. */
 .contact__card-text {
 	position: absolute;
 	left: 5%;
@@ -107,9 +115,10 @@
 
 
 /* =========================================
-   LINE IN THE MIDDLE OF CARD
+   LIGNE DE SÉPARATION DANS LA CARTE
 ========================================= */
 
+/* Séparation verticale entre le texte et les réseaux. */
 .contact__card-line {
 	position: absolute;
 	left: 52%;
@@ -122,9 +131,10 @@
 
 
 /* =========================================
-   SOCIAL LOGOS INSIDE CARD
+   LOGOS DES RÉSEAUX DANS LA CARTE
 ========================================= */
 
+/* Logos disposés verticalement dans la moitié droite de la carte. */
 .contact__card-socials {
 	position: absolute;
 	left: 57%;
@@ -159,9 +169,10 @@
 
 
 /* =========================================
-   EMAIL INSIDE CARD
+   COURRIEL DANS LA CARTE
 ========================================= */
 
+/* Courriel centré en bas de la carte ; nowrap évite de couper l’adresse. */
 .contact__card-email {
 	position: absolute;
 	left: 8%;
@@ -185,9 +196,10 @@
 
 
 /* =========================================
-   ARROW
+   FLÈCHE
 ========================================= */
 
+/* Flèche décorative reliant le message à la carte. */
 .contact__arrow {
 	position: absolute;
 	width: 8vw;
@@ -203,6 +215,7 @@
    "CONTACTEZ MOI!"
 ========================================= */
 
+/* Message de contact placé au premier plan ; ne bloque pas les clics. */
 .contact__message {
 	position: absolute;
 	right: 3vw;
@@ -223,7 +236,7 @@
 
 
 /* =========================================
-   TABLET
+   TABLETTE
 ========================================= */
 
 @media (max-width: 1000px) {
@@ -382,3 +395,4 @@
 		font-size: clamp(2rem, 9vw, 3.5rem);
 	}
 }
+.contact__text-mobile { display: none; }

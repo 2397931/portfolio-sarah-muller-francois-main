@@ -1,985 +1,180 @@
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
-
-
-/* =========================================================
-   MOBILE
-   0px → 480px
-   ========================================================= */
-
-@media (max-width: 480px) {
-
-    html {
-        font-size: 16px;
-    }
-
-    body {
-        width: 100%;
-        overflow-x: hidden;
-    }
-
-
-    /* -----------------------------------------------------
-       NAVIGATION
-       ----------------------------------------------------- */
-
-    .main-nav {
-        position: fixed;
-        top: 1.5vh;
-        left: 50%;
-        width: max-content;
-        gap: 7vw;
-        padding: 1vh 4vw;
-        transform: translateX(-50%);
-        border-radius: 999px;
-        z-index: 1000;
-    }
-
-    .main-nav a {
-        font-size: 3.6vw;
-        font-weight: 500;
-        letter-spacing: 0;
-    }
-
-
-    /* -----------------------------------------------------
-       HERO
-       ----------------------------------------------------- */
-
-    main {
-        width: 100%;
-        padding: 0;
-        margin: 0;
-    }
-
-    .hero {
-        width: 100%;
-
-        --hero-bouton-size: 25vw;
-        --hero-barrette-size: 28vw;
-        --hero-trombone-size: 30vw;
-        --hero-pin-size: 15vw;
-        --hero-xppen-size: 70vw;
-        --hero-clip-size: 28vw;
-        --hero-paperball-size: 35vw;
-    }
-
-    .hero__art {
-        position: relative;
-        width: 100%;
-        height: 100svh;
-        min-height: 100svh;
-        max-height: none;
-        overflow: visible;
-    }
-
-
-    /* -----------------------------------------------------
-       TITRE
-       ----------------------------------------------------- */
-
-    .hero__title {
-        left: 50%;
-        top: 49%;
-        width: max-content;
-        font-size: clamp(4rem, 16vw, 5.5rem);
-        line-height: 0.7;
-        letter-spacing: -0.03em;
-        white-space: nowrap;
-    }
-
-    .hero__title span:nth-child(1) {
-        font-size: 1.45em;
-    }
-
-    .hero__title span:nth-child(2),
-    .hero__title span:nth-child(3),
-    .hero__title span:nth-child(4) {
-        font-size: 0.82em;
-    }
-
-    .hero__title span:nth-child(5),
-    .hero__title span:nth-child(6),
-    .hero__title span:nth-child(7),
-    .hero__title span:nth-child(8) {
-        font-size: 0.98em;
-    }
-
-    .hero__title span:nth-child(9) {
-        font-size: 1.08em;
-    }
-
-
-    /* -----------------------------------------------------
-       HERO OBJECTS — MOBILE
-       ----------------------------------------------------- */
-
-    .hero__art img {
-        max-width: none !important;
-        min-width: 0 !important;
-        height: auto !important;
-        object-fit: contain !important;
-    }
-
-
-    /* XP-PEN */
-
-    .hero__art .xppen {
-        --hero-xppen-size: 45vw !important;
-        left: 10vw !important;
-        top: -8vw !important;
-    }
-
-    /* BLUE BARRETTE */
-
-    .hero__art .barrette-bleu {
-        left: -4vw !important;
-        top: 5vw !important;
-    }
-
-
-    /* PINK BARRETTE */
-
-    .hero__art .barrette-rose {
-        left: auto !important;
-        right: 7vw !important;
-        top: 9vh !important;
-    }
-
-
-    /* PIN */
-
-    .hero__art .pin {
-        right: -1vw !important;
-        top: 0 !important;
-    }
-
-
-    /* CLIP */
-
-    .hero__art .clip {
-        left: 15vw !important;
-        right: auto !important;
-        top: 68vh !important;
-    }
-
-
-    /* PAPER BALL */
-
-    .hero__art .paperball {
-        right: -2vw !important;
-        top: 35vh !important;
-    }
-
-
-    /* BLUE BUTTON */
-
-    .hero__art .bouton-bleu {
-        right: 1vw !important;
-        bottom: 4vw !important;
-    }
-
-
-    /* LOWER BLUE TROMBONE */
-
-    .hero__art .trombone-bleu--second {
-        left: 1vw !important;
-        bottom: 0 !important;
-    }
-
-
-    /* LOWER PINK TROMBONE */
-
-    .hero__art .trombone-rose {
-        left: 8vw !important;
-        bottom: -1vw !important;
-    }
-
-
-    /* MIDDLE BLUE TROMBONE */
-
-    .hero__art .trombone-bleu--third {
-        left: 25vw !important;
-        top: 72vh !important;
-    }
-
-
-    /* MIDDLE BLUE TROMBONE — FIRST */
-
-    .hero__art .trombone-bleu--first {
-        right: 18vw !important;
-        top: 72vh !important;
-    }
-
-
-    /* MIDDLE PINK TROMBONE */
-
-    .hero__art .trombone-rose--second {
-        right: 6vw !important;
-        top: 72vh !important;
-    }
-
-
-    /* BEIGE BARRETTE */
-
-    .hero__art .barrette-beige {
-        left: auto !important;
-        right: -1vw !important;
-        bottom: -4vw !important;
-    }
-
-
-    /* -----------------------------------------------------
-       ABOUT
-       ----------------------------------------------------- */
-
-    .about {
-        display: block;
-        width: 100%;
-        min-height: 0;
-        height: 72vw;
-        overflow: hidden;
-        background: var(--board-bg);
-    }
-
-    .about__paper {
-        position: relative;
-        width: 72vw;
-        height: 63vw;
-        min-height: 0;
-        margin: 5vw auto 0;
-        padding: 11vw 8vw 4vw;
-        background-size: 100% 100%;
-        background-position: center;
-        transform: rotate(0);
-        opacity: 0.65;
-    }
-
-    .about__paper h2 {
-        margin: 0;
-        font-size: 4vw;
-        line-height: 1;
-        text-align: center;
-    }
-
-    .about__paper p {
-        max-width: 100%;
-        margin: 3vw 0 0;
-        font-size: 2.5vw;
-        line-height: 1.4;
-    }
-
-    .about__pin {
-        top: -1vw;
-        left: 50%;
-        width: 8vw;
-        transform: translateX(-50%) rotate(8deg);
-    }
-
-    .about__clip {
-        right: 13vw;
-        bottom: 7vw;
-        width: 12vw;
-        transform: rotate(20deg);
-        z-index: 5;
-    }
-
-    .about__arrow {
-        left: auto;
-        right: 51vw;
-        bottom: 25vw;
-        width: 13vw;
-        transform: rotate(-10deg);
-    }
-
-    .about__pink-panel {
-        display: none;
-    }
-
-
-    /* -----------------------------------------------------
-       PROJECTS
-       ----------------------------------------------------- */
-
-    .projects {
-        width: 100%;
-        min-height: 0;
-        overflow: hidden;
-        padding: 4vw 2.5vw 6vw;
-        background-image: url("../assets/Img/plaid.jpg");
-        background-repeat: repeat;
-        background-position: center top;
-        background-size: auto;
-    }
-
-    .projects__screen {
-        display: none;
-    }
-
-    .projects__mouse {
-        display: none;
-    }
-
-    .projects__stage {
-        width: 100%;
-        min-height: 0;
-        padding: 0;
-        margin: 0;
-        position: relative;
-        overflow: visible;
-    }
-
-    .projects__title {
-        width: 100%;
-        margin-bottom: 3vw;
-        text-align: center;
-    }
-
-    .projects__carousel {
-        position: relative;
-        width: 100%;
-        max-width: none;
-        margin: 0;
-        padding: 2vw;
-        border: 1px solid rgba(14, 14, 18, 0.25);
-        overflow: visible;
-    }
-
-    .projects__arrow {
-        position: relative;
-        top: auto;
-        left: auto;
-        right: auto;
-        bottom: auto;
-        width: 11vw;
-        height: 11vw;
-        min-width: 11vw;
-        min-height: 11vw;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 20;
-    }
-
-    .projects__arrow--prev {
-        position: absolute;
-        top: -14vw;
-        left: 2vw;
-    }
-
-    .projects__arrow--next {
-        position: absolute;
-        top: -14vw;
-        right: 2vw;
-    }
-
-    .projects__arrow-icon {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-
-    .projects__slot {
-        width: 100%;
-        min-width: 0;
-        margin: 0;
-        padding: 0;
-    }
-
-    .project-card {
-        width: 100%;
-        min-width: 0;
-        margin: 0;
-    }
-
-    .project-card__media {
-        width: 100%;
-        height: auto;
-        min-height: 0;
-    }
-
-    .project-card__graphic {
-        width: 100%;
-        height: auto;
-    }
-
-    .project-card__content {
-        width: 100%;
-        padding: 4vw;
-    }
-
-
-    /* -----------------------------------------------------
-       SKILLS
-       ----------------------------------------------------- */
-
-    .skills {
-        width: 100%;
-        min-height: 0;
-        padding: 7vw 5vw 9vw;
-        overflow: hidden;
-    }
-
-    .skills__list {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 8vw 5vw;
-    }
-
-    .skill-card {
-        max-width: 42vw;
-        gap: 2vw;
-    }
-
-    .skill-card__icon {
-        width: 22vw;
-        height: 22vw;
-        max-width: 110px;
-        max-height: 110px;
-    }
-
-    .skill-card__label {
-        font-size: 3.6vw;
-    }
-
-
-    /* -----------------------------------------------------
-       CONTACT
-       ----------------------------------------------------- */
-
-    .contact {
-        width: 100%;
-        min-height: 0;
-        overflow: hidden;
-    }
-}
-
-
-/* =========================================================
-   PETITS ÉCRANS / GRAND MOBILE
-   481px → 767px
-   ========================================================= */
-
-@media (min-width: 481px) and (max-width: 767px) {
-
-    .skills {
-        padding: 8vh 6vw;
-    }
-
-    .skills__list {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 5vh 4vw;
-    }
-
-    .skill-card__icon {
-        width: 16vw;
-        height: 16vw;
-    }
-
-    .skill-card__label {
-        font-size: 2.3vw;
-    }
-
-    .main-nav {
-        top: 1.5vh;
-        gap: 5vw;
-        padding: 1vh 3vw;
-    }
-
-    .main-nav a {
-        font-size: 2.5vw;
-    }
-
-
-    /* -----------------------------------------------------
-       HERO
-       ----------------------------------------------------- */
-
-    .hero {
-        --hero-bouton-size: 13vw;
-        --hero-barrette-size: 14vw;
-        --hero-trombone-size: 11vw;
-        --hero-xppen-size: 25vw;
-        --hero-pin-size: 6vw;
-        --hero-clip-size: 12vw;
-        --hero-paperball-size: 17vw;
-    }
-
-    .hero__art {
-        min-height: 88vh;
-        overflow: hidden;
-    }
-
-    .hero__title {
-        top: 45%;
-        font-size: clamp(3.5rem, 12vw, 6rem);
-        white-space: nowrap;
-    }
-
-    .hero__art img {
-        max-width: none !important;
-        height: auto !important;
-        min-width: 0 !important;
-    }
-
-
-    /* -----------------------------------------------------
-       ABOUT
-       ----------------------------------------------------- */
-
-    .about {
-        display: block;
-    }
-
-    .about__paper {
-        width: 94%;
-        min-height: 75vh;
-        margin: 0 auto;
-        padding: 8vh 9vw 5vh;
-    }
-
-    .about__pink-panel {
-        min-height: 80vh;
-    }
-}
-
-
-/* =========================================================
-   TABLETTE
-   768px → 1023px
-   ========================================================= */
-
-@media (min-width: 768px) and (max-width: 1023px) {
-
-    .skills {
-        padding: 8vh 5vw;
-    }
-
-    .skills__list {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 5vh 3vw;
-    }
-
-    .skill-card__icon {
-        width: 12vw;
-        height: 12vw;
-        max-width: 110px;
-        max-height: 110px;
-    }
-
-    .main-nav {
-        top: 2vh;
-        gap: 3vw;
-        padding: 1.2vh 2.5vw;
-    }
-
-    .main-nav a {
-        font-size: 1.7vw;
-    }
-
-
-    /* -----------------------------------------------------
-       HERO
-       ----------------------------------------------------- */
-
-    .hero {
-        --hero-bouton-size: 20vw;
-        --hero-barrette-size: 19vw;
-        --hero-trombone-size: 14vw;
-        --hero-pin-size: 8vw;
-        --hero-xppen-size: 32vw;
-        --hero-clip-size: 17vw;
-        --hero-paperball-size: 23vw;
-    }
-
-    .hero__art {
-        min-height: 92vh;
-        overflow: hidden;
-    }
-
-    .hero__title {
-        top: 43%;
-        font-size: clamp(4rem, 8.5vw, 6.5rem);
-        white-space: nowrap;
-    }
-
-
-    /* -----------------------------------------------------
-       ABOUT
-       ----------------------------------------------------- */
-
-    .about {
-        min-height: 90vh;
-    }
-
-    .about__paper {
-        width: 90%;
-        min-height: 90vh;
-        padding: 8vh 5vw 4vh;
-    }
-
-    .about__paper h2 {
-        font-size: 5vw;
-    }
-
-    .about__paper p {
-        font-size: 1.7vw;
-    }
-
-    .about__pink-panel {
-        padding: 3vw;
-    }
-
-    .about__bow {
-        width: 15vw;
-    }
-
-    .about__arrow {
-        width: 18vw;
-    }
-
-
-    /* -----------------------------------------------------
-       PROJECTS
-       ----------------------------------------------------- */
-
-    .projects {
-        min-height: 100vh;
-    }
-
-    .projects__stage {
-        min-height: 100vh;
-    }
-
-    .projects__screen {
-        width: min(82vw, 850px);
-    }
-
-
-    /* -----------------------------------------------------
-       SKILLS / CONTACT
-       ----------------------------------------------------- */
-
-    .skills,
-    .contact {
-        width: 100%;
-    }
-}
-
-
-/* =========================================================
-   DESKTOP
-   1024px → 1439px
-   ========================================================= */
-
-@media (min-width: 1024px) and (max-width: 1439px) {
-
-    .main-nav {
-        gap: 2.5vw;
-    }
-
-    .main-nav a {
-        font-size: 1vw;
-    }
-
-
-    /* -----------------------------------------------------
-       HERO
-       ----------------------------------------------------- */
-
-    .hero {
-        --hero-bouton-size: 17vw;
-        --hero-barrette-size: 17vw;
-        --hero-trombone-size: 13vw;
-        --hero-pin-size: 8vw;
-        --hero-xppen-size: 30vw;
-        --hero-clip-size: 16vw;
-        --hero-paperball-size: 22vw;
-    }
-
-    .hero__art {
-        min-height: 100vh;
-        overflow: hidden;
-    }
-
-    .hero__title {
-        top: 44%;
-        font-size: clamp(5rem, 9vw, 9rem);
-    }
-
-
-    /* -----------------------------------------------------
-       ABOUT
-       ----------------------------------------------------- */
-
-    .about__paper h2 {
-        font-size: 6.2vw;
-    }
-
-    .about__paper p {
-        font-size: clamp(1.2rem, 1.7vw, 1.6rem);
-    }
-
-
-    /* -----------------------------------------------------
-       PROJECTS
-       ----------------------------------------------------- */
-
-    .projects {
-        min-height: 105vh;
-    }
-
-    .projects__stage {
-        min-height: 105vh;
-    }
-
-    .projects__screen {
-        width: min(78vw, 1100px);
-    }
-}
-
-
-/* =========================================================
-   LARGE DESKTOP
-   1440px → 1919px
-   ========================================================= */
-
-@media (min-width: 1440px) and (max-width: 1919px) {
-
-    .main-nav {
-        top: 2.5vh;
-        gap: 3vw;
-        padding: 1.4vh 2.5vw;
-    }
-
-    .main-nav a {
-        font-size: 1.05vw;
-    }
-
-
-    /* -----------------------------------------------------
-       HERO
-       ----------------------------------------------------- */
-
-    .hero {
-        --hero-bouton-size: 16vw;
-        --hero-barrette-size: 16vw;
-        --hero-trombone-size: 12vw;
-        --hero-pin-size: 8vw;
-        --hero-xppen-size: 29vw;
-        --hero-clip-size: 15vw;
-        --hero-paperball-size: 21vw;
-    }
-
-    .hero__art {
-        min-height: 105vh;
-        overflow: hidden;
-    }
-
-    .hero__title {
-        top: 44%;
-        font-size: clamp(6rem, 9vw, 11rem);
-    }
-
-
-    /* -----------------------------------------------------
-       ABOUT
-       ----------------------------------------------------- */
-
-    .about {
-        min-height: 105vh;
-    }
-
-    .about__paper {
-        min-height: 120vh;
-    }
-
-    .about__paper h2 {
-        font-size: 6vw;
-    }
-
-    .about__paper p {
-        font-size: 1.55vw;
-    }
-
-
-    /* -----------------------------------------------------
-       PROJECTS
-       ----------------------------------------------------- */
-
-    .projects {
-        min-height: 105vh;
-    }
-
-    .projects__stage {
-        min-height: 105vh;
-    }
-
-    .projects__screen {
-        width: min(76vw, 1250px);
-    }
-}
-
-
-/* =========================================================
-   ULTRA-WIDE
-   1920px+
-   ========================================================= */
-
-@media (min-width: 1920px) {
-
-    .main-nav {
-        top: 2.5vh;
-        gap: 3vw;
-        padding: 1.5vh 2.8vw;
-    }
-
-    .main-nav a {
-        font-size: 1vw;
-    }
-
-
-    /* -----------------------------------------------------
-       HERO
-       ----------------------------------------------------- */
-
-    .hero {
-        --hero-bouton-size: 12vw;
-        --hero-barrette-size: 12vw;
-        --hero-trombone-size: 8vw;
-        --hero-pin-size: 5vw;
-        --hero-xppen-size: 21vw;
-        --hero-clip-size: 11vw;
-        --hero-paperball-size: 15vw;
-    }
-
-    .hero__art {
-        min-height: 110vh;
-        overflow: hidden;
-    }
-
-    .hero__title {
-        top: 44%;
-        font-size: clamp(7rem, 8vw, 13rem);
-    }
-
-
-    /* -----------------------------------------------------
-       ABOUT
-       ----------------------------------------------------- */
-
-    .about {
-        min-height: 110vh;
-    }
-
-    .about__paper {
-        min-height: 125vh;
-        padding-left: 6vw;
-        padding-right: 6vw;
-    }
-
-    .about__paper h2 {
-        font-size: 5.8vw;
-    }
-
-    .about__paper p {
-        font-size: 1.4vw;
-        max-width: 48ch;
-    }
-
-    .about__pin {
-        width: 8vw;
-    }
-
-    .about__clip {
-        width: 12vw;
-    }
-
-    .about__bow {
-        width: 14vw;
-    }
-
-    .about__arrow {
-        width: 16vw;
-    }
-
-
-    /* -----------------------------------------------------
-       PROJECTS
-       ----------------------------------------------------- */
-
-    .projects {
-        min-height: 140vh;
-    }
-
-    .projects__stage {
-        min-height: 140vh;
-    }
-
-    .projects__screen {
-        width: min(77vw, 1350px);
-    }
-
-    .projects__arrow--prev {
-        left: 0;
-        transform: translateX(-19vw);
-    }
-
-    .projects__arrow--next {
-        right: 0;
-        transform: translateX(7vw);
-    }
-}
-
-/* Mobile layout matching supplied reference image */
-@media (max-width: 480px) {
-  .hero__art { height: 81vw; min-height: 81vw; max-height: 81vw; overflow: hidden; }
-  .hero__title { top: 53%; font-size: 11vw; }
-  .hero { --hero-bouton-size: 11vw; --hero-barrette-size: 13vw; --hero-trombone-size: 14vw; --hero-pin-size: 5vw; --hero-xppen-size: 49vw; --hero-clip-size: 15vw; --hero-paperball-size: 15vw; }
-  .hero__art .xppen { left: 15vw !important; top: 19vw !important; }
-  .hero__art .barrette-bleu { top: 19vw !important; }
-  .hero__art .barrette-rose { top: 23vw !important; }
-  .hero__art .pin { top: 22vw !important; right: 8vw !important; }
-  .hero__art .clip { top: 43vw !important; left: 3vw !important; }
-  .hero__art .paperball { top: 59vw !important; }
-  .hero__art .bouton-bleu { bottom: 13vw !important; right: 19vw !important; }
-  .hero__art .trombone-bleu--second { bottom: 5vw !important; }
-  .hero__art .trombone-rose { bottom: 5vw !important; }
-  .hero__art .trombone-bleu--third { top: 63vw !important; }
-  .hero__art .trombone-bleu--first { top: 68vw !important; right: 43vw !important; }
-  .hero__art .trombone-rose--second { top: 66vw !important; right: 47vw !important; }
-  .about { height: 71vw; background: transparent; }
-  .about__paper { width: 72vw; height: 62vw; margin: 5vw auto 0; opacity: .8; }
-  .about__paper p { font-size: 2.5vw; line-height: 1.3; }
-  .projects { padding: 1vw; }
-  .projects__title { display: none; }
-  .projects__carousel { position: relative; inset: auto; display: block; padding: 0; border: 1px solid #191923; }
-  .project-card { border-radius: 0; box-shadow: none; }
-  .project-card__media { aspect-ratio: 1.45 / 1; }
-  .project-card__content { padding: 1vw 1.5vw; }
-  .project-card__eyebrow { display: none; }
-  .project-card__name { font-size: 7vw; }
-  .project-card__category { font-size: 3.5vw; }
-  .projects__arrow { position: absolute; top: 42%; width: 12vw; height: 12vw; min-width: 0; min-height: 0; transform: translateY(-50%); }
-  .projects__arrow--prev { left: 1vw; }
-  .projects__arrow--next { right: 1vw; }
-  .skills { min-height: 0; padding: 2vw 1vw 3vw; background: var(--board-bg); }
-  .skills__list { display: flex; flex-wrap: nowrap; gap: 1vw; justify-content: space-between; }
+/* Adaptation des sections à la largeur de la fenêtre. Jusqu’à 767 px : composition mobile. À partir de 768 px : composition tablette et ordinateur. Ce fichier est chargé en dernier pour remplacer les règles de base. 1vw vaut 1 % de la largeur de la fenêtre ; 1vh vaut 1 % de sa hauteur. min() limite une taille, clamp() impose une valeur minimale et maximale. */
+
+/* Composition mobile : proportions adaptées à la référence de 430 px. */
+@media (max-width: 767px) {
+  body { width: 100%; overflow-x: hidden; }
+  body:not(.project-page) main { margin: 0; padding: 0; width: 100%; }
+  /* Navigation adaptée à cette largeur. */
+  .main-nav { position: fixed; top: 3.3vw; left: 50%; width: 66vw; gap: 0; padding: 2vw 3vw; justify-content: space-between; transform: translateX(-50%); border-radius: 999px; }
+  .main-nav a { font-size: 3.7vw; letter-spacing: 0; font-weight: 500; }
+  /* Bannière : hauteur, titre et placement des objets. */
+  .hero, .hero__art { height: 100vw; min-height: 0; max-height: none; padding: 0; }
+  .hero__art { overflow: visible; z-index: 2; }
+  .hero__title { top: 49%; left: 50%; width: max-content; font-size: 13vw; line-height: .9; letter-spacing: -.03em; }
+  .hero__title span:nth-child(1) { font-size: 1.45em; }
+  .hero__title span:nth-child(9) { font-size: 1.08em; }
+  .hero__art img { animation: none; max-width: none; min-width: 0; height: auto; opacity: 1; }
+  .hero__art .xppen { width: 49vw; left: 16vw; right: auto; top: 10vw; bottom: auto; transform: rotate(22deg); }
+  .hero__art .barrette-bleu { width: 22vw; left: -6vw; right: auto; top: 20vw; bottom: auto; transform: rotate(-35deg); }
+  .hero__art .barrette-rose { width: 22vw; left: auto; right: 5vw; top: 20vw; bottom: auto; transform: rotate(35deg); }
+  .hero__art .pin { width: 9vw; left: auto; right: 2vw; top: 18vw; bottom: auto; }
+  .hero__art .clip { width: 24vw; left: 0; right: auto; top: 64vw; bottom: auto; transform: rotate(-26deg); }
+  .hero__art .paperball { width: 24vw; left: auto; right: 0; top: 67vw; bottom: auto; }
+  .hero__art .bouton-bleu { width: 18vw; left: auto; right: 23vw; top: 67vw; bottom: auto; }
+  .hero__art .trombone-bleu--second { width: 20vw; left: 6vw; right: auto; top: 77vw; bottom: auto; transform: rotate(-20deg); }
+  .hero__art .trombone-rose:not(.trombone-rose--second) { width: 20vw; left: 9vw; right: auto; top: 78vw; bottom: auto; transform: rotate(32deg); }
+  .hero__art .trombone-bleu--third { width: 20vw; left: 16vw; right: auto; top: 80vw; bottom: auto; transform: rotate(34deg); }
+  .hero__art .trombone-bleu--first { display: none; }
+  .hero__art .trombone-rose--second { width: 14vw; left: 44vw; right: auto; top: 80vw; bottom: auto; transform: rotate(70deg); }
+  .hero__art .barrette-beige { width: 20vw; left: auto; right: 8vw; top: 84vw; bottom: auto; transform: rotate(40deg); z-index: 5; }
+
+  /* À propos : disposition du texte, de la photo et des décorations. */
+  .about { display: block; height: auto; min-height: 0; padding: 5vw 0 10vw; margin: 0; overflow: visible; background: linear-gradient(#f4eee5dd, #f4eee5dd); position: relative; }
+  .about__paper { width: 72vw; height: auto; min-height: 62vw; margin: 0 auto; padding: 10vw 8vw 9vw; transform: none; opacity: 1; overflow: visible; }
+  .about__paper::before { background-size: 100% 100%; background-position: center; opacity: .85; }
+  .about__paper h2 { margin: 0 0 3vw; font-size: 4.7vw; line-height: 1; text-align: center; }
+  .about__paper p { margin: 0 0 2vw; font-size: clamp(11px, 2.7vw, 18px); line-height: 1.35; }
+  .about__pin { top: -1vw; left: 45%; width: 8vw; transform: none; z-index: 3; }
+  .about__clip { right: -2vw; bottom: 0; width: 16vw; transform: rotate(20deg); z-index: 4; }
+  .about__pink-panel { display: block; position: relative; left: auto; bottom: auto; width: 28vw; height: 33vw; min-height: 0; margin: -3vw 0 5vw 10vw; padding: 3vw; background: #f582b5; transform: rotate(-20deg); z-index: 6; }
+  .about__image-placeholder { width: 100%; height: 100%; aspect-ratio: auto; transform: none; background: linear-gradient(45deg, transparent 49.5%, #191923 49.5% 50.5%, transparent 50.5%), linear-gradient(-45deg, transparent 49.5%, #191923 49.5% 50.5%, transparent 50.5%), white; box-shadow: none; }
+  .about__bow { top: -1vw; right: 0; width: 9vw; transform: rotate(20deg); }
+  .about__arrow { left: 37vw; right: auto; bottom: 30vw; width: 18vw; transform: rotate(55deg); z-index: 6; }
+
+  /* Projets sur mobile : carte seule, sans écran ni souris. */
+  .projects { min-height: 0; margin: 0; padding: 1vw; overflow: hidden; background-image: url("../assets/Img/plaid.jpg"); }
+  .projects__stage { position: relative; width: 100%; min-height: 0; margin: 0; padding: 0; overflow: visible; }
+  .projects__title, .projects__screen, .projects__mouse { display: none; }
+  .projects__carousel { position: relative; inset: auto; display: block; width: 100%; margin: 0; padding: 0; border: 1px solid #191923; }
+  .projects__slot { width: 100%; max-width: none; min-width: 0; margin: 0; }
+  .projects .project-card { position: relative; display: block; width: 100%; margin: 0; border-radius: 0; box-shadow: none; background: #d6d8d8; }
+  .projects .project-card__media { display: block; width: 100%; height: 65vw; min-height: 0; aspect-ratio: auto; overflow: hidden; }
+  .projects .project-card__image, .projects .project-card__graphic { display: block; width: 100%; height: 100%; object-fit: cover; background-size: cover; }
+  .projects .project-card__content { padding: 1vw 1vw .5vw; gap: 0; background: #d6d8d8; }
+  .projects .project-card__eyebrow { display: none; }
+  .projects .project-card__name { font-family: "Nunito Local", sans-serif; font-size: 7vw; line-height: 1; }
+  .projects .project-card__category { font-size: 3.5vw; line-height: 1.3; }
+  .projects__arrow { position: absolute; top: 50%; bottom: auto; width: 10vw; height: 12vw; min-width: 0; min-height: 0; margin: 0; padding: 0; transform: translateY(-50%); z-index: 10; }
+  .projects__arrow--prev { left: 1vw; right: auto; }
+  .projects__arrow--next { right: 1vw; left: auto; }
+
+  /* Logiciels : taille des icônes et répartition dans la rangée. */
+  .skills { min-height: 0; padding: 2vw 1vw 3vw; background: #fff4de; overflow: visible; }
+  .skills__list { display: flex; flex-wrap: nowrap; gap: 1vw; width: 100%; justify-content: space-between; }
   .skills__item { flex: 1 1 0; min-width: 0; }
-  .skill-card { width: 100%; height: 11vw; max-width: none; }
-  .skill-card__icon { width: 100%; height: 9vw; max-width: 100%; max-height: 9vw; }
-  .skill-card__label { font-size: 2.5vw; }
   .skills__item:nth-child(9) { display: none; }
-  .contact { margin-top: 0; min-height: 79vw; height: 79vw; padding: 7vw 0; }
-  .contact__stage { height: 61vw; }
-  .contact__card { width: 66vw; right: 16vw; top: 2vw; transform: rotate(8deg); }
-  .contact__card-image { width: 100%; }
-  .contact__card-text p { font-size: 3vw; }
-  .contact__card-social img { width: 7vw; }
-  .contact__card-email a { font-size: 2.1vw; }
-  .contact__envelope { width: 30vw; left: 3vw; top: auto; bottom: -1vw; }
-  .contact__message { right: 3vw; bottom: 0; }
+  .skill-card { width: 100%; height: 10vw; max-width: none; margin: 0; }
+  .skill-card__icon { width: 100%; height: 10vw; max-width: 100%; max-height: none; object-fit: contain; }
+  .skill-card__label { font-size: 2.5vw; }
+
+  /* Contact : placement de l’enveloppe, de la carte et de ses éléments. */
+  .contact { width: 100%; height: 80vw; min-height: 0; margin: 0; padding: 8vw 0 11vw; overflow: hidden; }
+  .contact__stage { width: 100%; height: 61vw; min-height: 0; margin: 0; overflow: visible; background: #1e1e2a; }
+  .contact__card { width: 63vw; right: 20vw; top: 0; transform: rotate(8deg); z-index: 3; }
+  .contact__card-image { width: 100%; height: auto; }
+  .contact__card-text { left: 5%; top: 42%; width: 43%; }
+  .contact__card-text p { font-family: "Meow Script", cursive; font-size: 5vw; line-height: 1.2; }
+  .contact__card-line { left: 52%; top: 18%; width: 1px; height: 55%; }
+  .contact__card-socials { left: 64%; top: 43%; gap: 5vw; }
+  .contact__card-social img { width: 8vw; height: 8vw; object-fit: contain; }
+  .contact__card-email { left: 8%; right: 8%; bottom: 12%; }
+  .contact__card-email a { font-size: 2.1vw; white-space: nowrap; }
+  .contact__envelope { width: 30vw; height: auto; left: 3vw; right: auto; top: auto; bottom: -1vw; transform: rotate(-10deg); z-index: 4; }
+  .contact__arrow { width: 19vw; right: 16vw; bottom: 5vw; transform: rotate(-200deg); }
+  .contact__message { right: 3vw; bottom: 1vw; }
   .contact__message h2 { font-size: 6vw; }
+<<<<<<< HEAD
+=======
+  .contact__text-desktop { display: none; }
+  .contact__text-mobile { display: inline; }
+  #a-propos, #projets, #contact { scroll-margin-top: 16vw; }
+}
+
+
+/* Composition de référence pour tablette et ordinateur. */
+.hero { position: relative; z-index: 10; overflow: visible; }
+.hero__art { overflow: visible; }
+.hero__art .barrette-beige { z-index: 20; }
+.about { isolation: isolate; z-index: 1; }
+@media (min-width: 768px) {
+  body:not(.project-page) main { padding: 0; }
+  /* Navigation adaptée à cette largeur. */
+  .main-nav { top: 1vw; gap: 3vw; padding: 1vw 2vw; }
+  .main-nav a { font-size: clamp(14px, 2vw, 28px); }
+  /* Bannière : hauteur, titre et placement des objets. */
+  .hero, .hero__art { height: 56vw; min-height: 0; }
+  .hero__title { top: 45%; font-size: 8.5vw; }
+  .hero__art img { animation: none; height: auto; }
+  .hero__art .xppen { width: min(40vw, 760px); left: 10vw; right: auto; top: -7vw; bottom: auto; transform: rotate(32deg); }
+  .hero__art .barrette-bleu { width: min(16vw, 300px); left: -7vw; top: -8vw; }
+  .hero__art .barrette-rose { width: min(16vw, 300px); left: 65vw; top: 7vw; }
+  .hero__art .pin { width: min(6.5vw, 120px); right: 7vw; top: 4vw; }
+  /* Pince abaissée pour laisser un espace sous le XP-Pen. */
+  .hero__art .clip { width: min(16vw, 300px); right: 78vw; top: 19vw; }
+  .hero__art .paperball { width: min(16vw, 300px); right: 0; top: 32vw; }
+  .hero__art .bouton-bleu { width: min(12vw, 220px); right: 20vw; bottom: 2vw; }
+  .hero__art .trombone-bleu--first { width: min(14vw, 260px); right: 72vw; top: 34vw; }
+  .hero__art .trombone-bleu--second { width: min(14vw, 260px); left: 10vw; bottom: 3vw; }
+  .hero__art .trombone-rose { width: min(14vw, 260px); left: 12vw; bottom: 3vw; }
+  .hero__art .trombone-bleu--third { width: min(14vw, 260px); left: 16vw; top: 36vw; }
+  .hero__art .trombone-rose--second { width: min(11vw, 200px); left: auto; right: 44vw; top: 46vw; }
+  .hero__art .barrette-beige { width: min(16vw, 300px); left: 85vw; bottom: -9vw; }
+
+  /* À propos : disposition du texte, de la photo et des décorations. */
+  .about { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); width: 100%; min-height: 56vw; background: linear-gradient(90deg, var(--board-bg) 50%, var(--pink-strong) 50%); }
+  .about__paper { min-width: 0; width: 46vw; min-height: 50vw; margin: 3vw auto; padding: 5vw 6vw 8vw; overflow: visible; }
+  .about__paper::before { background-size: 100% 100%; opacity: .85; }
+  .about__paper h2 { font-size: 5vw; text-align: center; margin: 0 0 4vw; }
+  .about__paper p { font-size: clamp(14px, 1.5vw, 26px); line-height: 1.5; margin-bottom: 2vw; }
+  .about__pin { width: 8vw; left: 40%; top: -2vw; }
+  .about__clip { width: 15vw; right: 0; bottom: 0; }
+  .about__pink-panel { min-width: 0; width: 100%; min-height: 56vw; padding: 7vw 6vw; }
+  .about__image-placeholder { width: 100%; min-width: 0; height: auto; aspect-ratio: 4 / 5; max-width: 100%; background: linear-gradient(45deg, transparent 49.8%, #999 49.8% 50.2%, transparent 50.2%), linear-gradient(-45deg, transparent 49.8%, #999 49.8% 50.2%, transparent 50.2%), white; }
+  .about__bow { width: 18vw; right: 2vw; top: 3vw; }
+  .about__arrow { width: 19vw; left: 40vw; bottom: 20vw; }
+
+  /* Projets sur tablette et ordinateur : carte cadrée dans l’écran. */
+  .projects, .projects__stage { width: 100%; min-height: 56vw; height: 56vw; }
+  .projects__stage { max-width: none; }
+  .projects__title { padding-top: 1vw; font-size: 6vw; }
+  .projects__screen { width: 62vw; max-width: none; top: -6vw; left: 50%; }
+  .projects__mouse { width: 32vw; right: 0; bottom: -1vw; }
+  .projects__carousel { top: 11vw; bottom: auto; left: 17vw; right: 17vw; height: 27vw; gap: 3vw; }
+  .projects__slot { flex: 0 0 45vw; width: 45vw; max-width: 45vw; }
+  .projects__arrow { width: 5vw; height: 7vw; }
+  .projects .project-card { position: relative; height: 27vw; border-radius: 0; box-shadow: none; background: #d6d8d8; }
+  .projects .project-card__media { width: 100%; height: 100%; aspect-ratio: auto; }
+  .projects .project-card__image, .projects .project-card__graphic { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .projects .project-card__content { position: absolute; inset: 0; padding: 1vw; background: transparent; pointer-events: none; }
+  .projects .project-card__eyebrow { display: none; }
+  .projects .project-card__name { align-self: flex-start; font-family: "Nunito Local", sans-serif; font-size: 2.8vw; line-height: 1.1; border-bottom: 2px solid var(--ink); background: #d6d8d8cc; }
+  .projects .project-card__category { margin-top: auto; align-self: flex-end; font-size: 1.6vw; background: #d6d8d8cc; border-bottom: 1px solid var(--ink); }
+
+  /* Logiciels : taille des icônes et répartition dans la rangée. */
+  .skills { min-height: 0; padding: 1vw 2vw 2vw; }
+  .skills__list { display: grid; grid-template-columns: repeat(9, minmax(0, 1fr)); width: 100%; max-width: none; gap: 1vw; }
+  .skills__item, .skill-card { min-width: 0; max-width: 100%; }
+  .skill-card { width: 100%; height: 8vw; }
+  .skill-card__icon { width: 100%; height: 7vw; max-width: 100%; object-fit: contain; }
+  .skill-card__label { font-size: 1vw; }
+
+  /* Contact : placement de l’enveloppe, de la carte et de ses éléments. */
+  .contact { min-height: 0; height: 56vw; margin: 0; padding: 3vw 0 5vw; }
+  .contact__stage { width: 100%; height: 48vw; min-height: 0; margin: 0; }
+  .contact__envelope { width: 60vw; top: -6vw; left: -6vw; right: auto; bottom: auto; transform: rotate(-10deg); }
+  .contact__card { width: 54vw; top: 7vw; right: 20vw; transform: rotate(10deg); }
+  .contact__card-image { width: 100%; }
+  .contact__card-text { left: 5%; top: 45%; width: 43%; }
+  .contact__card-text p { font-family: "Meow Script", cursive; font-size: 4vw; line-height: 1.3; }
+  .contact__text-desktop { display: none; }
+  .contact__text-mobile { display: inline; }
+  .contact__card-socials { left: 64%; top: 45%; gap: 4vw; }
+  .contact__card-social img { width: 6vw; height: 6vw; object-fit: contain; }
+  .contact__card-line { top: 18%; height: 55%; width: 1px; }
+  .contact__card-email { bottom: 8%; }
+  .contact__card-email a { font-size: 1.2vw; }
+  .contact__arrow { right: 18vw; bottom: 1vw; width: 15vw; }
+  .contact__message { right: 2vw; bottom: 0; }
+  .contact__message h2 { font-size: 5vw; }
+>>>>>>> c0e0ff18fff75fedea025ce9901465619ed1c4d9
 }

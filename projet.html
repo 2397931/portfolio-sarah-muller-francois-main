@@ -10,26 +10,34 @@
     <!-- Styles globaux -->
     <link rel="stylesheet" href="css/global.css">
 
+<<<<<<< HEAD
     <!-- Styles des cartes de projets, si utilisés -->
+=======
+    <!-- Styles de la page détaillée : bannière, lecteur, panneaux et processus. -->
+>>>>>>> c0e0ff18fff75fedea025ce9901465619ed1c4d9
     <link rel="stylesheet" href="css/projects-card.css">
 </head>
 
 <body class="project-page">
 
+    <!-- La classe project-page choisit la mise en page et l’initialisation de la page détaillée. -->
     <main class="project-page__main">
 
+        <!-- main.js insère ici l’image, les informations et la vidéo du projet demandé dans ?project=. -->
         <section
             class="project-hero"
             aria-labelledby="project-title"
             data-project-hero>
         </section>
 
+        <!-- Emplacement des panneaux Concept, Direction visuelle et Support générés en JavaScript. -->
         <section
             class="project-details"
             aria-label="Détails du projet"
             data-project-details>
         </section>
 
+        <!-- Emplacement des étapes de création ; retiré si le projet ne possède pas de processus. -->
         <section
             class="project-process"
             data-project-process>
@@ -45,7 +53,8 @@
 
     </main>
 
-    <script type="module" src="js/main.js"></script>
+    <!-- Charge le même point d’entrée que l’accueil ; la classe du body active la page détaillée. -->
+    <script type="module" src="js/main.js?v=20261008-responsive-11"></script>
 
 </body>
 

@@ -1,3 +1,5 @@
+/* Point d’entrée des deux pages : attend les données, puis initialise soit le carrousel, soit la page du projet. Les attributs data-project-* relient le HTML aux fonctions ci-dessous. */
+
 import {
     getNextProject,
     getPreviousProject,
@@ -16,6 +18,7 @@ import {
    PROJET DEMANDÉ
    ========================================================= */
 
+/* Lit le paramètre ?project= de l’URL ; sans paramètre, utilise le premier projet chargé. */
 function getRequestedProjectId() {
 
     const searchParams =
@@ -36,6 +39,7 @@ function getRequestedProjectId() {
    CARROUSEL DES PROJETS
    ========================================================= */
 
+/* Active le carrousel seulement si son conteneur existe sur la page d’accueil. */
 function initProjectCarousel() {
 
     const carousel =
@@ -60,6 +64,7 @@ function initProjectCarousel() {
     let currentIndex = 0;
 
 
+    /* Remplace la prévisualisation par le projet courant et met à jour son lien et son texte accessible. */
     function renderCurrentProject() {
 
         const project =
@@ -96,6 +101,7 @@ function initProjectCarousel() {
     }
 
 
+    /* Le ?. évite une erreur si le bouton est absent ; le modulo permet de boucler. */
     prevButton?.addEventListener(
         "click",
         () => {
@@ -130,6 +136,7 @@ function initProjectCarousel() {
    PAGE DU PROJET
    ========================================================= */
 
+/* Remplit les emplacements de projet.html avec le projet demandé, son thème et son processus. */
 function initProjectPage() {
 
     const heroSlot =
@@ -194,7 +201,7 @@ function initProjectPage() {
 
 
     /* =====================================================
-       HERO
+       BANNIÈRE
     ====================================================== */
 
     heroSlot.innerHTML =
@@ -286,6 +293,7 @@ function initProjectPage() {
    ANIMATION DU TITRE PORTFOLIO
    ========================================================= */
 
+/* Transforme le titre en lettres séparées ; leur indice pilote le délai d’animation défini dans hero.css. */
 function initPortfolioAnimation() {
 
     const title =
@@ -327,6 +335,7 @@ function initPortfolioAnimation() {
    INITIALISATION
    ========================================================= */
 
+/* Attend la fin du chargement avant d’utiliser la liste des projets. */
 loadProjects().then(() => {
 
     initPortfolioAnimation();

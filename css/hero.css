@@ -1,11 +1,14 @@
+/* Bannière d’accueil : titre lettre par lettre, objets décoratifs et animations d’entrée. responsive.css, chargé ensuite, ajuste les dimensions et désactive les animations des objets selon la largeur. */
+
 /* =========================================================
-   HERO
+   BANNIÈRE D’ACCUEIL
    ========================================================= */
 
 .hero {
     width: 100%;
 }
 
+/* Repère de positionnement des objets : leurs coordonnées sont calculées dans cette zone. */
 .hero__art {
     position: relative;
     width: 100%;
@@ -14,6 +17,7 @@
     padding: 0;
 }
 
+/* Centre le titre avec translate(-50%, -50%) ; sa taille dépend de la largeur. */
 .hero__title {
     position: absolute;
     left: 50%;
@@ -34,6 +38,7 @@
    ANIMATION DU TITRE PORTFOLIO
    ========================================================= */
 
+/* Chaque lettre reçoit un délai via --letter-index et sa police finale via --final-font. */
 .hero__title span {
     display: inline-block;
     font-weight: 400;
@@ -140,9 +145,10 @@
 
 
 /* =========================================================
-   OBJETS DU HERO
+   OBJETS DU BANNIÈRE D’ACCUEIL
    ========================================================= */
 
+/* Règles communes aux images décoratives ; height: auto conserve leurs proportions. */
 .hero__art img {
     position: absolute;
     width: 120px;
@@ -263,7 +269,7 @@
 
 
 /* ---------------------------------------------------------
-   PIN
+   PUNAISE
    --------------------------------------------------------- */
 
 .hero__art .pin {
@@ -286,7 +292,7 @@
 
 
 /* ---------------------------------------------------------
-   CLIP
+   PUNAISECE
    --------------------------------------------------------- */
 
 .hero__art .clip {
@@ -298,7 +304,7 @@
 
 
 /* ---------------------------------------------------------
-   PAPERBALL
+   BOULE DE PAPIER
    --------------------------------------------------------- */
 
 .hero__art .paperball {
@@ -309,7 +315,7 @@
 
 
 /* =========================================================
-   HERO — ARRIVÉE DES OBJETS
+   BANNIÈRE D’ACCUEIL — ARRIVÉE DES OBJETS
    ========================================================= */
 
 .hero__art img {
@@ -629,7 +635,7 @@
 
 
 /* =========================================================
-   PIN — ARRIVE DU HAUT DROITE
+   PUNAISE — ARRIVE DU HAUT DROITE
    ========================================================= */
 
 @keyframes pinEnter {
@@ -685,7 +691,7 @@
 
 
 /* =========================================================
-   CLIP — ARRIVE DE LA GAUCHE
+   PUNAISECE — ARRIVE DE LA GAUCHE
    ========================================================= */
 
 @keyframes clipEnter {
@@ -713,7 +719,7 @@
 
 
 /* =========================================================
-   PAPERBALL — ARRIVE DE LA DROITE
+   BOULE DE PAPIER — ARRIVE DE LA DROITE
    ========================================================= */
 
 @keyframes paperballEnter {

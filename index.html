@@ -10,14 +10,15 @@
 
     <title>Portfolio Sarah Muller François</title>
 
-        <link rel="stylesheet" href="css/global.css">
-        <link rel="stylesheet" href="css/navigation.css">
-        <link rel="stylesheet" href="css/hero.css">
-        <link rel="stylesheet" href="css/about.css">
-        <link rel="stylesheet" href="css/projects.css">
-        <link rel="stylesheet" href="css/skills.css">
-        <link rel="stylesheet" href="css/contact.css">
-        <link rel="stylesheet" href="css/responsive.css">
+        <!-- Charger les bases avant les styles de section. responsive.css arrive en dernier pour adapter la mise en page. La version dans les URL force le navigateur à récupérer les fichiers actualisés. -->
+        <link rel="stylesheet" href="css/global.css?v=20261008-responsive-11">
+        <link rel="stylesheet" href="css/navigation.css?v=20261008-responsive-11">
+        <link rel="stylesheet" href="css/hero.css?v=20261008-responsive-11">
+        <link rel="stylesheet" href="css/about.css?v=20261008-responsive-11">
+        <link rel="stylesheet" href="css/projects.css?v=20261008-responsive-11">
+        <link rel="stylesheet" href="css/skills.css?v=20261008-responsive-11">
+        <link rel="stylesheet" href="css/contact.css?v=20261008-responsive-11">
+        <link rel="stylesheet" href="css/responsive.css?v=20261008-responsive-11">
 </head>
 
 <body>
@@ -48,11 +49,12 @@
     <main>
 
         <!-- =========================================
-             HERO
+             BANNIÈRE D’ACCUEIL
              ========================================= -->
 
         <header class="hero">
 
+            <!-- Repère des images décoratives ; main.js découpe le titre en lettres pour son animation. -->
             <div class="hero__art">
 
                 <h1
@@ -140,6 +142,7 @@
             id="a-propos"
             aria-labelledby="about-title">
 
+            <!-- Texte sur une texture ajoutée en CSS ; les décorations restent indépendantes du contenu. -->
             <article class="about__paper">
 
                 <img
@@ -168,6 +171,7 @@
 
             </article>
 
+            <!-- Cadre réservé à la photo et nœud décoratif. -->
             <article class="about__pink-panel">
 
                 <div
@@ -208,6 +212,7 @@
                     Projets
                 </h2>
 
+                <!-- Écran au calque 1 ; souris au calque 0 derrière lui ; carrousel au calque 3. -->
                 <img
                     src="./maket/illustrations/ecran.png"
                     alt=""
@@ -220,6 +225,7 @@
                     class="projects__mouse"
                     aria-hidden="true">
 
+                <!-- Les attributs data-project-* permettent au JavaScript de trouver les boutons et la zone à remplacer. -->
                 <div
                     class="projects__carousel"
                     data-project-carousel
@@ -243,6 +249,7 @@
                         class="projects__slot"
                         data-project-slot>
 
+                        <!-- Carte initiale : remplacée par les données chargées depuis data/projects.json. -->
                         <a
                             class="project-card project-card--dark project-card--hyunjin"
                             href="projet.html?project=hyunjin"
@@ -306,6 +313,7 @@
             id="logiciels-competences"
             aria-labelledby="skills-title">
 
+            <!-- Chaque figure associe une icône au nom révélé au survol dans skills.css. -->
             <ul
                 class="skills__list"
                 aria-label="Logiciels et compétences">
@@ -477,6 +485,7 @@
             id="contact"
             aria-labelledby="contact-title">
 
+            <!-- Fond en bois séparé de la zone sombre pour conserver les bandes autour de la composition. -->
             <div class="contact__wood"></div>
 
             <div class="contact__stage">
@@ -487,6 +496,7 @@
                     class="contact__envelope"
                     aria-hidden="true">
 
+                <!-- La carte regroupe image, texte, séparation, réseaux et courriel : tout suit sa rotation. -->
                 <div class="contact__card">
 
                     <img
@@ -497,8 +507,8 @@
                     <div class="contact__card-text">
 
                         <p>
-                            Vous pouvez me retrouver<br>
-                            sur mes réseaux.
+                            <span class="contact__text-desktop">Vous pouvez me retrouver<br>sur mes réseaux.</span>
+                            <span class="contact__text-mobile">Travaillons<br>ensemble</span>
                         </p>
 
                     </div>
@@ -507,6 +517,7 @@
 
                     <div class="contact__card-socials">
 
+                        <!-- Remplacer # par l’adresse réelle du profil. -->
                         <a
                             href="#"
                             class="contact__card-social contact__card-social--indeed"
@@ -518,6 +529,7 @@
 
                         </a>
 
+                        <!-- Remplacer # par l’adresse réelle du profil. -->
                         <a
                             href="#"
                             class="contact__card-social contact__card-social--instagram"
@@ -562,9 +574,10 @@
     </main>
 
 
+    <!-- Le module charge les projets puis initialise les interactions après le HTML. -->
     <script
         type="module"
-        src="js/main.js">
+        src="js/main.js?v=20261008-responsive-11">
     </script>
 
 </body>
