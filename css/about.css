@@ -4,18 +4,12 @@
 
 .about {
     position: relative;
-
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
     width: 100%;
     max-width: 100%;
-
     min-height: 100vh;
-
     margin: 0;
-
     overflow: hidden;
 
     background:
@@ -26,11 +20,15 @@
         );
 }
 
+
+/* =========================================================
+   PAPER
+   ========================================================= */
+
 .about__paper {
     position: relative;
 
     min-height: calc(120vh - 4rem);
-
     width: calc(100% - 8vw);
 
     margin: 2.5rem auto;
@@ -40,6 +38,26 @@
         clamp(3rem, 6vw, 6rem)
         4rem;
 
+    background-color: transparent;
+
+    transform: rotate(-1deg);
+
+    overflow: hidden;
+
+    z-index: 1;
+}
+
+
+/* ---------------------------------------------------------
+   PAPER IMAGE ONLY
+   --------------------------------------------------------- */
+
+.about__paper::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
     background-image:
         url("../assets/Img/white-ripped-crumpled-paper-piece-png.webp");
 
@@ -47,20 +65,32 @@
     background-size: contain;
     background-repeat: no-repeat;
 
-    transform: rotate(-1deg);
-
     opacity: 0.6;
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   PAPER CONTENT
+   ========================================================= */
+
+.about__paper h2,
+.about__paper p {
+    position: relative;
+
+    z-index: 2;
+
+    opacity: 1;
 }
 
 .about__paper h2 {
     margin: 0 0 2rem;
 
     font-family: "Mieszkanie", sans-serif;
-
     font-weight: 300;
 
     font-size: 6.2vw;
-
     line-height: 0.9;
 }
 
@@ -72,9 +102,13 @@
     font-family: "Nunito Local", sans-serif;
 
     font-size: clamp(1.3rem, 2vw, 1.6rem);
-
     line-height: 1.55;
 }
+
+
+/* =========================================================
+   DECORATIONS
+   ========================================================= */
 
 .about__pin,
 .about__clip,
@@ -86,23 +120,32 @@
 .about__pin {
     top: 0vw;
     left: 30vh;
+
     width: 150px;
+
     transform: rotate(8deg);
 }
 
 .about__clip {
     right: 1rem;
     bottom: 0.5rem;
+
     width: 15vw;
+
     z-index: 2;
+
     transform: rotate(20deg);
 }
+
+
+/* =========================================================
+   PINK PHOTO PANEL
+   ========================================================= */
 
 .about__pink-panel {
     position: relative;
 
     display: grid;
-
     place-items: center;
 
     min-height: 100vh;
@@ -110,7 +153,14 @@
     padding: 4rem;
 
     background: var(--pink-strong);
+
+    transform: rotate(0deg);
 }
+
+
+/* =========================================================
+   PHOTO
+   ========================================================= */
 
 .about__image-placeholder {
     width: min(100%, 700px);
@@ -122,18 +172,34 @@
 
     box-shadow:
         inset 0 0 0 1px rgba(14, 14, 18, 0.2);
+
+    transform: rotate(0deg);
 }
+
+
+/* =========================================================
+   BOW
+   ========================================================= */
 
 .about__bow {
     right: 6%;
     top: 8%;
+
     width: clamp(100px, 16vw, 320px);
-    transform: rotate(20deg);
+
+    transform: rotate(-20deg);
 }
+
+
+/* =========================================================
+   ARROW
+   ========================================================= */
 
 .about__arrow {
     left: 41vw;
     bottom: 39vh;
+
     z-index: 3;
+
     width: 320px;
 }
