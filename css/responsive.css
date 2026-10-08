@@ -93,17 +93,17 @@
   .hero, .hero__art { height: 56vw; min-height: 0; }
   .hero__title { top: 45%; font-size: 8.5vw; }
   .hero__art img { animation: none; height: auto; }
-  .hero__art .xppen { width: min(29vw, 560px); left: 13vw; top: 0; transform: rotate(22deg); }
-  .hero__art .barrette-bleu { width: min(16vw, 300px); left: -9vw; top: -11vw; }
+  .hero__art .xppen { width: min(40vw, 760px); left: 10vw; right: auto; top: -7vw; bottom: auto; transform: rotate(32deg); }
+  .hero__art .barrette-bleu { width: min(16vw, 300px); left: -7vw; top: -8vw; }
   .hero__art .barrette-rose { width: min(16vw, 300px); left: 65vw; top: 7vw; }
   .hero__art .pin { width: min(6.5vw, 120px); right: 7vw; top: 4vw; }
   .hero__art .clip { width: min(16vw, 300px); right: 78vw; top: 14vw; }
   .hero__art .paperball { width: min(16vw, 300px); right: 0; top: 32vw; }
   .hero__art .bouton-bleu { width: min(12vw, 220px); right: 20vw; bottom: 2vw; }
-  .hero__art .trombone-bleu--first { width: min(14vw, 260px); right: 71vw; top: 32vw; }
-  .hero__art .trombone-bleu--second { width: min(14vw, 260px); left: 9vw; bottom: 4vw; }
-  .hero__art .trombone-rose { width: min(14vw, 260px); left: 11vw; bottom: 5vw; }
-  .hero__art .trombone-bleu--third { width: min(14vw, 260px); left: 15vw; top: 35vw; }
+  .hero__art .trombone-bleu--first { width: min(14vw, 260px); right: 72vw; top: 34vw; }
+  .hero__art .trombone-bleu--second { width: min(14vw, 260px); left: 10vw; bottom: 3vw; }
+  .hero__art .trombone-rose { width: min(14vw, 260px); left: 12vw; bottom: 3vw; }
+  .hero__art .trombone-bleu--third { width: min(14vw, 260px); left: 16vw; top: 36vw; }
   .hero__art .trombone-rose--second { width: min(11vw, 200px); left: auto; right: 44vw; top: 46vw; }
   .hero__art .barrette-beige { width: min(16vw, 300px); left: 85vw; bottom: -9vw; }
 
@@ -123,7 +123,7 @@
   .projects__stage { max-width: none; }
   .projects__title { padding-top: 1vw; font-size: 6vw; }
   .projects__screen { width: 62vw; max-width: none; top: -6vw; left: 50%; }
-  .projects__mouse { width: 25vw; right: 1vw; bottom: -1vw; }
+  .projects__mouse { width: 32vw; right: 0; bottom: -1vw; }
   .projects__carousel { top: 11vw; bottom: auto; left: 17vw; right: 17vw; height: 27vw; gap: 3vw; }
   .projects__slot { flex: 0 0 45vw; width: 45vw; max-width: 45vw; }
   .projects__arrow { width: 5vw; height: 7vw; }
@@ -144,8 +144,8 @@
 
   .contact { min-height: 0; height: 56vw; margin: 0; padding: 3vw 0 5vw; }
   .contact__stage { width: 100%; height: 48vw; min-height: 0; margin: 0; }
-  .contact__envelope { width: 50vw; top: -6vw; left: 0; bottom: auto; }
-  .contact__card { width: 50vw; top: 9vw; right: 20vw; transform: rotate(10deg); }
+  .contact__envelope { width: 60vw; top: -6vw; left: -6vw; right: auto; bottom: auto; transform: rotate(-10deg); }
+  .contact__card { width: 54vw; top: 7vw; right: 20vw; transform: rotate(10deg); }
   .contact__card-image { width: 100%; }
   .contact__card-text { left: 5%; top: 45%; width: 43%; }
   .contact__card-text p { font-family: "Meow Script", cursive; font-size: 4vw; line-height: 1.3; }
