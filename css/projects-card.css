@@ -645,3 +645,49 @@ body.project-page main {
         min-width: 0;
     }
 }
+/* =========================================================
+   LISIBILITÉ — COULEURS PROPRES À CHAQUE PROJET
+   Dans data/projects.json :
+   theme.textBackground = fond uni derrière les informations.
+   theme.ink = texte contrastant avec ce fond.
+   Les textures de page restent visibles autour des blocs.
+   ========================================================= */
+
+/* Panneaux Concept, Direction visuelle et Support. */
+.project-panel {
+  background: var(--project-text-background, var(--project-surface));
+  color: var(--project-text);
+}
+
+/* Fond continu derrière le titre et toutes les étapes du processus. */
+.project-process {
+  background: var(--project-text-background, var(--project-surface));
+  color: var(--project-text);
+  padding: clamp(20px, 4vw, 48px);
+  border-radius: 24px;
+}
+
+/* Fond coloré derrière les informations de la bannière. */
+.project-hero__eyebrow,
+.project-hero__title,
+.project-hero__year {
+  background: var(--project-text-background, var(--project-surface));
+  color: var(--project-text);
+  opacity: 1;
+  padding: 0.35em 0.6em;
+  border-radius: 12px;
+  text-shadow: none;
+}
+
+/* Le retour reste lisible sur les images de fond, au repos et au survol. */
+.project-page__back {
+  background: var(--project-text-background, var(--project-surface));
+  color: var(--project-text);
+}
+.project-page__back:hover,
+.project-page__back:focus-visible {
+  background: var(--project-text);
+  color: var(--project-text-background, var(--project-surface));
+  outline: 2px solid var(--project-text);
+  outline-offset: 4px;
+}
