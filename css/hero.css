@@ -279,7 +279,7 @@
 
 .hero__art .xppen {
     left: 12vw;
-    top: -4vh;
+    top: -8vh;
     width: var(--hero-xppen-size, 570px);
     transform: rotate(22deg);
 }
