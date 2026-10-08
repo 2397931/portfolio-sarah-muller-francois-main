@@ -308,3 +308,16 @@
   object-fit: cover;
   object-position: center;
 }
+
+/* =========================================================
+   À PROPOS — IMAGE DE FOND DU PORTRAIT
+   Chemin relatif au dossier css : respecter le I majuscule.
+   cover remplit le cadre sans déformer la photo.
+   La balise img dans le HTML conserve le texte alternatif.
+   ========================================================= */
+.about__image-placeholder {
+  background-image: url("../assets/Img/Image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
