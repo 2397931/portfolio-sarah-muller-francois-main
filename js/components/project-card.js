@@ -333,6 +333,13 @@ export function applyProjectTheme(project) {
     const body =
         document.body;
 
+    /* Fond uni du texte, défini par theme.textBackground dans data/projects.json.
+       Il protège la lecture même lorsque la page utilise une image de fond. */
+    root.style.setProperty(
+        "--project-text-background",
+        theme.textBackground ?? theme.background ?? theme.surface ?? "#f5f7f2"
+    );
+
 
     root.style.setProperty(
         "--project-background",
