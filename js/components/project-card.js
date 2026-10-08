@@ -530,7 +530,7 @@ function getProjectMediaMarkup(
                         : "project-card__image"
                 }"
                 src="${project.image}"
-                alt="Aperçu du projet ${escapeHtml(project.title)}">
+                alt="Aperçu du projet ${escapeHtml(project.title)}" decoding="async" loading="lazy">
         `;
     }
 
@@ -567,7 +567,7 @@ function getProjectMediaMarkup(
             <img
                 class="project-card__image"
                 src="${project.image}"
-                alt="Aperçu du projet ${escapeHtml(project.title)}">
+                alt="Aperçu du projet ${escapeHtml(project.title)}" decoding="async" loading="lazy">
         `;
     }
 
@@ -690,7 +690,7 @@ export function renderProjectProcess(project) {
                                 class="project-process__image"
                                 src="${introImage}"
                                 alt="Moodboard et inspirations du projet ${escapeHtml(project.title)}"
-                                loading="lazy">
+                                loading="lazy" decoding="async">
                         </div>
                     ` : ""}
                 </div>
@@ -708,7 +708,7 @@ export function renderProjectProcess(project) {
                                 class="project-process__image"
                                 src="${afterEffectsImage}"
                                 alt="Montage du projet ${escapeHtml(project.title)} dans After Effects"
-                                loading="lazy">
+                                loading="lazy" decoding="async">
                         </div>
                     ` : ""}
                 </div>
@@ -726,7 +726,7 @@ export function renderProjectProcess(project) {
                                 class="project-process__image"
                                 src="${rotobrushImage}"
                                 alt="Travail de rotobrush sur le projet ${escapeHtml(project.title)}"
-                                loading="lazy">
+                                loading="lazy" decoding="async">
                         </div>
                     ` : ""}
                 </div>
@@ -777,7 +777,7 @@ export function renderProjectHero(project) {
                 class="project-hero__visual"
                 src="${project.image}"
                 alt="Image du projet ${escapeHtml(project.title)}"
-                loading="eager">
+                loading="eager" decoding="async">
 
             <div class="project-hero__overlay">
                 <p class="project-hero__eyebrow">${escapeHtml(project.category)}</p>
