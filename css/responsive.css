@@ -15,7 +15,7 @@
   .hero__title span:nth-child(9) { font-size: 1.08em; }
   .hero__art img { max-width: none; min-width: 0; height: auto; opacity: 1; }
   .hero__art .xppen { width: 49vw; left: 16vw; right: auto; top: 10vw; bottom: auto; --hero-rest-transform: rotate(22deg); transform: rotate(22deg); }
-  .hero__art .barrette-bleu { width: 22vw; left: -6vw; right: auto; top: 20vw; bottom: auto; --hero-rest-transform: rotate(-35deg); transform: rotate(-35deg); }
+  .hero__art .barrette-bleu { width: 22vw; left: 3vw; right: auto; top: 20vw; bottom: auto; --hero-rest-transform: rotate(-35deg); transform: rotate(-35deg); }
   .hero__art .barrette-rose { width: 22vw; left: auto; right: 5vw; top: 20vw; bottom: auto; --hero-rest-transform: rotate(35deg); transform: rotate(35deg); }
   .hero__art .pin { width: 9vw; left: auto; right: 2vw; top: 18vw; bottom: auto; }
   .hero__art .clip { width: 24vw; left: 0; right: auto; top: 64vw; bottom: auto; --hero-rest-transform: rotate(-26deg); transform: rotate(-26deg); }
@@ -104,7 +104,7 @@
   .hero__title { top: 45%; font-size: 8.5vw; }
   .hero__art img { height: auto; }
   .hero__art .xppen { width: min(40vw, 760px); left: 10vw; right: auto; top: -7vw; bottom: auto; --hero-rest-transform: rotate(32deg); transform: rotate(32deg); }
-  .hero__art .barrette-bleu { width: min(16vw, 300px); left: -7vw; top: -8vw; }
+  .hero__art .barrette-bleu { width: min(16vw, 300px); left: 2vw; top: -5vw; }
   .hero__art .barrette-rose { width: min(16vw, 300px); left: 65vw; top: 7vw; }
   .hero__art .pin { width: min(6.5vw, 120px); right: 7vw; top: 4vw; }
   /* Pince abaissée pour laisser un espace sous le XP-Pen. */
