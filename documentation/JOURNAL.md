@@ -41,6 +41,55 @@
 - section
 
 
+## 5 questions | Deuxième bloc
+-   Qu'est-ce que j'ai accompli depuis le dernier bloc? :
+J'ai fais le design sur Figma et j'ai commencer mon site web. Comparer au autres, je suis vraiment en retard.
+
+-   Quelle a été ma principale difficulté et comment je l'ai surmontée? :
+    
+    Trouver du temps pour m'avancer dans mon site.
+
+
+-  Qu'est-ce que j'ai appris que je ne savais pas avant? : 
+
+   La technique pomodoro est vraiment intéressante. J'aime comment on prend des pauses durant notre travail.
+
+
+
+-   Quelle est ma prochaine étape concrète? :
+
+    Finir mon site web, bien annoter et s'assurer que mon responsive marche.
+
+
+-   Est-ce que j'ai utilisé l'IA? Si oui, pour quoi et qu'est-ce que ça m'a appris? :
+
+    Pas encore je ne suis pas asser avancer pour utiliser l'IA.
+
+
+## 5 questions | Deuxième bloc
+-   Qu'est-ce que j'ai accompli depuis le dernier bloc? :
+    J'ai vraiment avancer. J'ai fait 
+
+-   Quelle a été ma principale difficulté et comment je l'ai surmontée? :
+    
+    Trouver du temps pour m'avancer dans mon site.
+
+
+-  Qu'est-ce que j'ai appris que je ne savais pas avant? : 
+
+   La technique pomodoro est vraiment intéressante. J'aime comment on prend des pauses durant notre travail.
+
+
+
+-   Quelle est ma prochaine étape concrète? :
+
+    Finir mon site web, bien annoter et s'assurer que mon responsive marche.
+
+
+-   Est-ce que j'ai utilisé l'IA? Si oui, pour quoi et qu'est-ce que ça m'a appris? :
+
+    Pas encore je ne suis pas asser avancer pour utiliser l'IA.
+
 
  
 ## Utilisation IA
@@ -72,5 +121,4 @@ Résultat : <img width="1547" height="895" alt="Screenshot 2026-09-17 082236" sr
 <img width="1551" height="895" alt="Screenshot 2026-09-17 082308" src="https://github.com/user-attachments/assets/05e78d10-c625-46f2-a940-f8e017592860" />
 
 Je n'est pas utiliser ce que figma make m'a donner. Je trouver le site trop formelle et moins comme moi.
-
 
