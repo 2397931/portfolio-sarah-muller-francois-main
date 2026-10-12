@@ -7,7 +7,7 @@
 /* Palette commune : modifier une variable met à jour tous les éléments qui l’utilisent. */
 :root {
     --black: #03070d;
-    --board-bg: #e5d8bb;
+    --board-bg: #FFF3DF;
     --board-rim: #f3a7c7;
     --ink: #0e0e12;
     --gray-ink: #1f2233;
