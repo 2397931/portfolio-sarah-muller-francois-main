@@ -386,15 +386,15 @@
     min-height: 0;
     margin: 2vw auto 3vw;
     padding: 12vw 11vw 13vw;
-    background-color: #f4f1eb;
+    background-color: transparent;
     isolation: isolate;
     overflow: visible;
     transform: rotate(-1deg);
-    box-shadow: 0 1vw 3vw rgba(14, 14, 18, 0.12);
+    box-shadow: none;
   }
   .about__paper::before {
     inset: 0;
-    background-image: url("../assets/Img/Crumpled_Paper.png");
+    background-image: url("../assets/Img/Crumpled_paper.png");
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
