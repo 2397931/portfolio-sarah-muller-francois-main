@@ -46,7 +46,8 @@
             "ink": "#3d2524",
             "background": "#f7c5da",
             "textBackground": "#f7c5da"
-        }
+        },
+        "website": "https://202397931.tim-momo.com/Projet-Final/"
     },
     {
         "id": "Imparfaite",
@@ -70,7 +71,10 @@
             "ink": "#ffffff",
             "background": "#242024",
             "textBackground": "#242024"
-        }
+        },
+        "teamProject": true,
+        "role": "À préciser : indiquer mes responsabilités exactes.",
+        "teammates": "À compléter : noms des coéquipières."
     },
     {
         "id": "IChooseF5ve",
