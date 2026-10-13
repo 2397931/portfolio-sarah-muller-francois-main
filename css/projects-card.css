@@ -692,3 +692,10 @@ body.project-page main {
   outline: 2px solid var(--project-text);
   outline-offset: 4px;
 }
+
+/* Présentation des crédits et du lien vers le site Sweeny. */
+.project-panel--website p { margin-bottom: 1rem; }
+.project-website__link { display: inline-flex; align-items: center; min-height: 44px; padding: .8rem 1.2rem; border-radius: 999px; background: var(--project-text, #191923); color: var(--project-background, #fff); font-family: "Nunito Local", sans-serif; font-weight: 800; text-decoration: none; }
+.project-website__link:hover, .project-website__link:focus-visible { text-decoration: underline; outline-offset: 3px; }
+.project-panel strong { font-weight: 800; }
+.project-panel p + p { margin-top: .8rem; }
