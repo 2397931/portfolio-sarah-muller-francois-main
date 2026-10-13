@@ -804,6 +804,21 @@ export function renderProjectDetails(project) {
     const concept = project.concept ?? project.summary ?? project.description ?? "";
     const visualItems = project.visual?.length ? project.visual : [];
     const support = getProjectSupport(project);
+    const website = project.website || (project.id === "Sweeny" ? project.link : "");
+    const websiteDetails = typeof website === "string" && /^https:\/\//i.test(website) ? `
+        <article class="project-panel project-panel--full project-panel--website">
+            <h2>Voir le site Web</h2>
+            <p>Découvrez le site et les différentes pages du projet.</p>
+            <a class="project-website__link" href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">Visiter le site Sweeny ↗</a>
+        </article>
+    ` : "";
+    const teamDetails = project.teamProject ? `
+        <article class="project-panel project-panel--full">
+            <h2>Mon rôle et mon équipe</h2>
+            <p><strong>Mon rôle :</strong> ${escapeHtml(project.role || "À préciser.")}</p>
+            <p><strong>Coéquipières :</strong> ${escapeHtml(project.teammates || "À compléter.")}</p>
+        </article>
+    ` : "";
 
     return `
         <article class="project-panel project-panel--full">
@@ -826,5 +841,7 @@ export function renderProjectDetails(project) {
             <h2>Support</h2>
             <p>${escapeHtml(support)}</p>
         </article>
+        ${teamDetails}
+        ${websiteDetails}
     `;
 }
