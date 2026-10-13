@@ -374,3 +374,124 @@
   .contact__arrow { bottom: 9vw; }
   .contact__message { bottom: 4vw; }
 }
+
+
+/* Ajustements finaux mobile : papier, plaid, logiciels et contact. */
+@media (max-width: 767px) {
+  /* Papier visible derrière tout le texte, avec une surface de secours. */
+  .about { overflow: hidden; }
+  .about__paper {
+    position: relative;
+    width: min(94vw, 560px);
+    min-height: 0;
+    margin: 2vw auto 3vw;
+    padding: 12vw 11vw 13vw;
+    background-color: #f4f1eb;
+    isolation: isolate;
+    overflow: visible;
+    transform: rotate(-1deg);
+    box-shadow: 0 1vw 3vw rgba(14, 14, 18, 0.12);
+  }
+  .about__paper::before {
+    inset: 0;
+    background-image: url("../assets/Img/Crumpled_Paper.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .about__paper h2, .about__paper p { position: relative; z-index: 2; }
+  .about__paper h2 { font-size: clamp(27px, 7vw, 40px); }
+  .about__paper p { font-size: clamp(15px, 3.8vw, 19px); line-height: 1.5; }
+  .about__pin { z-index: 4; }
+  .about__clip { z-index: 4; }
+
+  /* Le plaid couvre toute la section, sans contour rose. */
+  .projects {
+    width: 100%;
+    min-height: 0;
+    padding: 7vw 4vw 9vw;
+    border: 0;
+    background-color: transparent;
+    background-image: url("../assets/Img/plaid.jpg");
+    background-repeat: repeat;
+    background-position: center top;
+    background-size: auto;
+  }
+  .projects__stage { width: 100%; }
+  .projects__title { display: block; margin: 0; padding: 0 0 6vw; }
+  .projects__carousel { width: 100%; }
+
+  /* Une seule rangée : les neuf logos restent visibles sans défilement. */
+  .skills { padding: 6vw 2vw 7vw; overflow: visible; }
+  .skills__list {
+    display: grid;
+    grid-template-columns: repeat(9, minmax(0, 1fr));
+    align-items: start;
+    justify-items: center;
+    gap: 0.8vw;
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .skills__item, .skills__item:nth-child(9) {
+    display: flex;
+    width: 100%;
+    min-width: 0;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .skill-card { width: 100%; min-width: 0; min-height: 0; height: auto; gap: 1vw; }
+  .skill-card__icon {
+    display: block;
+    width: 100%;
+    height: 9vw;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  .skill-card__label {
+    font-size: clamp(7px, 1.45vw, 11px);
+    line-height: 1.15;
+    overflow-wrap: anywhere;
+    text-align: center;
+  }
+
+  /* Enveloppe plus grande, glissée derrière la carte. */
+  .contact { height: auto; min-height: 0; margin: 0; padding: 7vw 0 9vw; overflow: hidden; }
+  .contact__stage {
+    position: relative;
+    height: 78vw;
+    min-height: 0;
+    overflow: hidden;
+  }
+  .contact__envelope {
+    width: 47vw;
+    height: auto;
+    left: 8vw;
+    right: auto;
+    top: 12vw;
+    bottom: auto;
+    transform: rotate(-12deg);
+    z-index: 2;
+  }
+  .contact__card {
+    width: 62vw;
+    right: 9vw;
+    top: 6vw;
+    transform: rotate(8deg);
+    z-index: 3;
+  }
+  .contact__card-image { width: 100%; }
+  .contact__arrow {
+    width: 16vw;
+    right: 13vw;
+    bottom: 12vw;
+    transform: rotate(-200deg);
+    z-index: 5;
+  }
+  .contact__message { right: 4vw; bottom: 5vw; z-index: 6; }
+  .contact__message h2 { font-size: clamp(27px, 7vw, 48px); }
+}
