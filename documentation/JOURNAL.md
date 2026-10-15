@@ -66,29 +66,29 @@ J'ai fais le design sur Figma et j'ai commencer mon site web. Comparer au autres
     Pas encore je ne suis pas asser avancer pour utiliser l'IA.
 
 
-## 5 questions | Deuxième bloc
+## 5 questions | Troisième bloc
 -   Qu'est-ce que j'ai accompli depuis le dernier bloc? :
-    J'ai vraiment avancer. J'ai fait 
+    J'ai vraiment avancer. J'ai construis la grande partie de mon portfolio. Je me suis rattraper comparer au dernier bloc. J'ai séparer mon code global en plusieurs petit codes pour rendre mon portfolio plus clair et facile à naviger. j'ai fait le design des pages de projets et de tous les section dans la page principale.
 
 -   Quelle a été ma principale difficulté et comment je l'ai surmontée? :
     
-    Trouver du temps pour m'avancer dans mon site.
+    Finir mon site en 1 semaine et mon site mobile.
 
 
 -  Qu'est-ce que j'ai appris que je ne savais pas avant? : 
 
-   La technique pomodoro est vraiment intéressante. J'aime comment on prend des pauses durant notre travail.
+   Les différentes tailles pour les responsives et comment utiliser la banque json.
 
 
 
 -   Quelle est ma prochaine étape concrète? :
 
-    Finir mon site web, bien annoter et s'assurer que mon responsive marche.
+    Arranger mon site avec les rétroactions de mes professeurs et ajouter des choses que j'avais pas pu faire.
 
 
 -   Est-ce que j'ai utilisé l'IA? Si oui, pour quoi et qu'est-ce que ça m'a appris? :
 
-    Pas encore je ne suis pas asser avancer pour utiliser l'IA.
+    Oui et surtout pour tout ce qui est relier au responsive.
 
 
  
@@ -122,3 +122,10 @@ Résultat : <img width="1547" height="895" alt="Screenshot 2026-09-17 082236" sr
 
 Je n'est pas utiliser ce que figma make m'a donner. Je trouver le site trop formelle et moins comme moi.
 
+
+Date : Mercredi 8 Octobre 2026
+Prompt : D’accord, je veux que la version responsive mobile de mon site ressemble à l’image PNG que je vais joindre, s’il vous plaît.
+Outil : ChatGPT
+Résultat : ...
+
+j'ai accepter ce que Chat a changer pour mais après j'ai changer un peu de détails que je trouvais trop différent.
