@@ -495,3 +495,23 @@
   .contact__message { right: 4vw; bottom: 5vw; z-index: 6; }
   .contact__message h2 { font-size: clamp(27px, 7vw, 48px); }
 }
+
+
+/* Mobile : noms des logiciels permanents et fond bleu intégral du contact. */
+@media (max-width: 767px) {
+  .skills .skill-card__label,
+  .skills .skill-card:hover .skill-card__label,
+  .skills .skill-card:focus-within .skill-card__label {
+    position: static;
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    pointer-events: auto;
+  }
+
+  /* Conserve les dimensions actuelles de la section et de la scène. */
+  .contact { background: #1e1e2a; }
+  .contact__wood { display: none; }
+  .contact__stage { background: #1e1e2a; }
+}
