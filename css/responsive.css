@@ -664,3 +664,12 @@
   .contact__message { right: 9vw; bottom: 1vw; }
   .contact__arrow { right: 25vw; bottom: 11vw; }
 }
+
+
+/* Mobile : dégager le courriel en abaissant légèrement la flèche. */
+@media (max-width: 767px) {
+  .contact__arrow {
+    right: 25vw;
+    bottom: 6vw;
+  }
+}
