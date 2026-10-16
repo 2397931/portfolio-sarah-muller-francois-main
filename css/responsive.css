@@ -638,3 +638,29 @@
     pointer-events: none;
   }
 }
+
+
+/* Contact mobile : garder la hauteur, afficher la carte entière et l'enveloppe. */
+@media (max-width: 767px) {
+  .contact { height: 64vw; padding: 2vw 0; }
+  .contact__stage { height: 60vw; overflow: hidden; }
+  .contact__envelope {
+    width: 51vw;
+    left: 8vw;
+    top: 13vw;
+    right: auto;
+    bottom: auto;
+    transform: rotate(-12deg);
+    z-index: 2;
+  }
+  .contact__card {
+    width: 57vw;
+    left: 27vw;
+    right: auto;
+    top: 8vw;
+    transform: rotate(8deg);
+    z-index: 3;
+  }
+  .contact__message { right: 9vw; bottom: 1vw; }
+  .contact__arrow { right: 25vw; bottom: 11vw; }
+}
