@@ -583,3 +583,58 @@
     transform: rotate(-200deg);
   }
 }
+
+
+/* Contact : composition mobile recentrée et hauteur réellement réduite. */
+@media (max-width: 767px) {
+  .contact {
+    display: block;
+    width: 100%;
+    height: 64vw;
+    min-height: 0;
+    margin: 0;
+    padding: 2vw 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: #1e1e2a;
+  }
+  .contact__stage {
+    position: relative;
+    width: 100%;
+    height: 60vw;
+    min-height: 0;
+    margin: 0;
+    overflow: hidden;
+    background: #1e1e2a;
+  }
+  .contact__wood { display: none; }
+  .contact__envelope {
+    width: 44vw;
+    left: 13vw;
+    top: 6vw;
+    right: auto;
+    bottom: auto;
+    z-index: 2;
+  }
+  .contact__card {
+    width: 60vw;
+    left: 22vw;
+    right: auto;
+    top: 2vw;
+    z-index: 3;
+  }
+  .contact__message {
+    right: 9vw;
+    bottom: 1vw;
+    z-index: 6;
+  }
+  .contact__message h2 { font-size: clamp(24px, 6.5vw, 43px); }
+  .contact__arrow {
+    width: 13vw;
+    right: 25vw;
+    bottom: 11vw;
+    transform: rotate(-200deg);
+    z-index: 5;
+    pointer-events: none;
+  }
+}
