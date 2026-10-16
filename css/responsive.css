@@ -546,3 +546,40 @@
     pointer-events: none;
   }
 }
+
+
+/* Contact mobile compact : moins de vide, composition entièrement visible. */
+@media (max-width: 767px) {
+  .contact {
+    height: 80vw;
+    min-height: 0;
+    padding: 3vw 0 5vw;
+    background: #1e1e2a;
+    overflow: hidden;
+  }
+  .contact__stage {
+    height: 72vw;
+    min-height: 0;
+    overflow: hidden;
+  }
+  .contact__envelope {
+    left: 11vw;
+    top: 9vw;
+    width: 47vw;
+  }
+  .contact__card {
+    right: 12vw;
+    top: 4vw;
+    width: 62vw;
+  }
+  .contact__message {
+    right: 4vw;
+    bottom: 2vw;
+  }
+  .contact__arrow {
+    right: 23vw;
+    bottom: 15vw;
+    width: 15vw;
+    transform: rotate(-200deg);
+  }
+}
