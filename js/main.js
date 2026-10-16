@@ -241,6 +241,8 @@ function initProjectPage() {
     }
 
 
+    initProjectGallery(project);
+
     /* =====================================================
        TITRE DE LA PAGE
     ====================================================== */
@@ -288,6 +290,65 @@ function initProjectPage() {
     }
 }
 
+
+
+/* =========================================================
+   GALERIE DES CAPTURES D'ÉCRAN DU PROJET
+   Réutilise les flèches de la page d'accueil.
+   ========================================================= */
+function initProjectGallery(project) {
+    const gallery = document.querySelector("[data-project-gallery]");
+    if (!gallery) return;
+
+    const images = Array.isArray(project.gallery) ? project.gallery : [];
+    if (project.id.toLowerCase() !== "sweeny" || images.length === 0) {
+        gallery.hidden = true;
+        return;
+    }
+
+    gallery.hidden = false;
+    gallery.innerHTML = `
+        <h2 class="project-gallery__title">Aperçus du site Web</h2>
+        <div class="project-gallery__carousel" aria-label="Captures d’écran du site Sweeny">
+            <button type="button" class="projects__arrow projects__arrow--prev"
+                data-gallery-prev aria-label="Image précédente">
+                <img src="./assets/fleches/fleche_5.png" alt=""
+                    class="projects__arrow-icon" aria-hidden="true">
+            </button>
+            <div class="project-gallery__slot" aria-live="polite">
+                <img class="project-gallery__image" data-gallery-image
+                    alt="Capture d’écran du site Sweeny">
+            </div>
+            <button type="button" class="projects__arrow projects__arrow--next"
+                data-gallery-next aria-label="Image suivante">
+                <img src="./assets/fleches/fleche_5.png" alt=""
+                    class="projects__arrow-icon" aria-hidden="true">
+            </button>
+        </div>
+        <p class="project-gallery__counter" data-gallery-counter></p>
+    `;
+
+    const image = gallery.querySelector("[data-gallery-image]");
+    const counter = gallery.querySelector("[data-gallery-counter]");
+    let index = 0;
+
+    function showImage() {
+        image.src = images[index];
+        image.alt = `Capture d’écran ${index + 1} sur ${images.length} du site Sweeny`;
+        counter.textContent = `${index + 1} / ${images.length}`;
+    }
+
+    gallery.querySelector("[data-gallery-prev]").addEventListener("click", () => {
+        index = (index - 1 + images.length) % images.length;
+        showImage();
+    });
+    gallery.querySelector("[data-gallery-next]").addEventListener("click", () => {
+        index = (index + 1) % images.length;
+        showImage();
+    });
+
+    showImage();
+}
 
 /* =========================================================
    ANIMATION DU TITRE PORTFOLIO
