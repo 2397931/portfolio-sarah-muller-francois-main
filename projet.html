@@ -10,8 +10,11 @@
     <!-- Styles globaux -->
     <link rel="stylesheet" href="css/global.css?v=20261008-contraste-17">
 
+    <!-- Flèches partagées avec le carrousel de la page d’accueil. -->
+    <link rel="stylesheet" href="css/projects.css?v=20261016-sweeny-gallery">
+
     <!-- Styles de la page détaillée : bannière, lecteur, panneaux et processus. -->
-    <link rel="stylesheet" href="css/projects-card.css?v=20261013-feedback">
+    <link rel="stylesheet" href="css/projects-card.css?v=20261016-sweeny-gallery">
 </head>
 
 <body class="project-page">
@@ -33,6 +36,9 @@
             data-project-details>
         </section>
 
+        <!-- Galerie réservée aux projets disposant d’images supplémentaires. -->
+        <section class="project-gallery" data-project-gallery hidden></section>
+
         <!-- Emplacement des étapes de création ; retiré si le projet ne possède pas de processus. -->
         <section
             class="project-process"
@@ -50,7 +56,7 @@
     </main>
 
     <!-- Charge le même point d’entrée que l’accueil ; la classe du body active la page détaillée. -->
-    <script type="module" src="js/main.js?v=20261013-feedback"></script>
+    <script type="module" src="js/main.js?v=20261016-sweeny-gallery"></script>
 
 </body>
 
