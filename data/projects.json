@@ -32,7 +32,14 @@
         "year": "2025",
         "image": "assets/Img/SweenyIMG.png",
         "link": "https://202397931.tim-momo.com/Projet-Final/",
-        "gallery": [],
+        "gallery": [
+            "assets/Img/sweeny1.png",
+            "assets/Img/sweeny2.png",
+            "assets/Img/sweeny3.png",
+            "assets/Img/sweeny4.png",
+            "assets/Img/sweeny5.png",
+            "assets/Img/sweeny6.png"
+        ],
         "support": "HTML, CSS et JavaScript",
         "concept": "J'ai créé un site Web pour une petite compagnie de pâtisserie appelée Sweeny. L'interface présente les produits avec une navigation simple et une ambiance douce afin de rendre la découverte agréable et intuitive.",
         "visual": [
