@@ -515,3 +515,34 @@
   .contact__wood { display: none; }
   .contact__stage { background: #1e1e2a; }
 }
+
+
+/* Composition Contact mobile : carte et enveloppe rapprochées,
+   flèche placée près du titre et orientée vers le courriel. */
+@media (max-width: 767px) {
+  .contact__envelope {
+    left: 11vw;
+    top: 13vw;
+    width: 47vw;
+    bottom: auto;
+    z-index: 2;
+  }
+  .contact__card {
+    right: 12vw;
+    top: 8vw;
+    width: 62vw;
+    z-index: 3;
+  }
+  .contact__message {
+    right: 4vw;
+    bottom: 5vw;
+  }
+  .contact__arrow {
+    right: 20vw;
+    bottom: 18vw;
+    width: 17vw;
+    transform: rotate(-200deg);
+    z-index: 5;
+    pointer-events: none;
+  }
+}
