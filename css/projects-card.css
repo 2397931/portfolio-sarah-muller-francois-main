@@ -772,3 +772,9 @@ body.project-page main {
     .project-gallery__carousel .projects__arrow--next { right: 1vw; left: auto; }
     .project-gallery__counter { margin-top: 2vw; }
 }
+
+
+/* Métadonnées communes à toutes les pages projet et distinctions. */
+.project-panel--information p + p { margin-top: 0.6rem; }
+.project-panel--information strong { font-weight: 800; }
+.project-panel--awards .project-list { margin-top: 0.3rem; }
