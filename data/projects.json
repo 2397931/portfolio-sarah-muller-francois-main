@@ -8,7 +8,7 @@
         "image": "assets/Img/hyunjinIMG.png",
         "link": "assets/video/hyunjinParty.mp4",
         "gallery": [],
-        "support": "After Effects",
+        "support": "After Effects et Photoshop",
         "concept": "Cette création est un montage de Hyunjin du groupe Stray Kids, créé comme cadeau pour une amie. Le thème de l'argent et du luxe guide la composition, avec un contraste marqué entre les éléments graphiques et les images du personnage.",
         "visual": [
             "Palette rouge, vert et blanc inspirée de l’argent et du luxe.",
@@ -22,13 +22,17 @@
             "backgroundImage": "assets/Img/grille.jpg",
             "background": "#285d20",
             "textBackground": "#285d20"
-        }
+        },
+        "projectType": "Personnel",
+        "collaboration": "Individuel",
+        "role": "Montage vidéo et sonore",
+        "teamProject": false
     },
     {
         "id": "Sweeny",
         "title": "Sweeny",
         "description": "J’ai créé un site Web pour une petite compagnie de pâtisserie appelée Sweeny. Le site présente leurs différents produits, comme leurs beignes et leurs cupcakes, avec une présentation simple et colorée. J’ai principalement utilisé les couleurs rose, brun et blanc pour créer une ambiance douce et chaleureuse qui correspond à l’univers de la pâtisserie. J’ai aussi ajouté différentes sections pour permettre aux clients de découvrir les produits, d’en apprendre plus sur la compagnie et de la contacter. Le site est disponible en plusieurs langues.",
-        "category": "Design web",
+        "category": "Site Web",
         "year": "2025",
         "image": "assets/Img/SweenyIMG.png",
         "link": "https://202397931.tim-momo.com/Projet-Final/",
@@ -40,7 +44,7 @@
             "assets/Img/sweeny5.png",
             "assets/Img/sweeny6.png"
         ],
-        "support": "HTML, CSS et JavaScript",
+        "support": "WordPress",
         "concept": "J'ai créé un site Web pour une petite compagnie de pâtisserie appelée Sweeny. L'interface présente les produits avec une navigation simple et une ambiance douce afin de rendre la découverte agréable et intuitive.",
         "visual": [
             "Palette rose, brun et blanc pour rappeler l'univers de la pâtisserie.",
@@ -54,7 +58,12 @@
             "background": "#f7c5da",
             "textBackground": "#f7c5da"
         },
-        "website": "https://202397931.tim-momo.com/Projet-Final/"
+        "website": "https://202397931.tim-momo.com/Projet-Final/",
+        "projectType": "Académique",
+        "course": "Web 4",
+        "collaboration": "Individuel",
+        "role": "Designer de site Web",
+        "teamProject": false
     },
     {
         "id": "Imparfaite",
@@ -65,7 +74,7 @@
         "image": "assets/Img/ImparfaiteIMG.png",
         "link": "assets/video/Imparfaite_h264_1920_1080.mp4",
         "gallery": [],
-        "support": "After Effects",
+        "support": "DaVinci Resolve",
         "concept": "J'ai créé un micro-montage à partir de différentes séquences vidéo pour raconter l'histoire du personnage. Les transitions, les effets, la musique et le montage sonore construisent une atmosphère sombre et cohérente.",
         "visual": [
             "Transitions et effets visuels utilisés pour installer le rythme.",
@@ -80,8 +89,12 @@
             "textBackground": "#242024"
         },
         "teamProject": true,
-        "role": "À préciser : indiquer mes responsabilités exactes.",
-        "teammates": "À compléter : noms des coéquipières."
+        "role": "Cadreuse, monteuse vidéo et sonore",
+        "teammates": "Nurlika Richard et Manel Yaya",
+        "projectType": "Académique",
+        "course": "Vidéo 2 – 582312MO",
+        "collaboration": "En équipe",
+        "awards": []
     },
     {
         "id": "IChooseF5ve",
@@ -126,6 +139,10 @@
                     "text": "Au total, ce montage vidéo m’a pris quatre jours à réaliser."
                 }
             ]
-        }
+        },
+        "projectType": "Personnel",
+        "collaboration": "Individuel",
+        "role": "Montage vidéo et sonore",
+        "teamProject": false
     }
 ]
