@@ -812,11 +812,22 @@ export function renderProjectDetails(project) {
             <a class="project-website__link" href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">Visiter le site Sweeny ↗</a>
         </article>
     ` : "";
-    const teamDetails = project.teamProject ? `
-        <article class="project-panel project-panel--full">
-            <h2>Mon rôle et mon équipe</h2>
-            <p><strong>Mon rôle :</strong> ${escapeHtml(project.role || "À préciser.")}</p>
-            <p><strong>Coéquipières :</strong> ${escapeHtml(project.teammates || "À compléter.")}</p>
+    const projectInfo = `
+        <article class="project-panel project-panel--full project-panel--information">
+            <h2>Informations sur le projet</h2>
+            <p><strong>Type de projet :</strong> ${escapeHtml(project.projectType ?? "Non précisé")}</p>
+            ${project.course ? `<p><strong>Cours :</strong> ${escapeHtml(project.course)}</p>` : ""}
+            <p><strong>Réalisation :</strong> ${escapeHtml(project.collaboration ?? (project.teamProject ? "En équipe" : "Individuel"))}</p>
+            ${project.teamProject && project.teammates ? `<p><strong>Coéquipières :</strong> ${escapeHtml(project.teammates)}</p>` : ""}
+            ${project.role ? `<p><strong>Mon rôle :</strong> ${escapeHtml(project.role)}</p>` : ""}
+        </article>
+    `;
+    const awardsDetails = project.id.toLowerCase() === "imparfaite" ? `
+        <article class="project-panel project-panel--full project-panel--awards">
+            <h2>Prix et distinctions</h2>
+            ${Array.isArray(project.awards) && project.awards.length
+                ? `<ul class="project-list">${project.awards.map(award => `<li>${escapeHtml(award)}</li>`).join("")}</ul>`
+                : "<p>À compléter : prix ou distinction obtenue.</p>"}
         </article>
     ` : "";
 
@@ -841,7 +852,8 @@ export function renderProjectDetails(project) {
             <h2>Support</h2>
             <p>${escapeHtml(support)}</p>
         </article>
-        ${teamDetails}
+        ${projectInfo}
+        ${awardsDetails}
         ${websiteDetails}
     `;
 }
