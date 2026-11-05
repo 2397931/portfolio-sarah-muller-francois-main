@@ -316,7 +316,7 @@
    La balise img dans le HTML conserve le texte alternatif.
    ========================================================= */
 .about__image-placeholder {
-  background-image: url("../assets/Img/Image.jpg");
+  background-image: url("../assets/Img/Photo_a_propos.JPG");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
